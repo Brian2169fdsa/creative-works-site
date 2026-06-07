@@ -20,6 +20,19 @@ export const metadata: Metadata = {
 
 const CUSTOMERS = [
   {
+    name: "Phoenix Rising Window Cleaning",
+    fullName: null,
+    category: "Home Services",
+    location: "Phoenix, AZ",
+    services: ["Brand Development", "Website Design and Development", "Marketing", "Social Media Management", "Google Ads", "AI Development", "Automation"],
+    bio: "Creative Works built Phoenix Rising Window Cleaning from the ground up as a true end-to-end partner. We developed their complete brand identity - name presence, logo, and a clean \"crystal-clear, Phoenix strong\" visual language that feels premium and local at once - then designed and built their full website, including service pages, online booking, pricing, a before/after gallery, and a service-area experience covering the entire Phoenix metro. Beyond the build, we run the whole growth engine: marketing strategy, social media management, and Google Ads campaigns that turn searches into booked jobs. And under the hood, we deployed custom AI and automation to streamline quoting, scheduling, and customer follow-up - so the team can focus on spotless glass while the back office runs itself. From brand to booking to lead generation, Phoenix Rising runs on infrastructure we designed, built, and manage end to end - the full package.",
+    primaryHref: "https://phoenix-rising-web.vercel.app",
+    primaryLabel: "Visit Site",
+    secondaryHref: null,
+    secondaryLabel: null,
+    screenshot: null,
+  },
+  {
     name: "Cholla Behavioral Health",
     category: "Behavioral Health Provider",
     location: "Phoenix, AZ",

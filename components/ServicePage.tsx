@@ -86,7 +86,7 @@ function CalloutSection({ s }: CalloutSectionProps) {
         </div>
         <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] shadow-lg">
           {s.image ? (
-            <Image src={s.image} alt={s.title} fill className="object-cover" />
+            <Image src={s.image} alt={s.title} fill className="object-cover" style={s.imagePosition ? { objectPosition: s.imagePosition } : undefined} />
           ) : (
             <div className="absolute inset-0 bg-navy-700/20 flex items-center justify-center">
               <div className={cn("text-center p-8", dark ? "text-white/40" : "text-gray-400")}>
@@ -190,6 +190,7 @@ export default function ServicePage(cfg: ServiceConfig) {
                   alt={`${cfg.eyebrow} hero`}
                   fill
                   className="object-cover"
+                  style={cfg.heroImagePosition ? { objectPosition: cfg.heroImagePosition } : undefined}
                   priority
                 />
               ) : (

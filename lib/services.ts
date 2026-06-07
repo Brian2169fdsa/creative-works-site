@@ -23,6 +23,7 @@ export interface ServiceSection {
   lead?: string;
   points?: string[];
   image?: string;
+  imagePosition?: string;
   items?: string[];
   cards?: ServiceProvideCard[];
   columns?: number;
@@ -40,6 +41,7 @@ export interface ServiceConfig {
   lead: string;
   heroPlaceholder?: string;
   heroImage?: string;
+  heroImagePosition?: string;
   href: string;
   tagline: string;
   short: string;
@@ -90,6 +92,7 @@ export const SERVICES: ServiceConfig[] = [
     lead: "Behavioral health organizations do vital work that most communities do not fully understand. We help you build awareness, connect with the people who need you, and create marketing that genuinely reflects your mission.",
     heroPlaceholder: "Marketing team at work, photo placeholder",
     heroImage: "/images/marketing-hero.png",
+    heroImagePosition: "left center",
     href: "/services/marketing",
     tagline: "Reach more people. Grow your mission.",
     short:
@@ -169,6 +172,7 @@ export const SERVICES: ServiceConfig[] = [
         placeholder: "Marketing materials, photo placeholder",
         placeholderIcon: "Megaphone",
         image: "/images/marketing-hero.png",
+        imagePosition: "left center",
       },
     ],
     process: {

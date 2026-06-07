@@ -130,7 +130,8 @@ export default function HomePage() {
                 src="/images/home-hero.png"
                 alt="Creative Works hero"
                 fill
-                className="object-cover object-right"
+                className="object-cover"
+                style={{ objectPosition: "85% center" }}
                 priority
               />
             </div>

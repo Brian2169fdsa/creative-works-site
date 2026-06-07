@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import Section from "@/components/ui/Section";
@@ -23,6 +24,7 @@ const LEADERS = [
   {
     name: "Brian Reinhart",
     title: "CEO / President",
+    photo: "/images/leader-brian-reinhart.png",
     bio: "Brian founded Creative Works with a clear conviction: behavioral health organizations do vital work, and they deserve operational support that truly understands their mission. With a background spanning professional services, business development, and organizational strategy, Brian leads Creative Works with a people-first approach that puts long-term client outcomes ahead of short-term transactions. He is responsible for the firm's strategic direction, client relationships, and overall vision.",
     focus: [
       "Strategic direction and firm leadership",
@@ -33,6 +35,7 @@ const LEADERS = [
   {
     name: "Sierra Largo",
     title: "CFO",
+    photo: "/images/leader-sierra-largo.png",
     bio: "Sierra brings financial clarity and operational discipline to Creative Works, ensuring the firm and the clients it serves are built on a foundation that is sustainable, transparent, and built to grow. Her expertise spans financial planning, reporting, internal controls, and the operational finance needs unique to mission-driven organizations. Sierra partners closely with clients who need stronger financial systems and processes as part of their broader operational transformation.",
     focus: [
       "Financial planning and reporting",
@@ -43,6 +46,7 @@ const LEADERS = [
   {
     name: "Wayne Giles",
     title: "COO",
+    photo: "/images/leader-wayne-giles.png",
     bio: "Wayne is the operational engine behind Creative Works, overseeing how the firm delivers on its commitments to clients. With deep experience in process design, systems implementation, and operational leadership, Wayne ensures that every engagement is executed with consistency, clarity, and care. He works directly with clients on operational support engagements, bringing structure to organizations that are ready to run more efficiently and serve more effectively.",
     focus: [
       "Firm operations and delivery excellence",
@@ -94,10 +98,10 @@ export default function LeadershipPage() {
                 idx % 2 === 1 ? "lg:grid-cols-[1fr_300px]" : ""
               }`}
             >
-              {/* Photo placeholder — left on even, right on odd */}
+              {/* Photo — right on odd rows */}
               {idx % 2 === 1 && (
                 <div className="hidden lg:block order-2">
-                  <PhotoPlaceholder name={leader.name} title={leader.title} />
+                  <LeaderPhoto leader={leader} />
                 </div>
               )}
 
@@ -105,7 +109,7 @@ export default function LeadershipPage() {
               <div className={idx % 2 === 1 ? "order-1" : ""}>
                 {/* Mobile photo */}
                 <div className="lg:hidden mb-8">
-                  <PhotoPlaceholder name={leader.name} title={leader.title} />
+                  <LeaderPhoto leader={leader} />
                 </div>
 
                 <Eyebrow>{leader.title}</Eyebrow>
@@ -153,7 +157,7 @@ export default function LeadershipPage() {
               {/* Photo — left side on even rows */}
               {idx % 2 === 0 && (
                 <div className="hidden lg:block">
-                  <PhotoPlaceholder name={leader.name} title={leader.title} />
+                  <LeaderPhoto leader={leader} />
                 </div>
               )}
             </div>
@@ -215,44 +219,36 @@ export default function LeadershipPage() {
   );
 }
 
-function PhotoPlaceholder({
-  name,
-  title,
+function LeaderPhoto({
+  leader,
 }: {
-  name: string;
-  title: string;
+  leader: { name: string; title: string; photo?: string };
 }) {
-  const initials = name
-    .split(" ")
-    .map((n) => n[0])
-    .join("");
-
   return (
-    <div className="group relative">
-      {/* Orange arc accent */}
+    <div className="relative">
       <div
         aria-hidden="true"
         className="absolute -top-4 -right-4 w-28 h-28 rounded-full border-[3px] border-orange opacity-60 pointer-events-none z-10"
       />
-      <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-cloud to-gray-100 border-2 border-dashed border-gray-300 aspect-[3/3.6] flex flex-col items-center justify-center gap-4 shadow-card">
-        {/* Initials avatar */}
-        <div className="w-24 h-24 rounded-full bg-navy-midnight flex items-center justify-center">
-          <span className="font-display font-extrabold text-3xl text-white tracking-tight">
-            {initials}
-          </span>
-        </div>
-        <div className="text-center px-4">
-          <p className="font-display font-bold text-lg text-navy-midnight leading-tight">
-            {name}
-          </p>
-          <p className="text-sm text-orange font-semibold mt-1">{title}</p>
-        </div>
-        {/* Drop hint */}
-        <div className="absolute bottom-4 left-0 right-0 text-center">
-          <span className="text-xs text-gray-400 font-medium">
-            Photo coming soon
-          </span>
-        </div>
+      <div className="relative rounded-xl overflow-hidden aspect-[3/3.6] shadow-card bg-cloud">
+        {leader.photo ? (
+          <Image
+            src={leader.photo}
+            alt={leader.name}
+            fill
+            className="object-cover object-top"
+          />
+        ) : (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+            <div className="w-24 h-24 rounded-full bg-navy-midnight flex items-center justify-center">
+              <span className="font-display font-extrabold text-3xl text-white tracking-tight">
+                {leader.name.split(" ").map((n) => n[0]).join("")}
+              </span>
+            </div>
+            <p className="font-display font-bold text-lg text-navy-midnight">{leader.name}</p>
+            <p className="text-sm text-orange font-semibold">{leader.title}</p>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -171,8 +171,8 @@ export const SERVICES: ServiceConfig[] = [
         ],
         placeholder: "Marketing materials, photo placeholder",
         placeholderIcon: "Megaphone",
-        image: "/images/marketing-hero.png",
-        imagePosition: "left center",
+        image: "/images/marketing-secondary.png",
+        imagePosition: "center center",
       },
     ],
     process: {

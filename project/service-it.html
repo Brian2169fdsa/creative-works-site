@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IT Services | Creative Works for Behavioral Health</title>
+<meta name="description" content="Reliable, secure technology support for behavioral health organizations, Microsoft 365, accounts and access, cybersecurity basics, device coordination, and help desk routing.">
+<meta property="og:title" content="IT Services | Creative Works">
+<meta property="og:description" content="Secure, reliable technology support so your team can stay focused on care.">
+<meta property="og:image" content="assets/phoenix-mark.png">
+<link rel="canonical" href="https://www.creativeworksaz.com/services/it-services">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" src="lib/service-page.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { ServicePage, mount } = window.CW;
+    mount(ServicePage({
+      slug: 'it', icon: 'shield-check', eyebrow: 'IT Services',
+      title: 'Technology that just works, so your team can focus on care.',
+      lead: 'Reliable systems are the quiet foundation behind everything your organization does. We provide practical, secure IT support that keeps accounts, devices, and tools running without the headaches.',
+      heroPlaceholder: 'IT & systems support, photo placeholder',
+      problem: {
+        title: 'Technology problems pull your team away from people.',
+        lead: 'When access breaks, accounts are a mess, or no one knows who to call, your staff lose time they should be spending on care.',
+        items: [
+          'Staff access and login issues',
+          'Device management problems',
+          'Microsoft 365 confusion',
+          'Messy email and account setup',
+          'Security gaps and weak habits',
+          'Inconsistent onboarding and offboarding',
+          'Vendor confusion, no one owns IT',
+          'No structured help desk',
+        ],
+        columns: 2,
+      },
+      provide: {
+        title: 'What we support', eyebrow: 'What We Support',
+        lead: 'Practical IT coordination across the tools behavioral health teams rely on.', columns: 4,
+        cards: [
+          { icon: 'grid-2x2', title: 'Microsoft 365', desc: 'Setup, configuration, and ongoing support.' },
+          { icon: 'user-plus', title: 'Account Setup', desc: 'New accounts done right the first time.' },
+          { icon: 'key-round', title: 'User Access', desc: 'The right access for every role.' },
+          { icon: 'laptop', title: 'Device Coordination', desc: 'Consistent, managed devices for your team.' },
+          { icon: 'cloud', title: 'Cloud Storage', desc: 'Organized, secure cloud file storage.' },
+          { icon: 'shield-check', title: 'Cybersecurity Basics', desc: 'Sensible protections and good habits.' },
+          { icon: 'mail', title: 'Email & Domain', desc: 'Reliable email and domain support.' },
+          { icon: 'headphones', title: 'Help Desk Routing', desc: 'A clear path to get problems solved.' },
+        ],
+      },
+      sections: [
+        { type: 'callout', tone: 'navy', eyebrow: 'Security & Reliability', title: 'In behavioral health, reliable systems are not optional.',
+          body: 'Your organization handles sensitive information and depends on systems being available when staff need them. We help you build reliable, security-aware technology habits, without overcomplicating things or locking you into tools you do not need.',
+          points: ['Sensible, layered protections', 'Clear onboarding and offboarding', 'Documented systems your team understands'],
+          placeholder: 'Secure systems, illustration placeholder', placeholderIcon: 'lock' },
+        { type: 'cards', tone: 'white', eyebrow: 'How We Engage', title: 'A support model that fits your needs.',
+          lead: 'Bring us in for a one-time setup or partner with us for ongoing coordination.', columns: 5,
+          cards: [
+            { icon: 'rocket', title: 'Project-Based Setup', desc: 'A defined start-to-finish engagement.' },
+            { icon: 'calendar-check', title: 'Monthly Support', desc: 'Ongoing coordination and peace of mind.' },
+            { icon: 'network', title: 'Vendor Coordination', desc: 'We manage your tech vendors for you.' },
+            { icon: 'user-cog', title: 'Onboarding / Offboarding', desc: 'Smooth, secure staff transitions.' },
+            { icon: 'file-text', title: 'Documentation & Training', desc: 'So your team knows how things work.' },
+          ] },
+      ],
+      benefits: {
+        title: 'What reliable IT gives you back.',
+        items: [
+          { title: 'More reliable technology', desc: 'Fewer surprises, more uptime.' },
+          { title: 'Reduced interruptions', desc: 'Staff stay focused on their work.' },
+          { title: 'Cleaner access management', desc: 'The right access, every time.' },
+          { title: 'Better staff onboarding', desc: 'New hires are productive on day one.' },
+          { title: 'Stronger security habits', desc: 'Protection that becomes second nature.' },
+          { title: 'A clear point of contact', desc: 'You always know who to call.' },
+        ],
+      },
+      related: ['sharepoint', 'operations', 'staffing'],
+      cta: { title: 'Want technology you can rely on?', body: 'Schedule a consultation and we will review your systems and recommend a practical path forward.' },
+    }), 'services');
+  </script>
+</body>
+</html>

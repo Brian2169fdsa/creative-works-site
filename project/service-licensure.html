@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Behavioral Health Licensure Services | Creative Works</title>
+<meta name="description" content="Guidance through behavioral health center licensure, accreditation, and compliance, applications, policies and procedures, survey readiness, and ongoing compliance support.">
+<meta property="og:title" content="Licensure Services | Creative Works">
+<meta property="og:description" content="Open your doors, and stay compliant, with confidence.">
+<meta property="og:image" content="assets/phoenix-mark.png">
+<link rel="canonical" href="https://www.creativeworksaz.com/services/licensure">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" src="lib/service-page.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { ServicePage, mount } = window.CW;
+    mount(ServicePage({
+      slug: 'licensure', icon: 'badge-check', eyebrow: 'Licensure Services',
+      title: 'Open your doors, and stay compliant, with confidence.',
+      lead: 'Licensure is one of the most complex parts of running a behavioral health organization. We guide you through applications, policies, and accreditation so you can meet requirements without losing momentum.',
+      heroPlaceholder: 'Licensure & compliance, photo placeholder',
+      problem: {
+        title: 'Licensure is complex, and the stakes are high.',
+        lead: 'Requirements shift, paperwork piles up, and a single gap can delay an opening or a survey. You need a steady guide who knows the terrain.',
+        items: [
+          'Confusing or changing state requirements',
+          'A backlog of application paperwork',
+          'Policies that do not meet current standards',
+          'Survey or inspection readiness',
+          'Accreditation preparation (CARF, Joint Commission)',
+          'Maintaining compliance over time',
+        ],
+      },
+      provide: {
+        title: 'What we support', eyebrow: 'What We Support',
+        lead: 'End-to-end support from first application through ongoing compliance.', columns: 4,
+        cards: [
+          { icon: 'file-badge', title: 'Licensure Applications', desc: 'Prepare and organize your application package.' },
+          { icon: 'book-marked', title: 'Policy & Procedure Development', desc: 'Build the documentation standards require.' },
+          { icon: 'shield-check', title: 'Compliance Readiness', desc: 'Get ready for surveys and inspections.' },
+          { icon: 'award', title: 'Accreditation Support', desc: 'Prepare for CARF, Joint Commission, and more.' },
+          { icon: 'folder-cog', title: 'Documentation Systems', desc: 'Keep required records organized and current.' },
+          { icon: 'rocket', title: 'New Program Setup', desc: 'Stand up a new licensed program or site.' },
+          { icon: 'calendar-check', title: 'Ongoing Compliance', desc: 'Stay compliant after you are licensed.' },
+          { icon: 'graduation-cap', title: 'Staff Training', desc: 'Help your team meet and maintain standards.' },
+        ],
+      },
+      sections: [
+        { type: 'callout', tone: 'cloud', eyebrow: 'A Note On Scope', title: 'A knowledgeable guide alongside your team.',
+          body: 'We provide preparation, documentation, and readiness support, working alongside your clinical and legal leaders. Our role is to make the process organized and manageable; we do not provide legal advice, and we coordinate with your counsel where it is needed.',
+          points: ['Organized, manageable preparation', 'Coordination with your clinical & legal leaders', 'Readiness support, not legal advice'],
+          placeholder: 'Compliance documentation, photo placeholder', placeholderIcon: 'badge-check' },
+      ],
+      process: {
+        title: 'Our licensure process.', eyebrow: 'How It Works',
+        steps: [
+          { title: 'Assess Requirements', desc: 'We clarify exactly what your situation requires.' },
+          { title: 'Gap Analysis', desc: 'We compare where you are to where you need to be.' },
+          { title: 'Build Documentation', desc: 'We develop the policies and records required.' },
+          { title: 'Prepare Application', desc: 'We assemble a clean, complete package.' },
+          { title: 'Readiness Review', desc: 'We pressure-test for surveys and inspections.' },
+          { title: 'Submit & Maintain', desc: 'We support submission and ongoing compliance.' },
+        ],
+      },
+      benefits: {
+        title: 'What confident compliance gives you.',
+        items: [
+          { title: 'A clearer path to licensure', desc: 'No more guessing at requirements.' },
+          { title: 'Less paperwork stress', desc: 'Organized, manageable documentation.' },
+          { title: 'Survey-ready documentation', desc: 'Walk into inspections prepared.' },
+          { title: 'Accreditation confidence', desc: 'A real plan for CARF or Joint Commission.' },
+          { title: 'Faster program launches', desc: 'Open new sites without stalling.' },
+          { title: 'Ongoing peace of mind', desc: 'Stay compliant long after approval.' },
+        ],
+      },
+      related: ['operations', 'sharepoint', 'consulting'],
+      cta: { title: 'Opening, expanding, or preparing for a survey?', body: 'Schedule a consultation and we will map your path to licensure and compliance.' },
+    }), 'services');
+  </script>
+</body>
+</html>

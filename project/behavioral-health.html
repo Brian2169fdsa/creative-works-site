@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Behavioral Health Organizations | Creative Works</title>
+<meta name="description" content="Creative Works helps behavioral health organizations strengthen the systems behind care, marketing, SharePoint, IT, staffing, and operations, tailored to mission-driven teams.">
+<meta property="og:title" content="Behavioral Health Organizations | Creative Works">
+<meta property="og:description" content="We understand your world. We help you strengthen the systems behind care.">
+<meta property="og:image" content="assets/photo-hero.jpg">
+<link rel="canonical" href="https://www.creativeworksaz.com/industries/behavioral-health">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { Container, Section, ImageFrame, CheckGrid, PillList, ProcessSteps, Breadcrumb, SERVICES, CONSULT_HREF, mount } = window.CW;
+    const { Button, Eyebrow, SectionHeading, ServiceCard, CTASection } = window.CreativeWorksDesignSystem_42e791;
+
+    const WHO = ['Mental Health Clinics', 'Substance Use Treatment', 'Outpatient Programs', 'Residential Treatment Centers', 'Recovery Organizations', 'Community Behavioral Health', 'Psychiatric Service Providers', 'Integrated Care Teams'];
+
+    const CHALLENGES = [
+      { title: 'Staffing shortages', desc: 'Too few hands, too much to do, and leaders covering the gaps.' },
+      { title: 'Operational complexity', desc: 'Many moving parts with little structure holding them together.' },
+      { title: 'Documentation burden', desc: 'Endless paperwork pulling staff away from people.' },
+      { title: 'Referral competition', desc: 'Standing out and staying top-of-mind with partners.' },
+      { title: 'Technology gaps', desc: 'Tools that do not talk to each other or break down.' },
+      { title: 'Internal file chaos', desc: 'Documents scattered where no one can find them.' },
+      { title: 'Compliance-sensitive workflows', desc: 'Processes that must be careful, consistent, and documented.' },
+      { title: 'Leadership overload', desc: 'Directors wearing five hats and running out of hours.' },
+    ];
+
+    const USE_CASES = [
+      { icon: 'rocket', t: 'Launching a new program' },
+      { icon: 'door-open', t: 'Improving intake operations' },
+      { icon: 'folder-cog', t: 'Organizing internal documents' },
+      { icon: 'users', t: 'Supporting staff transitions' },
+      { icon: 'megaphone', t: 'Building marketing campaigns' },
+      { icon: 'handshake', t: 'Creating referral partner materials' },
+      { icon: 'user-plus', t: 'Improving staff onboarding' },
+      { icon: 'grid-2x2', t: 'Setting up Microsoft 365 & SharePoint' },
+    ];
+
+    function Page() {
+      return (
+        <React.Fragment>
+          <section style={{ background: 'var(--cw-cloud)', padding: 'clamp(2.5rem, 5vw, 4.5rem) 0' }}>
+            <Container>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 'clamp(2rem, 4vw, 4rem)', alignItems: 'center' }}>
+                <div>
+                  <Breadcrumb items={[{ label: 'Home', href: 'index.html' }, { label: 'Industries', href: 'industries.html' }, { label: 'Behavioral Health' }]} />
+                  <Eyebrow>Behavioral Health Organizations</Eyebrow>
+                  <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--fs-h1-fluid)', lineHeight: 'var(--lh-tight)', letterSpacing: 'var(--ls-tight)', color: 'var(--text-heading)', margin: '16px 0 0' }}>We understand your world, because it is the only one we work in.</h1>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body-lg)', lineHeight: 'var(--lh-normal)', color: 'var(--text-muted)', margin: '20px 0 0', maxWidth: '54ch' }}>
+                    Behavioral health organizations carry an enormous mission with limited resources. Creative Works helps you strengthen the systems behind care so your team can spend more time with the people who need them.
+                  </p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, marginTop: 28 }}>
+                    <Button href={CONSULT_HREF} arrow size="lg">Schedule a Consultation</Button>
+                    <Button href="contact.html" variant="secondary" arrow size="lg">Talk With Our Team</Button>
+                  </div>
+                </div>
+                <ImageFrame src="assets/photo-hero.jpg" alt="Behavioral health leadership team meeting" />
+              </div>
+            </Container>
+          </section>
+
+          <Section>
+            <SectionHeading align="center" eyebrow="Who We Support" title="The teams behind behavioral health care." style={{ marginBottom: 36 }} />
+            <div style={{ display: 'flex', justifyContent: 'center' }}><PillList items={WHO} icon="building-2" /></div>
+          </Section>
+
+          <Section tone="cloud">
+            <SectionHeading eyebrow="Challenges We Understand" title="The pressures you live with every day." lead="We have worked alongside teams like yours. These are the realities we design around, not assumptions we make from the outside." style={{ marginBottom: 36 }} />
+            <CheckGrid items={CHALLENGES} columns={2} icon="alert-circle" />
+          </Section>
+
+          <Section>
+            <SectionHeading align="center" eyebrow="How We Help" title="A full suite of services, tailored to behavioral health." lead="Each of our services adapts to the realities of mission-driven care." style={{ marginBottom: 44 }} />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 20 }}>
+              {SERVICES.map((s) => <ServiceCard key={s.slug} icon={<i data-lucide={s.icon} style={{ width: 30, height: 30 }}></i>} title={s.title} description={s.short} href={s.href} />)}
+            </div>
+          </Section>
+
+          <Section tone="cloud">
+            <SectionHeading align="center" eyebrow="Use Cases" title="Where organizations bring us in." style={{ marginBottom: 40 }} />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+              {USE_CASES.map((u) => (
+                <div key={u.t} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '18px 20px', background: '#fff', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-xs)' }}>
+                  <i data-lucide={u.icon} style={{ width: 22, height: 22, color: 'var(--cw-orange)', flex: '0 0 auto' }}></i>
+                  <span style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 'var(--fs-body)', color: 'var(--text-heading)' }}>{u.t}</span>
+                </div>
+              ))}
+            </div>
+          </Section>
+
+          <CTASection title="Let's strengthen the systems behind your care." body="Schedule a consultation and we will help you find the highest-impact place to start." buttonLabel="Schedule a Consultation" href={CONSULT_HREF} phoenixSrc="assets/phoenix-mark.png" />
+        </React.Fragment>
+      );
+    }
+
+    mount(<Page />, 'industries');
+  </script>
+</body>
+</html>

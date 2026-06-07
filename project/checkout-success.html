@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment Received | Creative Works</title>
+<meta name="description" content="Your payment was received. Creative Works will follow up shortly.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { Section, PRODUCTS, CONTACT, mount } = window.CW;
+    const { Button, Eyebrow } = window.CreativeWorksDesignSystem_42e791;
+    const product = PRODUCTS[new URLSearchParams(location.search).get('type')];
+
+    const NEXT = [
+      'You\u2019ll receive an email confirmation and receipt.',
+      'Our team reviews your information and prepares for next steps.',
+      'We reach out within one business day to schedule your time.',
+    ];
+
+    function Page() {
+      return (
+        <Section pad="clamp(2.5rem, 6vw, 5rem)">
+          <div style={{ maxWidth: 640, margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ width: 84, height: 84, borderRadius: '50%', background: 'color-mix(in srgb, var(--cw-success) 14%, white)', border: '1px solid color-mix(in srgb, var(--cw-success) 30%, white)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>
+              <i data-lucide="check" style={{ width: 44, height: 44, color: 'var(--cw-success)' }}></i>
+            </div>
+            <Eyebrow style={{ alignItems: 'center' }}>Payment Received</Eyebrow>
+            <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--fs-h1-fluid)', lineHeight: 'var(--lh-tight)', letterSpacing: 'var(--ls-tight)', color: 'var(--text-heading)', margin: '14px 0 0' }}>Thank you, your payment is confirmed.</h1>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body-lg)', lineHeight: 'var(--lh-normal)', color: 'var(--text-muted)', margin: '18px auto 0', maxWidth: '46ch' }}>
+              {product ? <React.Fragment>We\u2019ve received your payment for the <strong style={{ color: 'var(--text-heading)' }}>{product.name}</strong>. </React.Fragment> : null}
+              Creative Works will follow up shortly to get started.
+            </p>
+
+            <div style={{ background: 'var(--cw-cloud)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-xl)', padding: 'clamp(1.5rem, 4vw, 2rem)', margin: '32px 0', textAlign: 'left' }}>
+              <div style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 'var(--ls-label)', color: 'var(--text-muted)', marginBottom: 16 }}>What happens next</div>
+              <div style={{ display: 'grid', gap: 14 }}>
+                {NEXT.map((s, i) => (
+                  <div key={i} style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
+                    <span style={{ width: 30, height: 30, borderRadius: '50%', flex: '0 0 auto', background: 'var(--cw-gradient-phoenix)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 14 }}>{i + 1}</span>
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body)', color: 'var(--text-body)' }}>{s}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center' }}>
+              <Button href="index.html" arrow size="lg">Back to Home</Button>
+              <Button href="contact.html" variant="secondary" arrow size="lg">Contact Us</Button>
+            </div>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', color: 'var(--text-muted)', marginTop: 24 }}>
+              Questions about your payment? Email <a href={'mailto:' + CONTACT.email} style={{ color: 'var(--cw-orange)', fontWeight: 600, textDecoration: 'none' }}>{CONTACT.email}</a>.
+            </p>
+          </div>
+        </Section>
+      );
+    }
+
+    mount(<Page />, null);
+  </script>
+</body>
+</html>

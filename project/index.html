@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Works | Full-Service Support for Behavioral Health Organizations</title>
+<meta name="description" content="Creative Works is a Phoenix-based professional services partner helping behavioral health organizations strengthen the systems behind care, marketing, SharePoint setup, IT services, staffing, and operational support.">
+<meta property="og:title" content="Creative Works | Professional Services for Behavioral Health">
+<meta property="og:description" content="We help behavioral health organizations strengthen the systems behind care.">
+<meta property="og:image" content="assets/photo-hero.jpg">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.creativeworksaz.com/">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;}
+  img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){
+    .cw-desktop-nav{display:none !important;}
+    .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;}
+  }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { Container, Section, IconBadge, ImageFrame, ProcessSteps, PillList, SERVICES, CONSULT_HREF, mount } = window.CW;
+    const { Button, Eyebrow, SectionHeading, ServiceCard, FeatureCard, StatsBand, CTASection, TestimonialCard } = window.CreativeWorksDesignSystem_42e791;
+
+    const TRUST = ['Strategic. Reliable. Human.', 'Phoenix-Based', 'Mission-Focused'];
+
+    function HomeHero() {
+      return (
+        <section style={{ background: 'var(--color-bg)', padding: 'clamp(2.5rem, 5vw, 4.5rem) 0' }}>
+          <Container>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 'clamp(2rem, 4vw, 4rem)', alignItems: 'center' }}>
+              <div>
+                <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--fs-h1-fluid)', lineHeight: 'var(--lh-tight)', letterSpacing: 'var(--ls-tight)', color: 'var(--text-heading)', margin: 0 }}>
+                  Full-Service Support for Behavioral Health Organizations
+                </h1>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body-lg)', lineHeight: 'var(--lh-normal)', color: 'var(--text-muted)', margin: '20px 0 0', maxWidth: '52ch' }}>
+                  We partner with behavioral health organizations to strengthen operations, elevate impact, and build a better future for the communities you serve.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, marginTop: 28 }}>
+                  <Button href={CONSULT_HREF} arrow size="lg">Schedule a Consultation</Button>
+                  <Button href="services.html" variant="secondary" arrow size="lg">Explore Our Services</Button>
+                </div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px 28px', marginTop: 30 }}>
+                  {TRUST.map((t) => (
+                    <span key={t} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', fontWeight: 600, color: 'var(--text-heading)' }}>
+                      <i data-lucide="check-circle-2" style={{ width: 18, height: 18, color: 'var(--cw-orange)' }}></i>{t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <ImageFrame alt="Behavioral health leaders meeting around a table" />
+            </div>
+          </Container>
+        </section>
+      );
+    }
+
+    function PillarStrip() {
+      return (
+        <section style={{ padding: '0 var(--container-pad)', marginTop: -32, position: 'relative', zIndex: 2 }}>
+          <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', background: '#fff', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-xl)', boxShadow: 'var(--shadow-card)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', overflow: 'hidden' }}>
+            {SERVICES.map((p, i) => (
+              <a key={p.title} href={p.href} style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 10, padding: '26px 18px', borderLeft: i === 0 ? 'none' : '1px solid var(--border-subtle)', transition: 'background var(--dur-base)' }}
+                onMouseEnter={(e) => e.currentTarget.style.background = 'var(--cw-cloud)'}
+                onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}>
+                <i data-lucide={p.icon} style={{ width: 30, height: 30, color: 'var(--cw-orange)' }}></i>
+                <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'var(--fs-body)', color: 'var(--text-heading)' }}>{p.title}</span>
+                <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--text-muted)', lineHeight: 1.45 }}>{p.tagline}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    }
+
+    const WHY = [
+      { icon: 'target', title: 'Strategic', desc: 'Thoughtful solutions aligned with your mission and goals.' },
+      { icon: 'circle-check-big', title: 'Reliable', desc: 'You can count on us to show up, follow through, and deliver.' },
+      { icon: 'heart-handshake', title: 'Human', desc: 'We lead with empathy and build lasting relationships.' },
+      { icon: 'compass', title: 'Mission-Focused', desc: 'We exist to strengthen the systems behind care.' },
+    ];
+    function WhyGrid() {
+      return (
+        <Section>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 'clamp(1.5rem, 3vw, 2.5rem)', alignItems: 'start' }}>
+            <SectionHeading eyebrow="Why Creative Works" title="Strategy, technology, and people working together." lead="We combine strategy, technology, and people to deliver solutions that make a real difference. Our approach is built around what matters most: clarity, reliability, and sustainable growth." />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 16 }}>
+              {WHY.map((w) => <FeatureCard key={w.title} icon={<i data-lucide={w.icon} style={{ width: 26, height: 26 }}></i>} title={w.title} description={w.desc} />)}
+            </div>
+          </div>
+        </Section>
+      );
+    }
+
+    const ROOT_POINTS = [
+      { title: 'Local Expertise', desc: 'Proudly based in Phoenix, serving organizations across Arizona and beyond.' },
+      { title: 'Behavioral Health Understanding', desc: 'We focus on the realities of mission-driven care, your mission is our mission.' },
+      { title: 'Partners in Progress', desc: 'We are invested in your long-term success and community impact.' },
+    ];
+    function PhoenixRooted() {
+      return (
+        <Section tone="cloud">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(2rem, 4vw, 3.5rem)', alignItems: 'center' }}>
+            <ImageFrame alt="Phoenix, Arizona skyline at sunset" curve="bl" ratio="5 / 3.2" shadow="var(--shadow-card)" />
+            <div>
+              <Eyebrow>Rooted in Phoenix</Eyebrow>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--fs-h2-fluid)', lineHeight: 'var(--lh-snug)', color: 'var(--text-heading)', margin: '14px 0 0' }}>Rooted in Phoenix. Driven by Purpose.</h2>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body-lg)', lineHeight: 'var(--lh-normal)', color: 'var(--text-muted)', margin: '14px 0 24px', maxWidth: '54ch' }}>
+                Creative Works is a Phoenix-based professional services firm dedicated to supporting behavioral health organizations. We understand the operational demands of mission-driven care and help teams build stronger organizations that change lives.
+              </p>
+              <div style={{ display: 'grid', gap: 16 }}>
+                {ROOT_POINTS.map((p) => (
+                  <div key={p.title} style={{ display: 'flex', gap: 12 }}>
+                    <i data-lucide="circle-check-big" style={{ width: 22, height: 22, color: 'var(--cw-orange)', flex: '0 0 auto', marginTop: 2 }}></i>
+                    <div>
+                      <div style={{ fontFamily: 'var(--font-body)', fontWeight: 700, color: 'var(--text-heading)', fontSize: 'var(--fs-body)' }}>{p.title}</div>
+                      <div style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', color: 'var(--text-muted)', lineHeight: 1.55 }}>{p.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Section>
+      );
+    }
+
+    function ServicesGrid() {
+      return (
+        <Section id="services">
+          <SectionHeading align="center" eyebrow="Our Services" title="A full suite of services. One trusted partner." style={{ marginBottom: 44 }} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 20 }}>
+            {SERVICES.map((s) => <ServiceCard key={s.title} icon={<i data-lucide={s.icon} style={{ width: 30, height: 30 }}></i>} title={s.title} description={s.short} href={s.href} />)}
+          </div>
+        </Section>
+      );
+    }
+
+    const WHO = ['Mental Health Clinics', 'Substance Use Treatment', 'Recovery Organizations', 'Outpatient Programs', 'Residential Treatment', 'Community Behavioral Health', 'Integrated Care Providers', 'Human Services Organizations'];
+    function WhoWeHelp() {
+      return (
+        <Section tone="cloud">
+          <SectionHeading align="center" eyebrow="Who We Help" title="Built for mission-driven behavioral health organizations." lead="From growing clinics to established treatment centers, we support the teams working to make care more accessible and effective." style={{ marginBottom: 36 }} />
+          <div style={{ display: 'flex', justifyContent: 'center' }}><PillList items={WHO} /></div>
+        </Section>
+      );
+    }
+
+    const STEPS = [
+      { title: 'Discover', desc: 'We learn your organization, your mission, and the challenges slowing your team down.' },
+      { title: 'Assess', desc: 'We map your systems, marketing, staffing, and operations to find the real gaps.' },
+      { title: 'Build', desc: 'We design and implement solutions tailored to how your team actually works.' },
+      { title: 'Support', desc: 'We stay with you, training, refining, and supporting long-term success.' },
+    ];
+    function ProcessPreview() {
+      return (
+        <Section>
+          <SectionHeading align="center" eyebrow="How We Work" title="A clear path from challenge to lasting change." style={{ marginBottom: 44 }} />
+          <ProcessSteps steps={STEPS} />
+        </Section>
+      );
+    }
+
+    function Home() {
+      return (
+        <React.Fragment>
+          <HomeHero />
+          <PillarStrip />
+          <WhyGrid />
+          <PhoenixRooted />
+          <ServicesGrid />
+          <WhoWeHelp />
+          <ProcessPreview />
+          <StatsBand
+            title="Stronger Organizations. Better Outcomes."
+            subtitle="We help behavioral health organizations strengthen the systems behind care."
+            phoenixSrc="assets/phoenix-mark.png"
+            stats={[
+              { value: '100+', label: 'Organizations Supported' },
+              { value: '15+', label: 'Years Combined Experience' },
+              { value: '98%', label: 'Client Satisfaction Rate' },
+            ]}
+          >
+            <div style={{ flex: '1 1 300px', minWidth: 280, borderLeft: '1px solid rgba(255, 255, 255, 0.14)', paddingLeft: 'clamp(1.25rem, 3vw, 2.5rem)' }}>
+              <TestimonialCard inverse quote="Creative Works is a true partner. They understand our world and consistently deliver solutions that make our organization stronger and more effective." name={<React.Fragment>Jericho Chebultz, CEO<br /><span style={{ fontWeight: 400, color: 'var(--text-on-inverse-muted)' }}>Behavioral Health Organization</span></React.Fragment>} />
+            </div>
+          </StatsBand>
+          <CTASection title="Let's Build a Stronger Future, Together." body="Whether you need strategic guidance, better systems, or the right people, Creative Works is here to help your mission thrive." buttonLabel="Schedule a Consultation" href={CONSULT_HREF} phoenixSrc="assets/phoenix-mark.png" />
+        </React.Fragment>
+      );
+    }
+
+    mount(<Home />, 'home');
+  </script>
+</body>
+</html>

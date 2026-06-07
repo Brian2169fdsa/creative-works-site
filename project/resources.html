@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources & Insights | Creative Works</title>
+<meta name="description" content="Practical insights for behavioral health leaders, guidance on marketing, SharePoint, IT, staffing, operations, and leadership from Creative Works.">
+<meta property="og:title" content="Resources & Insights | Creative Works">
+<meta property="og:description" content="Practical insights for behavioral health leaders.">
+<meta property="og:image" content="assets/phoenix-mark.png">
+<link rel="canonical" href="https://www.creativeworksaz.com/resources">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { Container, Section, PageHero, Placeholder, CONSULT_HREF, mount } = window.CW;
+    const { Eyebrow, SectionHeading, CTASection, Badge, Button, Input } = window.CreativeWorksDesignSystem_42e791;
+
+    const CATS = [
+      { name: 'Marketing', icon: 'megaphone' }, { name: 'SharePoint', icon: 'folder-cog' },
+      { name: 'IT Services', icon: 'shield-check' }, { name: 'Staffing', icon: 'users' },
+      { name: 'Operations', icon: 'refresh-cw' }, { name: 'BH Leadership', icon: 'compass' },
+    ];
+
+    const FEATURED = { cat: 'Operations', title: 'The hidden cost of disorganized systems in behavioral health', excerpt: 'When documents are scattered and workflows are unclear, the cost is not just time, it is staff burnout, slower onboarding, and missed opportunities to serve. Here is how to spot it and where to start fixing it.', read: '7 min read', date: 'June 2026' };
+
+    const ARTICLES = [
+      { cat: 'Marketing', title: 'Building referral partner trust without a big budget', read: '5 min read', date: 'May 2026' },
+      { cat: 'SharePoint', title: 'A simple SharePoint structure every clinic can use', read: '6 min read', date: 'May 2026' },
+      { cat: 'IT Services', title: 'Microsoft 365 onboarding: a checklist for new staff', read: '4 min read', date: 'Apr 2026' },
+      { cat: 'Staffing', title: 'Bridging staffing gaps without burning out your team', read: '5 min read', date: 'Apr 2026' },
+      { cat: 'Operations', title: 'How to map a workflow your whole team understands', read: '8 min read', date: 'Mar 2026' },
+      { cat: 'BH Leadership', title: 'Five systems every growing program should formalize', read: '6 min read', date: 'Mar 2026' },
+    ];
+
+    function ArticleCard({ a }) {
+      return (
+        <a href="resource-article.html" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)', overflow: 'hidden', height: '100%' }}>
+          <Placeholder label={a.cat} ratio="16 / 9" icon="newspaper" style={{ borderRadius: 0, border: 'none', borderBottom: '1px solid var(--border-subtle)' }} />
+          <div style={{ padding: '22px 22px 24px', display: 'flex', flexDirection: 'column', gap: 12, flex: 1 }}>
+            <Badge tone="orange">{a.cat}</Badge>
+            <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'var(--fs-h4)', color: 'var(--text-heading)', margin: 0, lineHeight: 1.25 }}>{a.title}</h3>
+            <div style={{ marginTop: 'auto', display: 'flex', gap: 14, fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--text-muted)' }}>
+              <span>{a.date}</span><span aria-hidden="true">·</span><span>{a.read}</span>
+            </div>
+          </div>
+        </a>
+      );
+    }
+
+    function Page() {
+      return (
+        <React.Fragment>
+          <PageHero
+            eyebrow="Resources & Insights"
+            title="Practical insights for behavioral health leaders."
+            lead="Guidance on the systems behind care, marketing, SharePoint, IT, staffing, operations, and leadership. Written for the people doing the work."
+            tone="cloud"
+            align="center"
+          />
+
+          <Section>
+            <a href="resource-article.html" style={{ textDecoration: 'none', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(1.5rem, 4vw, 2.5rem)', alignItems: 'center', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-xl)', boxShadow: 'var(--shadow-card)', padding: 'clamp(1.25rem, 3vw, 2rem)' }}>
+              <Placeholder label="Featured article image" ratio="5 / 3.4" icon="newspaper" />
+              <div>
+                <Badge tone="orange">Featured · {FEATURED.cat}</Badge>
+                <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--fs-h3)', color: 'var(--text-heading)', margin: '14px 0 0', lineHeight: 1.2 }}>{FEATURED.title}</h2>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body-lg)', lineHeight: 'var(--lh-normal)', color: 'var(--text-muted)', margin: '14px 0 0' }}>{FEATURED.excerpt}</p>
+                <div style={{ display: 'flex', gap: 14, margin: '16px 0 20px', fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--text-muted)' }}>
+                  <span>{FEATURED.date}</span><span aria-hidden="true">·</span><span>{FEATURED.read}</span>
+                </div>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 'var(--fs-body)', color: 'var(--cw-orange)' }}>Read the article <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </Section>
+
+          <Section tone="cloud">
+            <SectionHeading align="center" eyebrow="Browse by Topic" title="Find insights for your role." style={{ marginBottom: 36 }} />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: 14 }}>
+              {CATS.map((c) => (
+                <a key={c.name} href="#articles" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 12, padding: '18px 20px', background: '#fff', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-xs)' }}>
+                  <i data-lucide={c.icon} style={{ width: 22, height: 22, color: 'var(--cw-orange)', flex: '0 0 auto' }}></i>
+                  <span style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 'var(--fs-sm)', color: 'var(--text-heading)' }}>{c.name}</span>
+                </a>
+              ))}
+            </div>
+          </Section>
+
+          <Section id="articles">
+            <SectionHeading eyebrow="Latest Articles" title="From the Creative Works team." style={{ marginBottom: 40 }} />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
+              {ARTICLES.map((a, i) => <ArticleCard key={i} a={a} />)}
+            </div>
+          </Section>
+
+          <Section tone="navy">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1.5rem, 4vw, 3rem)', alignItems: 'center' }}>
+              <div>
+                <Eyebrow color="var(--cw-orange-soft)">Stay In The Loop</Eyebrow>
+                <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--fs-h3)', color: '#fff', margin: '14px 0 0' }}>Insights for behavioral health leaders, in your inbox.</h2>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body)', color: 'var(--text-on-inverse-muted)', margin: '12px 0 0' }}>Occasional, practical, and never spammy. Unsubscribe anytime.</p>
+              </div>
+              <form onSubmit={(e) => { e.preventDefault(); alert('Thanks! (Placeholder, connect to your email tool.)'); }} style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                <div style={{ flex: '1 1 220px' }}><Input label="" type="email" placeholder="you@organization.org" aria-label="Email address" required /></div>
+                <div style={{ display: 'flex', alignItems: 'flex-end' }}><Button type="submit" arrow size="lg">Subscribe</Button></div>
+              </form>
+            </div>
+          </Section>
+
+          <CTASection title="Prefer to just talk it through?" body="Schedule a consultation and we will share guidance specific to your organization." buttonLabel="Schedule a Consultation" href={CONSULT_HREF} phoenixSrc="assets/phoenix-mark.png" />
+        </React.Fragment>
+      );
+    }
+
+    mount(<Page />, 'resources');
+  </script>
+</body>
+</html>

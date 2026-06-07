@@ -1,0 +1,56 @@
+:root {
+  /* ============ BRAND PALETTE — base ============ */
+  /* Navy — the trust color. Used for headings, dark section blocks, footer. */
+  --cw-navy-deep:      #061E3A;  /* deepest — footer, dark blocks */
+  --cw-navy-midnight:  #0A2540;  /* primary navy — headings, nav text */
+  --cw-navy-700:       #143257;  /* hover/raised navy */
+  --cw-navy-500:       #2B4A73;  /* muted navy, secondary text on light */
+
+  /* Phoenix Orange — the action / energy color. CTAs, icons, accents, stats. */
+  --cw-orange:         #F15A24;  /* primary orange */
+  --cw-orange-burnt:   #D94A12;  /* hover / pressed */
+  --cw-orange-soft:    #FF7A2F;  /* gradient top, highlights */
+
+  /* Neutrals */
+  --cw-white:          #FFFFFF;
+  --cw-cloud:          #F8FAFC;  /* page tint / alt section background */
+  --cw-gray-100:       #F1F4F8;
+  --cw-gray-200:       #E5E7EB;  /* light borders, dividers */
+  --cw-gray-400:       #B6BFCB;
+  --cw-gray-600:       #5B6573;  /* muted body text */
+  --cw-charcoal:       #1F2937;  /* body text on light */
+
+  /* Accents */
+  --cw-soft-blue:      #EAF4FF;
+  --cw-warm-sand:      #F7EFE5;
+  --cw-success:        #4F8A6D;
+
+  /* Brand gradient (phoenix mark) */
+  --cw-gradient-phoenix: linear-gradient(150deg, var(--cw-orange-soft) 0%, var(--cw-orange) 45%, var(--cw-orange-burnt) 100%);
+  --cw-gradient-cta:     linear-gradient(135deg, var(--cw-orange-soft) 0%, var(--cw-orange) 60%, var(--cw-orange-burnt) 100%);
+
+  /* ============ SEMANTIC ALIASES ============ */
+  --color-bg:            var(--cw-white);
+  --color-bg-alt:        var(--cw-cloud);
+  --color-bg-inverse:    var(--cw-navy-midnight);
+  --color-bg-inverse-deep: var(--cw-navy-deep);
+
+  --text-heading:        var(--cw-navy-midnight);
+  --text-body:           var(--cw-charcoal);
+  --text-muted:          var(--cw-gray-600);
+  --text-on-inverse:     var(--cw-white);
+  --text-on-inverse-muted: #B9C6D6;
+
+  --color-accent:        var(--cw-orange);
+  --color-accent-hover:  var(--cw-orange-burnt);
+  --text-accent:         var(--cw-orange);
+
+  --border-subtle:       var(--cw-gray-200);
+  --border-strong:       var(--cw-gray-400);
+  --divider:             var(--cw-gray-200);
+
+  --surface-card:        var(--cw-white);
+  --surface-card-alt:    var(--cw-cloud);
+
+  --focus-ring:          color-mix(in srgb, var(--cw-orange) 55%, white);
+}

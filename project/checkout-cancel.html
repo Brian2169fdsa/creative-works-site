@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout Canceled | Creative Works</title>
+<meta name="description" content="Your checkout was canceled. No charge was made.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { Section, CONSULT_HREF, mount } = window.CW;
+    const { Button, Eyebrow } = window.CreativeWorksDesignSystem_42e791;
+
+    function Page() {
+      return (
+        <Section pad="clamp(2.5rem, 6vw, 5rem)">
+          <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ width: 84, height: 84, borderRadius: '50%', background: 'var(--cw-cloud)', border: '1px solid var(--border-strong)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>
+              <i data-lucide="undo-2" style={{ width: 40, height: 40, color: 'var(--cw-navy-500)' }}></i>
+            </div>
+            <Eyebrow style={{ alignItems: 'center' }}>Checkout Canceled</Eyebrow>
+            <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--fs-h1-fluid)', lineHeight: 'var(--lh-tight)', letterSpacing: 'var(--ls-tight)', color: 'var(--text-heading)', margin: '14px 0 0' }}>No problem, you weren't charged.</h1>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body-lg)', lineHeight: 'var(--lh-normal)', color: 'var(--text-muted)', margin: '18px auto 0', maxWidth: '46ch' }}>
+              Your checkout was canceled and no payment was processed. Whenever you're ready, you can pick up right where you left off, or reach out with any questions first.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center', marginTop: 32 }}>
+              <Button href={CONSULT_HREF} arrow size="lg">Back to Consultation Options</Button>
+              <Button href="contact.html" variant="secondary" arrow size="lg">Contact Us</Button>
+            </div>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', color: 'var(--text-muted)', marginTop: 24 }}>
+              Not sure which option is right? We're happy to help you decide, no pressure.
+            </p>
+          </div>
+        </Section>
+      );
+    }
+
+    mount(<Page />, null);
+  </script>
+</body>
+</html>

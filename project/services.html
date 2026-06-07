@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | Creative Works, Behavioral Health Professional Services</title>
+<meta name="description" content="Marketing, SharePoint setup, IT services, staffing, and operational support, coordinated under one trusted partner for behavioral health organizations in Phoenix.">
+<meta property="og:title" content="Services | Creative Works">
+<meta property="og:description" content="A full suite of coordinated services. One trusted partner for behavioral health organizations.">
+<meta property="og:image" content="assets/photo-meeting.jpg">
+<link rel="canonical" href="https://www.creativeworksaz.com/services">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { Container, Section, PageHero, ProcessSteps, ProblemSolution, ImageFrame, SERVICES, CONSULT_HREF, mount } = window.CW;
+    const { SectionHeading, ServiceCard, CTASection } = window.CreativeWorksDesignSystem_42e791;
+
+    const DETAIL = {
+      marketing: ['Brand & messaging', 'Social media & ads', 'Referral partner materials'],
+      sharepoint: ['Portals & document libraries', 'Permission structure', 'Migration & training'],
+      salesforce: ['CRM setup & configuration', 'Workflow automation', 'Dashboards & reporting'],
+      it: ['Microsoft 365 & accounts', 'Cybersecurity basics', 'Help desk coordination'],
+      staffing: ['Administrative & intake support', 'Temporary coverage', 'Onboarding support'],
+      operations: ['Workflow mapping & SOPs', 'Process improvement', 'Leadership support'],
+      bps: ['Billing & revenue cycle', 'Intake & admin processes', 'HR & onboarding ops'],
+      consulting: ['Strategic planning', 'Problem-solving support', 'Change leadership'],
+      licensure: ['Licensure applications', 'Policy & compliance', 'Accreditation readiness'],
+    };
+
+    const STEPS = [
+      { title: 'Initial Consultation', desc: 'We learn your organization, mission, and the pressures your team faces.' },
+      { title: 'Needs Assessment', desc: 'We review systems, marketing, staffing, and operations to find the real gaps.' },
+      { title: 'Service Plan', desc: 'We propose a clear, prioritized plan, one service or many, coordinated together.' },
+      { title: 'Implementation', desc: 'We build, configure, and roll out solutions tailored to how your team works.' },
+      { title: 'Ongoing Support', desc: 'We stay with you to train, refine, and support long-term success.' },
+    ];
+
+    function CombinedSupport() {
+      return (
+        <Section>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(2rem, 4vw, 3.5rem)', alignItems: 'center' }}>
+            <ImageFrame alt="Two professionals collaborating" curve="tr" ratio="5 / 4" shadow="var(--shadow-card)" />
+            <div>
+              <SectionHeading eyebrow="One Coordinated Partner" title="Most organizations need more than one kind of support." lead="Marketing reaches your community. Systems keep your team organized. Reliable IT keeps everything running. The right people keep care moving. Strong operations hold it all together. Creative Works connects these so they work as one, instead of five disconnected vendors." />
+              <div style={{ marginTop: 24, display: 'grid', gap: 12 }}>
+                {['Marketing and outreach that builds trust', 'Internal systems that keep documents organized', 'IT reliability your team can count on', 'Staffing coverage when you need it', 'Operational execution that ties it together'].map((t) => (
+                  <div key={t} style={{ display: 'flex', gap: 10, fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body)', color: 'var(--text-body)' }}>
+                    <i data-lucide="circle-check-big" style={{ width: 20, height: 20, color: 'var(--cw-orange)', flex: '0 0 auto', marginTop: 3 }}></i>{t}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Section>
+      );
+    }
+
+    function Page() {
+      return (
+        <React.Fragment>
+          <PageHero
+            eyebrow="Our Services"
+            title="The operational foundation behind better care."
+            lead="Creative Works supports behavioral health organizations across a full suite of coordinated services, so your team can focus on the people you serve, not the systems behind them."
+            primary={{ label: 'Schedule a Consultation', href: CONSULT_HREF }}
+            secondary={{ label: 'Talk With Our Team', href: 'contact.html' }}
+            placeholder="Team planning session, photo placeholder"
+            tone="cloud"
+          />
+
+          <Section>
+            <SectionHeading align="center" eyebrow="Our Full Suite" title="Everything you need to strengthen the systems behind care." style={{ marginBottom: 44 }} />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 20 }}>
+              {SERVICES.map((s) => (
+                <div key={s.slug} style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: '28px 26px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-card)' }}>
+                  <div style={{ color: 'var(--cw-orange)' }}><i data-lucide={s.icon} style={{ width: 32, height: 32 }}></i></div>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'var(--fs-h4)', color: 'var(--text-heading)', margin: 0 }}>{s.title}</h3>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body)', lineHeight: 'var(--lh-normal)', color: 'var(--text-muted)', margin: 0 }}>{s.short}</p>
+                  <div style={{ display: 'grid', gap: 8, marginTop: 2 }}>
+                    {DETAIL[s.slug].map((d) => (
+                      <span key={d} style={{ display: 'flex', gap: 8, fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', color: 'var(--text-body)' }}>
+                        <i data-lucide="check" style={{ width: 16, height: 16, color: 'var(--cw-orange)', flex: '0 0 auto', marginTop: 2 }}></i>{d}
+                      </span>
+                    ))}
+                  </div>
+                  <a href={s.href} style={{ marginTop: 'auto', paddingTop: 6, display: 'inline-flex', alignItems: 'center', gap: 7, fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 'var(--fs-sm)', color: 'var(--cw-orange)', textDecoration: 'none' }}>Learn More <span aria-hidden="true">→</span></a>
+                </div>
+              ))}
+            </div>
+          </Section>
+
+          <CombinedSupport />
+
+          <Section tone="cloud">
+            <SectionHeading align="center" eyebrow="Why It Matters" title="One coordinated partner beats a patchwork of vendors." lead="Juggling separate vendors for marketing, IT, staffing, and operations creates gaps, finger-pointing, and wasted time. Here is the difference." style={{ marginBottom: 44 }} />
+            <ProblemSolution
+              problemTitle="A patchwork of vendors"
+              problems={['Disconnected tools and inconsistent messaging', 'Each vendor owns a silo, no one owns the outcome', 'Repeated onboarding and duplicated context', 'Gaps between marketing, systems, and operations', 'More invoices, more meetings, more overhead']}
+              solutionTitle="One Creative Works partnership"
+              solutions={['Strategy, systems, and people aligned to one plan', 'A single team accountable for results', 'We learn your organization once and apply it everywhere', 'Services that hand off cleanly between each other', 'One relationship, one point of contact, less overhead']}
+            />
+          </Section>
+
+          <Section>
+            <SectionHeading align="center" eyebrow="Our Process" title="A clear path from first call to ongoing support." style={{ marginBottom: 44 }} />
+            <ProcessSteps steps={STEPS} columns={5} />
+          </Section>
+
+          <CTASection title="Not sure where to start?" body="Schedule a consultation and we will help you identify the highest-impact place to begin." buttonLabel="Schedule a Consultation" href={CONSULT_HREF} phoenixSrc="assets/phoenix-mark.png" />
+        </React.Fragment>
+      );
+    }
+
+    mount(<Page />, 'services');
+  </script>
+</body>
+</html>

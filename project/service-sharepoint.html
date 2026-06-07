@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SharePoint Setup | Creative Works for Behavioral Health</title>
+<meta name="description" content="Organized, secure SharePoint environments for behavioral health teams, portals, policy and forms libraries, permissions, migration, and training.">
+<meta property="og:title" content="SharePoint Setup | Creative Works">
+<meta property="og:description" content="Smarter systems. Stronger collaboration. A central home for your team's documents.">
+<meta property="og:image" content="assets/phoenix-mark.png">
+<link rel="canonical" href="https://www.creativeworksaz.com/services/sharepoint-setup">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" src="lib/service-page.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { ServicePage, mount } = window.CW;
+    mount(ServicePage({
+      slug: 'sharepoint', icon: 'folder-cog', eyebrow: 'SharePoint Setup',
+      title: 'A single, organized home for everything your team needs.',
+      lead: 'Your team should not have to dig through scattered folders and old email threads. We build SharePoint environments that are organized, secure, and easy to use, so the right document is always one click away.',
+      heroPlaceholder: 'SharePoint portal, screenshot placeholder',
+      problem: {
+        title: 'When files are everywhere, work slows down.',
+        lead: 'Disorganized documents quietly cost your team hours every week and make onboarding, compliance, and collaboration harder than they should be.',
+        items: [
+          'Files scattered across email and personal folders',
+          'Staff cannot find the current version of a document',
+          'Policies are outdated or duplicated',
+          'Confusion about who can access what',
+          'Poorly organized onboarding materials',
+          'No central staff portal or department structure',
+        ],
+      },
+      provide: {
+        title: 'What we build', eyebrow: 'What We Build',
+        lead: 'A complete internal portal tailored to how your organization actually works.', columns: 4,
+        cards: [
+          { icon: 'home', title: 'SharePoint Homepage', desc: 'A clear front door for your whole team.' },
+          { icon: 'layout-grid', title: 'Department Pages', desc: 'A dedicated space for each part of your org.' },
+          { icon: 'book-marked', title: 'Policy Libraries', desc: 'Current, findable policies in one place.' },
+          { icon: 'list-checks', title: 'Procedure Libraries', desc: 'Step-by-step procedures your team can follow.' },
+          { icon: 'life-buoy', title: 'Staff Resource Center', desc: 'Everything new and current staff need.' },
+          { icon: 'file-text', title: 'Forms Library', desc: 'Standardized, easy-to-find forms.' },
+          { icon: 'graduation-cap', title: 'Training Materials Hub', desc: 'Onboarding and training in one home.' },
+          { icon: 'shield-check', title: 'Permission Groups', desc: 'Clean, role-based access that makes sense.' },
+        ],
+      },
+      sections: [
+        { type: 'architecture', tone: 'white', eyebrow: 'Information Architecture', title: 'A clear structure, from day one.',
+          lead: 'A sample site map we tailor to your organization, so everyone knows exactly where things live.',
+          nodes: [
+            { label: 'Home', icon: 'home' }, { label: 'HR', icon: 'users' }, { label: 'Operations', icon: 'settings-2' },
+            { label: 'Clinical Administration', icon: 'clipboard-list' }, { label: 'Compliance', icon: 'shield-check' },
+            { label: 'Marketing', icon: 'megaphone' }, { label: 'IT Resources', icon: 'server' }, { label: 'Forms', icon: 'file-text' },
+            { label: 'Policies & Procedures', icon: 'book-marked' }, { label: 'Staff Training', icon: 'graduation-cap' },
+          ] },
+      ],
+      process: {
+        title: 'Our implementation process.', eyebrow: 'Implementation',
+        steps: [
+          { title: 'Discovery', desc: 'We learn your teams, documents, and how you work.' },
+          { title: 'File Audit', desc: 'We review what exists, what is current, and what to retire.' },
+          { title: 'Site Architecture', desc: 'We design the structure and naming conventions.' },
+          { title: 'Build', desc: 'We configure the portal, pages, and libraries.' },
+          { title: 'Permissions', desc: 'We set up clean, role-based access groups.' },
+          { title: 'Migration & Training', desc: 'We move your files and train your team to own it.' },
+        ],
+      },
+      benefits: {
+        title: 'What your team gains.',
+        items: [
+          { title: 'Faster access', desc: 'Find the right document in seconds, not minutes.' },
+          { title: 'Less confusion', desc: 'One source of truth for every team.' },
+          { title: 'Better onboarding', desc: 'New staff get up to speed faster.' },
+          { title: 'Cleaner permissions', desc: 'The right people see the right things.' },
+          { title: 'Consistent documentation', desc: 'Standardized naming and structure.' },
+          { title: 'Better collaboration', desc: 'Teams work together instead of in silos.' },
+        ],
+      },
+      related: ['it', 'operations', 'marketing'],
+      cta: { title: 'Ready to build a better internal system?', body: 'Schedule a consultation and we will map a SharePoint structure that fits your organization.' },
+    }), 'services');
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consulting Services | Creative Works for Behavioral Health</title>
+<meta name="description" content="Experienced behavioral health and operations consulting, strategic planning, growth and expansion, operational advisory, change management, and interim leadership.">
+<meta property="og:title" content="Consulting Services | Creative Works">
+<meta property="og:description" content="Experienced guidance for the decisions that matter most.">
+<meta property="og:image" content="assets/phoenix-mark.png">
+<link rel="canonical" href="https://www.creativeworksaz.com/services/consulting">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" src="lib/service-page.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { ServicePage, mount } = window.CW;
+    mount(ServicePage({
+      slug: 'consulting', icon: 'lightbulb', eyebrow: 'Consulting Services',
+      title: 'Experienced guidance for the decisions that matter.',
+      lead: 'Some challenges are bigger than a single project. Our consultants bring behavioral health and operations experience to help you plan growth, solve hard problems, and lead change with confidence.',
+      heroPlaceholder: 'Strategy session, photo placeholder',
+      problem: {
+        title: 'Big decisions are hard to make alone.',
+        lead: 'When you are planning growth, navigating a transition, or untangling a stubborn operational problem, an experienced, objective partner changes everything.',
+        items: [
+          'Planning growth or a new location',
+          'Navigating a merger or transition',
+          'Unclear strategy or competing priorities',
+          'Operational problems with no obvious fix',
+          'Leadership stretched too thin',
+          'A need for an objective outside perspective',
+        ],
+      },
+      provide: {
+        title: 'How we help', eyebrow: 'How We Help',
+        lead: 'Advisory support across the strategic and operational decisions you face.', columns: 4,
+        cards: [
+          { icon: 'target', title: 'Strategic Planning', desc: 'Set a clear direction and a plan to get there.' },
+          { icon: 'trending-up', title: 'Growth & Expansion', desc: 'Plan new programs, sites, or service lines.' },
+          { icon: 'settings-2', title: 'Operational Advisory', desc: 'Diagnose and solve operational challenges.' },
+          { icon: 'compass', title: 'Leadership Support', desc: 'A trusted thought partner for your leaders.' },
+          { icon: 'refresh-cw', title: 'Change Management', desc: 'Lead change your team will actually adopt.' },
+          { icon: 'clipboard-check', title: 'Organizational Assessment', desc: 'An objective read on where you stand.' },
+          { icon: 'calculator', title: 'Operational Modeling', desc: 'Model decisions before you make them.' },
+          { icon: 'user-cog', title: 'Interim Leadership', desc: 'Experienced hands during a transition.' },
+        ],
+      },
+      sections: [
+        { type: 'callout', tone: 'cloud', eyebrow: 'How We Work', title: 'Practical advice you can actually act on.',
+          body: 'We are not the kind of consultants who hand you a slide deck and disappear. We work alongside your team, ground our recommendations in your reality, and stay involved to help you execute, not just plan.',
+          points: ['Recommendations grounded in your reality', 'A partner through execution, not just planning', 'Honest, objective perspective when you need it'],
+          placeholder: 'Advisory workshop, photo placeholder', placeholderIcon: 'lightbulb' },
+      ],
+      process: {
+        title: 'Our consulting approach.', eyebrow: 'How It Works',
+        steps: [
+          { title: 'Listen & Assess', desc: 'We start by deeply understanding your situation.' },
+          { title: 'Define the Problem', desc: 'We get clear on the real question to solve.' },
+          { title: 'Develop Options', desc: 'We lay out practical paths and trade-offs.' },
+          { title: 'Recommend a Path', desc: 'We give you a clear, honest recommendation.' },
+          { title: 'Support Execution', desc: 'We stay involved to help you make it happen.' },
+        ],
+      },
+      benefits: {
+        title: 'What experienced guidance delivers.',
+        items: [
+          { title: 'Clearer strategy', desc: 'A direction your whole team understands.' },
+          { title: 'Confident decisions', desc: 'Move forward without second-guessing.' },
+          { title: 'An objective perspective', desc: 'Insight that is not tangled in internal politics.' },
+          { title: 'Faster problem-solving', desc: 'Experience that shortcuts the trial and error.' },
+          { title: 'Stronger leadership capacity', desc: 'A partner who lightens the load.' },
+          { title: 'Momentum on change', desc: 'Initiatives that move instead of stalling.' },
+        ],
+      },
+      related: ['operations', 'licensure', 'staffing'],
+      cta: { title: 'Facing a decision you don\u2019t want to make alone?', body: 'Schedule a consultation and talk it through with an experienced partner who knows your world.' },
+    }), 'services');
+  </script>
+</body>
+</html>

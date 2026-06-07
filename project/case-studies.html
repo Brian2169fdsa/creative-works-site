@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Studies | Creative Works Results</title>
+<meta name="description" content="Stronger organizations and better outcomes, example case studies across SharePoint, marketing, IT, staffing, and operations for behavioral health organizations.">
+<meta property="og:title" content="Case Studies | Creative Works">
+<meta property="og:description" content="Real-world examples of stronger systems and better outcomes.">
+<meta property="og:image" content="assets/phoenix-mark.png">
+<link rel="canonical" href="https://www.creativeworksaz.com/case-studies">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { Container, Section, PageHero, Placeholder, CONSULT_HREF, mount } = window.CW;
+    const { Eyebrow, SectionHeading, CTASection, Badge, StatsBand } = window.CreativeWorksDesignSystem_42e791;
+
+    const CATS = ['All', 'SharePoint', 'Marketing', 'IT', 'Staffing', 'Operations'];
+
+    const CASES = [
+      { cat: 'SharePoint', client: 'Outpatient Behavioral Health Clinic', icon: 'folder-cog',
+        challenge: 'Staff spent hours hunting for current policies and forms across email and shared drives.',
+        solution: 'We built a structured SharePoint portal with department pages, policy and forms libraries, and clean permissions.',
+        result: 'Document retrieval time dropped dramatically and onboarding became far smoother.',
+        services: ['SharePoint Setup', 'Operations'] },
+      { cat: 'Marketing', client: 'Substance Use Treatment Provider', icon: 'megaphone',
+        challenge: 'A strong program with weak community awareness and inconsistent referral materials.',
+        solution: 'We refreshed brand messaging, rebuilt referral collateral, and launched targeted social campaigns.',
+        result: 'More consistent referral partner engagement and a clearer, more professional presence.',
+        services: ['Marketing'] },
+      { cat: 'IT', client: 'Community Behavioral Health Agency', icon: 'shield-check',
+        challenge: 'Messy Microsoft 365 setup, inconsistent onboarding, and no clear IT point of contact.',
+        solution: 'We standardized accounts and access, tightened security basics, and set up help desk routing.',
+        result: 'Fewer access issues, faster onboarding, and a reliable path to resolve problems.',
+        services: ['IT Services', 'SharePoint Setup'] },
+      { cat: 'Staffing', client: 'Residential Treatment Center', icon: 'users',
+        challenge: 'A sudden administrative gap left leadership covering intake and operations work.',
+        solution: 'We coordinated temporary administrative and intake support and clarified key roles.',
+        result: 'Leadership reclaimed time to lead while continuity of care was protected.',
+        services: ['Staffing Support', 'Operations'] },
+      { cat: 'Operations', client: 'Integrated Care Organization', icon: 'refresh-cw',
+        challenge: 'Unclear workflows and manual workarounds were slowing the whole organization down.',
+        solution: 'We mapped current workflows, developed SOPs, and implemented a clearer operating structure.',
+        result: 'More consistent operations, better accountability, and a calmer, more confident team.',
+        services: ['Operational Support'] },
+      { cat: 'Marketing', client: 'Recovery Organization', icon: 'megaphone',
+        challenge: 'Launching a new program with no campaign plan and limited marketing capacity.',
+        solution: 'We built a launch campaign, landing page, ad creative, and a content calendar.',
+        result: 'A confident launch with materials the team could keep running themselves.',
+        services: ['Marketing', 'SharePoint Setup'] },
+    ];
+
+    function CaseCard({ c }) {
+      return (
+        <article style={{ display: 'flex', flexDirection: 'column', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-card)', overflow: 'hidden', height: '100%' }}>
+          <div style={{ position: 'relative' }}>
+            <Placeholder slot={'case-' + c.client} label={c.client + ', drop a project photo'} ratio="16 / 9" style={{ borderRadius: 0 }} />
+            <span style={{ position: 'absolute', top: 14, left: 14 }}><Badge tone="orange">{c.cat}</Badge></span>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: '24px 24px', flex: 1 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <div style={{ color: 'var(--cw-orange)' }}><i data-lucide={c.icon} style={{ width: 28, height: 28 }}></i></div>
+          </div>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'var(--fs-h4)', color: 'var(--text-heading)', margin: 0 }}>{c.client}</h3>
+          <div style={{ display: 'grid', gap: 12 }}>
+            {[['Challenge', c.challenge], ['Solution', c.solution], ['Result', c.result]].map(([k, v]) => (
+              <div key={k}>
+                <div style={{ fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 'var(--ls-label)', color: k === 'Result' ? 'var(--cw-orange)' : 'var(--text-muted)', marginBottom: 4 }}>{k}</div>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', lineHeight: 'var(--lh-normal)', color: 'var(--text-body)', margin: 0 }}>{v}</p>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 'auto', paddingTop: 6 }}>
+            {c.services.map((s) => <span key={s} style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 600, color: 'var(--cw-navy-500)', background: 'var(--cw-cloud)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-pill)', padding: '4px 11px' }}>{s}</span>)}
+          </div>
+          <a href="contact.html" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 'var(--fs-sm)', color: 'var(--cw-orange)', textDecoration: 'none' }}>Discuss a similar project <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      );
+    }
+
+    function Grid() {
+      const [cat, setCat] = React.useState('All');
+      const shown = cat === 'All' ? CASES : CASES.filter((c) => c.cat === cat);
+      return (
+        <Section>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 16, marginBottom: 16, flexWrap: 'wrap' }}>
+            <Badge tone="soft">Sample case studies, replace with your own</Badge>
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 32 }}>
+            {CATS.map((c) => {
+              const active = c === cat;
+              return (
+                <button key={c} onClick={() => setCat(c)} style={{
+                  fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 'var(--fs-sm)', cursor: 'pointer',
+                  padding: '9px 18px', borderRadius: 'var(--radius-pill)',
+                  background: active ? 'var(--cw-orange)' : '#fff', color: active ? '#fff' : 'var(--text-heading)',
+                  border: '1px solid ' + (active ? 'transparent' : 'var(--border-strong)'), transition: 'all var(--dur-base)',
+                }}>{c}</button>
+              );
+            })}
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 20 }}>
+            {shown.map((c) => <CaseCard key={c.client} c={c} />)}
+          </div>
+        </Section>
+      );
+    }
+
+    function Page() {
+      return (
+        <React.Fragment>
+          <PageHero
+            eyebrow="Case Studies"
+            title="Stronger organizations. Better outcomes."
+            lead="Real-world examples of how Creative Works helps behavioral health organizations strengthen the systems behind care. These are illustrative examples, your story could be next."
+            primary={{ label: 'Discuss Your Organization', href: 'contact.html' }}
+            secondary={{ label: 'Schedule a Consultation', href: CONSULT_HREF }}
+            tone="cloud"
+          />
+          <Grid />
+          <StatsBand
+            title="Results that matter."
+            subtitle="Editable placeholder metrics, replace with your real outcomes."
+            phoenixSrc="assets/phoenix-mark.png"
+            stats={[
+              { value: '100+', label: 'Organizations Supported' },
+              { value: '5', label: 'Core Service Areas' },
+              { value: '98%', label: 'Client Satisfaction Rate' },
+              { value: '15+', label: 'Years Combined Experience' },
+            ]}
+          />
+          <CTASection title="Let's write your success story." body="Schedule a consultation and tell us where your organization is feeling the strain." buttonLabel="Schedule a Consultation" href={CONSULT_HREF} phoenixSrc="assets/phoenix-mark.png" />
+        </React.Fragment>
+      );
+    }
+
+    mount(<Page />, 'resources');
+  </script>
+</body>
+</html>

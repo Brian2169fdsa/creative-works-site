@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Creative Works, Phoenix Professional Services</title>
+<meta name="description" content="Creative Works is a Phoenix-based professional services partner built around people and systems, dedicated to helping behavioral health organizations serve their communities better.">
+<meta property="og:title" content="About | Creative Works">
+<meta property="og:description" content="People-first, systems-minded, and rooted in Phoenix.">
+<meta property="og:image" content="assets/photo-meeting.jpg">
+<link rel="canonical" href="https://www.creativeworksaz.com/about">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { Container, Section, PageHero, ImageFrame, CheckGrid, CONSULT_HREF, mount } = window.CW;
+    const { Eyebrow, SectionHeading, FeatureCard, CTASection } = window.CreativeWorksDesignSystem_42e791;
+
+    const VALUES = [
+      { icon: 'heart-handshake', title: 'Human First', desc: 'We lead with empathy. People come before processes, always.' },
+      { icon: 'circle-check-big', title: 'Reliable Execution', desc: 'We show up, follow through, and finish what we start.' },
+      { icon: 'target', title: 'Strategic Thinking', desc: 'We connect today\u2019s work to your long-term mission.' },
+      { icon: 'workflow', title: 'Operational Clarity', desc: 'We turn complexity into systems your team can run.' },
+      { icon: 'compass', title: 'Mission Alignment', desc: 'Your mission drives every decision we make together.' },
+    ];
+
+    const DIFF = [
+      { title: 'Multi-service support', desc: 'Marketing, systems, IT, staffing, and operations under one roof.' },
+      { title: 'Behavioral health understanding', desc: 'We know the realities of mission-driven care.' },
+      { title: 'Professional execution', desc: 'Polished, dependable work you can stand behind.' },
+      { title: 'A human approach', desc: 'Real partnership, not transactional vendor relationships.' },
+      { title: 'Vendor consolidation', desc: 'Fewer relationships to manage, more accountability.' },
+      { title: 'Systems-first thinking', desc: 'We strengthen the foundation, not just the surface.' },
+    ];
+
+    function Page() {
+      return (
+        <React.Fragment>
+          <PageHero
+            eyebrow="About Creative Works"
+            title="Built around people and the systems that support them."
+            lead="Creative Works is a Phoenix-based professional services partner. We believe stronger systems help organizations serve people better, and we exist to build them for behavioral health teams."
+            primary={{ label: 'Schedule a Consultation', href: CONSULT_HREF }}
+            secondary={{ label: 'Our Services', href: 'services.html' }}
+            tone="cloud"
+          />
+
+          <Section>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(2rem, 4vw, 3.5rem)', alignItems: 'center' }}>
+              <ImageFrame src="assets/photo-meeting.jpg" alt="Creative Works team in conversation" curve="tr" ratio="4 / 3.6" shadow="var(--shadow-card)" />
+              <div>
+                <Eyebrow>Our Story</Eyebrow>
+                <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--fs-h2-fluid)', lineHeight: 'var(--lh-snug)', color: 'var(--text-heading)', margin: '14px 0 18px' }}>A professional services partner, born in Phoenix.</h2>
+                <div style={{ display: 'grid', gap: 16, fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body-lg)', lineHeight: 'var(--lh-normal)', color: 'var(--text-muted)' }}>
+                  <p style={{ margin: 0 }}>Creative Works began with a simple observation: behavioral health organizations do extraordinary work, but too often carry it on systems that were never built to support them.</p>
+                  <p style={{ margin: 0 }}>So we built a different kind of partner, one that combines marketing, technology, staffing, and operations into a single, coordinated model. Not a marketing agency. Not a cold IT vendor. A practical, human team that strengthens the foundation behind care.</p>
+                  <p style={{ margin: 0 }}>We are proudly rooted in Phoenix, and we focus exclusively on mission-driven organizations, because when their systems get stronger, the people they serve are better off.</p>
+                </div>
+              </div>
+            </div>
+          </Section>
+
+          <Section tone="navy">
+            <div style={{ position: 'relative', textAlign: 'center', maxWidth: 820, margin: '0 auto' }}>
+              <Eyebrow color="var(--cw-orange-soft)" style={{ alignItems: 'center' }}>Our Mission</Eyebrow>
+              <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'var(--fs-h2-fluid)', lineHeight: 'var(--lh-snug)', color: '#fff', margin: '18px 0 0' }}>
+                To strengthen the systems behind care, so behavioral health organizations can focus on the people they serve.
+              </p>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body-lg)', color: 'var(--text-on-inverse-muted)', margin: '20px 0 0' }}>Renewing Organizations. Empowering People. Building Better Futures.</p>
+            </div>
+          </Section>
+
+          <Section>
+            <SectionHeading align="center" eyebrow="Our Values" title="What we stand for." style={{ marginBottom: 44 }} />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
+              {VALUES.map((v) => <FeatureCard key={v.title} icon={<i data-lucide={v.icon} style={{ width: 26, height: 26 }}></i>} title={v.title} description={v.desc} />)}
+            </div>
+          </Section>
+
+          <Section tone="cloud">
+            <SectionHeading eyebrow="What Makes Us Different" title="Most firms do one thing. We strengthen the whole foundation." lead="Our difference is not a single feature, it is the way our services work together for organizations that need a true partner." style={{ marginBottom: 36 }} />
+            <CheckGrid items={DIFF} columns={2} />
+          </Section>
+
+          <Section>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(2rem, 4vw, 3.5rem)', alignItems: 'center' }}>
+              <div>
+                <Eyebrow>Phoenix Roots</Eyebrow>
+                <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--fs-h2-fluid)', lineHeight: 'var(--lh-snug)', color: 'var(--text-heading)', margin: '14px 0 14px' }}>Rooted in Phoenix. Driven by purpose.</h2>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body-lg)', lineHeight: 'var(--lh-normal)', color: 'var(--text-muted)', margin: 0, maxWidth: '54ch' }}>
+                  Phoenix is more than our address, it is our community. We are invested in the organizations that serve Arizona, and proud to help them grow stronger and reach further.
+                </p>
+              </div>
+              <ImageFrame src="assets/photo-phoenix.jpg" alt="Phoenix, Arizona skyline" curve="bl" ratio="5 / 3.2" shadow="var(--shadow-card)" />
+            </div>
+          </Section>
+
+          <CTASection title="Let's build something stronger, together." body="Schedule a consultation and tell us about the mission you are working to advance." buttonLabel="Schedule a Consultation" href={CONSULT_HREF} phoenixSrc="assets/phoenix-mark.png" />
+        </React.Fragment>
+      );
+    }
+
+    mount(<Page />, 'about');
+  </script>
+</body>
+</html>

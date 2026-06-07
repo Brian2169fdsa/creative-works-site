@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schedule a Consultation | Creative Works</title>
+<meta name="description" content="Start with a free intro call, a paid Discovery & Operations Assessment, or a custom project deposit. Creative Works helps behavioral health organizations strengthen the systems behind care.">
+<meta property="og:title" content="Schedule a Consultation | Creative Works">
+<meta property="og:description" content="Choose how you'd like to begin, intro call, assessment, or project deposit.">
+<meta property="og:image" content="assets/phoenix-mark.png">
+<link rel="canonical" href="https://www.creativeworksaz.com/schedule-consultation">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { Container, Section, PageHero, PillList, FAQ, PRODUCTS, usd, mount } = window.CW;
+    const { Eyebrow, SectionHeading, Button, Badge, CTASection } = window.CreativeWorksDesignSystem_42e791;
+
+    const OPTIONS = [
+      { icon: 'phone-call', title: 'Free Intro Call', price: 'Free', priceNote: '30 minutes',
+        desc: 'A no-pressure conversation to understand your organization and see if we are a good fit.',
+        features: ['Understand your goals & challenges', 'Explore where we can help', 'No commitment required'],
+        cta: 'Request Intro Call', href: 'contact.html', tone: 'plain' },
+      { icon: 'clipboard-check', title: 'Discovery & Operations Assessment', price: usd(PRODUCTS.discoveryAssessment.amount), priceNote: 'One-time · Stripe',
+        desc: 'A thorough paid assessment of your systems, marketing, staffing, and operations, with a prioritized plan.',
+        features: ['Full review across all five areas', 'Prioritized roadmap you can act on', 'Findings session with our team'],
+        cta: 'Start Assessment', href: 'checkout.html?type=discoveryAssessment', tone: 'featured', badge: 'Most Popular' },
+      { icon: 'rocket', title: 'Custom Project Deposit', price: usd(PRODUCTS.projectDeposit.amount), priceNote: 'Deposit · Stripe',
+        desc: 'Ready to move on a defined project? Reserve your start and lock in scope with a project deposit.',
+        features: ['Secure your project timeline', 'Applied toward your project total', 'Kickoff scheduled on payment'],
+        cta: 'Pay Project Deposit', href: 'checkout.html?type=projectDeposit', tone: 'plain' },
+    ];
+
+    function OptionCard({ o }) {
+      const featured = o.tone === 'featured';
+      return (
+        <div style={{
+          position: 'relative', display: 'flex', flexDirection: 'column', gap: 16, padding: 'clamp(1.5rem, 3vw, 2rem)',
+          background: featured ? 'var(--cw-navy-midnight)' : 'var(--surface-card)', color: featured ? '#fff' : 'inherit',
+          border: '1px solid ' + (featured ? 'transparent' : 'var(--border-subtle)'),
+          borderRadius: 'var(--radius-xl)', boxShadow: featured ? 'var(--shadow-lg)' : 'var(--shadow-card)', overflow: 'hidden',
+        }}>
+          {o.badge && <span style={{ position: 'absolute', top: 18, right: 18, whiteSpace: 'nowrap', fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#fff', background: 'var(--cw-gradient-cta)', padding: '5px 12px', borderRadius: 'var(--radius-pill)' }}>{o.badge}</span>}
+          <div style={{ width: 52, height: 52, borderRadius: 'var(--radius-md)', background: featured ? 'rgba(255, 255, 255, 0.1)' : 'color-mix(in srgb, var(--cw-orange) 9%, white)', border: '1px solid ' + (featured ? 'rgba(255, 255, 255, 0.2)' : 'color-mix(in srgb, var(--cw-orange) 22%, white)'), display: 'flex', alignItems: 'center', justifyContent: 'center', color: featured ? 'var(--cw-orange-soft)' : 'var(--cw-orange)' }}>
+            <i data-lucide={o.icon} style={{ width: 26, height: 26 }}></i>
+          </div>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'var(--fs-h4)', margin: 0, color: featured ? '#fff' : 'var(--text-heading)' }}>{o.title}</h3>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
+            <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '2rem', color: featured ? 'var(--cw-orange-soft)' : 'var(--cw-orange)' }}>{o.price}</span>
+            <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: featured ? 'var(--text-on-inverse-muted)' : 'var(--text-muted)' }}>{o.priceNote}</span>
+          </div>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body)', lineHeight: 'var(--lh-normal)', color: featured ? 'var(--text-on-inverse-muted)' : 'var(--text-muted)', margin: 0 }}>{o.desc}</p>
+          <div style={{ display: 'grid', gap: 10, marginTop: 2 }}>
+            {o.features.map((f) => (
+              <span key={f} style={{ display: 'flex', gap: 9, fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', color: featured ? '#fff' : 'var(--text-body)' }}>
+                <i data-lucide="check" style={{ width: 17, height: 17, color: 'var(--cw-orange)', flex: '0 0 auto', marginTop: 2 }}></i>{f}
+              </span>
+            ))}
+          </div>
+          <div style={{ marginTop: 'auto', paddingTop: 8 }}>
+            <Button href={o.href} arrow size="lg" variant={featured ? 'primary' : 'secondary'} style={{ width: '100%' }}>{o.cta}</Button>
+            {o.tone === 'featured' || o.priceNote.includes('Stripe') ? (
+              <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, marginTop: 12, fontFamily: 'var(--font-body)', fontSize: 12, color: featured ? 'var(--text-on-inverse-muted)' : 'var(--text-muted)' }}>
+                <i data-lucide="lock" style={{ width: 13, height: 13 }}></i> Secure checkout via Stripe
+              </span>
+            ) : null}
+          </div>
+        </div>
+      );
+    }
+
+    const DISCUSS = ['Marketing', 'SharePoint', 'IT Services', 'Staffing', 'Operations', 'Multi-Service Support', 'Growth or Transition'];
+
+    const FAQS = [
+      { q: 'Who does Creative Works serve?', a: 'We focus on behavioral health organizations, mental health clinics, substance use treatment, outpatient and residential programs, recovery and community organizations, and integrated care teams.' },
+      { q: 'Do you only do marketing?', a: 'No. Marketing is just one of our services. We also provide SharePoint setup, Salesforce build-outs, IT services, staffing, operational support, business process services, consulting, and behavioral health licensure support, coordinated under one partner.' },
+      { q: 'Do you work with small organizations?', a: 'Yes. We work with organizations of many sizes, including small and growing teams. We scope engagements to fit your needs and budget.' },
+      { q: 'How does the paid assessment work?', a: 'The Discovery & Operations Assessment is a thorough review of your systems, marketing, staffing, and operations. You receive a prioritized roadmap and a findings session. It can be applied toward future work.' },
+      { q: 'What happens after the consultation?', a: 'We summarize what we heard, recommend a next step, and, if it is a fit, propose a clear plan. There is never any obligation to continue.' },
+    ];
+
+    function Page() {
+      return (
+        <React.Fragment>
+          <PageHero
+            eyebrow="Schedule a Consultation"
+            title="Choose how you'd like to begin."
+            lead="Whether you want a quick conversation or you're ready to dig in, there's a path that fits. Every option moves you toward stronger systems and better outcomes."
+            tone="cloud"
+            align="center"
+          />
+
+          <Section pad="clamp(1.5rem, 4vw, 2.5rem)">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 22, alignItems: 'stretch' }}>
+              {OPTIONS.map((o) => <OptionCard key={o.title} o={o} />)}
+            </div>
+            <p style={{ textAlign: 'center', fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--text-muted)', margin: '24px auto 0', maxWidth: '60ch' }}>
+              A Professional Services Retainer is also available for ongoing partnerships, <a href="contact.html" style={{ color: 'var(--cw-orange)', fontWeight: 600, textDecoration: 'none' }}>contact us</a> to discuss recurring support.
+            </p>
+          </Section>
+
+          <Section tone="cloud">
+            <SectionHeading align="center" eyebrow="What We Can Discuss" title="Bring any challenge to the table." style={{ marginBottom: 32 }} />
+            <div style={{ display: 'flex', justifyContent: 'center' }}><PillList items={DISCUSS} icon="message-circle" /></div>
+          </Section>
+
+          <Section>
+            <SectionHeading align="center" eyebrow="Prefer to Pick a Time?" title="Book directly on our calendar." lead="Connect your scheduling tool here, the embed below is a placeholder for Calendly or Microsoft Bookings." style={{ marginBottom: 32 }} />
+            <div style={{ maxWidth: 820, margin: '0 auto', minHeight: 280, borderRadius: 'var(--radius-xl)', border: '2px dashed var(--border-strong)', background: 'var(--cw-cloud)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14, textAlign: 'center', padding: 32 }}>
+              <i data-lucide="calendar-clock" style={{ width: 40, height: 40, color: 'var(--cw-orange)' }}></i>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'var(--fs-h4)', color: 'var(--text-heading)' }}>Scheduler embed area</div>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', color: 'var(--text-muted)', margin: 0, maxWidth: '46ch' }}>Drop in your Calendly / Microsoft Bookings embed code here. Until then, use the Free Intro Call button above or the contact form.</p>
+              <Button href="contact.html" variant="secondary" arrow>Use the Contact Form</Button>
+            </div>
+          </Section>
+
+          <Section tone="cloud">
+            <SectionHeading align="center" eyebrow="FAQ" title="Common questions." style={{ marginBottom: 36 }} />
+            <FAQ items={FAQS} />
+          </Section>
+
+          <CTASection title="Still not sure which option fits?" body="Reach out and we'll point you to the right starting place, no pressure, no obligation." buttonLabel="Contact Us" href="contact.html" tone="navy" phoenixSrc="assets/phoenix-mark.png" />
+        </React.Fragment>
+      );
+    }
+
+    mount(<Page />, 'contact');
+  </script>
+</body>
+</html>

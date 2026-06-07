@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Industries We Serve | Creative Works</title>
+<meta name="description" content="Creative Works supports mission-driven organizations, with a primary focus on behavioral health, plus human services, nonprofits, and community-based organizations.">
+<meta property="og:title" content="Industries | Creative Works">
+<meta property="og:description" content="Focused on behavioral health, built for mission-driven organizations.">
+<meta property="og:image" content="assets/phoenix-mark.png">
+<link rel="canonical" href="https://www.creativeworksaz.com/industries">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { Container, Section, PageHero, CheckGrid, CONSULT_HREF, mount } = window.CW;
+    const { Button, Eyebrow, SectionHeading, ServiceCard, CTASection, Badge } = window.CreativeWorksDesignSystem_42e791;
+
+    function PrimaryCard() {
+      return (
+        <Section>
+          <div style={{ position: 'relative', borderRadius: 'var(--radius-xl)', overflow: 'hidden', background: 'var(--cw-navy-midnight)', color: '#fff', padding: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            <img src="assets/phoenix-mark.png" alt="" aria-hidden="true" style={{ position: 'absolute', right: -50, bottom: -60, width: 320, opacity: 0.07 }} />
+            <div style={{ position: 'relative', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1.5rem, 4vw, 3rem)', alignItems: 'center' }}>
+              <div>
+                <Badge tone="orange">Primary Focus</Badge>
+                <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--fs-h2-fluid)', lineHeight: 'var(--lh-snug)', margin: '16px 0 0' }}>Behavioral Health Organizations</h2>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body-lg)', lineHeight: 'var(--lh-normal)', color: 'var(--text-on-inverse-muted)', margin: '14px 0 24px', maxWidth: '52ch' }}>
+                  This is where we live. We understand the operational realities of mission-driven care, staffing pressure, documentation burden, compliance-sensitive workflows, and the constant pull between people and paperwork.
+                </p>
+                <Button href="behavioral-health.html" arrow size="lg">Explore Behavioral Health</Button>
+              </div>
+              <div style={{ display: 'grid', gap: 12 }}>
+                {['Mental health clinics', 'Substance use treatment providers', 'Outpatient & residential programs', 'Recovery & community organizations'].map((t) => (
+                  <div key={t} style={{ display: 'flex', gap: 10, alignItems: 'center', fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body)', color: '#fff' }}>
+                    <i data-lucide="circle-check-big" style={{ width: 20, height: 20, color: 'var(--cw-orange-soft)', flex: '0 0 auto' }}></i>{t}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Section>
+      );
+    }
+
+    const ADJACENT = [
+      { icon: 'heart-handshake', title: 'Human Services', desc: 'Organizations supporting individuals and families across the community.' },
+      { icon: 'hand-heart', title: 'Nonprofits', desc: 'Mission-driven teams that need to do more with focused resources.' },
+      { icon: 'stethoscope', title: 'Healthcare Services', desc: 'Care-oriented providers with similar operational demands.' },
+      { icon: 'users-round', title: 'Community-Based Organizations', desc: 'Local organizations serving and strengthening their communities.' },
+    ];
+
+    function Page() {
+      return (
+        <React.Fragment>
+          <PageHero
+            eyebrow="Industries We Serve"
+            title="We support the organizations that strengthen communities."
+            lead="Our work is built around mission-driven organizations, with deep, specific focus on behavioral health. Care-oriented fields share real challenges: sensitivity, compliance awareness, staffing pressure, and the demands of mission-driven work."
+            primary={{ label: 'Behavioral Health', href: 'behavioral-health.html' }}
+            secondary={{ label: 'Schedule a Consultation', href: CONSULT_HREF }}
+            tone="cloud"
+          />
+
+          <PrimaryCard />
+
+          <Section tone="cloud">
+            <SectionHeading align="center" eyebrow="Adjacent & Future Focus" title="Mission-driven organizations beyond behavioral health." lead="We also support adjacent fields that share the same operational realities. Behavioral health remains our primary focus." style={{ marginBottom: 40 }} />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
+              {ADJACENT.map((s) => <ServiceCard key={s.title} icon={<i data-lucide={s.icon} style={{ width: 30, height: 30 }}></i>} title={s.title} description={s.desc} />)}
+            </div>
+          </Section>
+
+          <Section>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(2rem, 4vw, 3.5rem)', alignItems: 'start' }}>
+              <SectionHeading eyebrow="Why Focus Matters" title="Why industry focus matters." lead="Generalist vendors treat every client the same. We do not. Care-oriented organizations operate under conditions most agencies never see, and that focus changes how we work." />
+              <CheckGrid columns={1} items={[
+                { title: 'Sensitivity', desc: 'We understand the human stakes behind every system and message.' },
+                { title: 'Compliance awareness', desc: 'We build with documentation and privacy expectations in mind.' },
+                { title: 'Staffing pressure', desc: 'We know how thin care teams often are, and design around it.' },
+                { title: 'Mission-driven work', desc: 'We measure success by the impact you have on the people you serve.' },
+              ]} />
+            </div>
+          </Section>
+
+          <CTASection title="Let's talk about your organization." body="Behavioral health is where we do our best work. Schedule a consultation and see how we can help." buttonLabel="Schedule a Consultation" href={CONSULT_HREF} tone="navy" phoenixSrc="assets/phoenix-mark.png" />
+        </React.Fragment>
+      );
+    }
+
+    mount(<Page />, 'industries');
+  </script>
+</body>
+</html>

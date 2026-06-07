@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Secure Checkout | Creative Works</title>
+<meta name="description" content="Secure checkout for Creative Works professional services.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--cw-cloud);}
+  a{color:inherit;} img{max-width:100%;}
+  @media (max-width: 820px){ .cw-checkout-grid{ grid-template-columns: 1fr !important; } .cw-summary{ order: -1; } }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { PRODUCTS, usd, mountRaw } = window.CW;
+    const { Button, Input } = window.CreativeWorksDesignSystem_42e791;
+
+    const params = new URLSearchParams(location.search);
+    const product = PRODUCTS[params.get('type')] || PRODUCTS.discoveryAssessment;
+
+    function Field({ label, children }) {
+      return (
+        <label style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>
+          <span style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', fontWeight: 600, color: 'var(--text-heading)' }}>{label}</span>
+          {children}
+        </label>
+      );
+    }
+    const inputCss = { width: '100%', boxSizing: 'border-box', fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body)', color: 'var(--text-body)', background: '#fff', border: '1px solid var(--border-strong)', borderRadius: 'var(--radius-md)', padding: '12px 14px', outline: 'none' };
+
+    function Checkout() {
+      const [busy, setBusy] = React.useState(false);
+      React.useEffect(() => { window.lucide && window.lucide.createIcons(); });
+      const pay = (e) => {
+        e.preventDefault();
+        setBusy(true);
+        // MOCK: in production this redirects to the Stripe Checkout session URL.
+        setTimeout(() => { location.href = 'checkout-success.html?type=' + product.key; }, 1100);
+      };
+      return (
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+          <header style={{ background: '#fff', borderBottom: '1px solid var(--border-subtle)' }}>
+            <div style={{ maxWidth: 960, margin: '0 auto', padding: '14px var(--container-pad)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <a href="schedule-consultation.html" style={{ display: 'flex', alignItems: 'center' }}><img src="assets/logo-full.png" alt="Creative Works" style={{ height: 34 }} /></a>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--text-muted)' }}><i data-lucide="lock" style={{ width: 15, height: 15, color: 'var(--cw-success)' }}></i>Secure checkout</span>
+            </div>
+          </header>
+
+          <main style={{ flex: 1, padding: 'clamp(1.5rem, 4vw, 3rem) var(--container-pad)' }}>
+            <div className="cw-checkout-grid" style={{ maxWidth: 960, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(1.25rem, 3vw, 2.5rem)', alignItems: 'start' }}>
+              {/* Order summary */}
+              <div className="cw-summary">
+                <a href="schedule-consultation.html" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', fontWeight: 600, color: 'var(--text-muted)', textDecoration: 'none', marginBottom: 20 }}><i data-lucide="arrow-left" style={{ width: 16, height: 16 }}></i>Back</a>
+                <div style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 'var(--ls-label)', color: 'var(--text-muted)' }}>You're paying</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '2.75rem', color: 'var(--text-heading)', margin: '6px 0 18px' }}>{usd(product.amount)}</div>
+                <div style={{ background: '#fff', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)', padding: '20px 22px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'flex-start' }}>
+                    <div>
+                      <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'var(--fs-body-lg)', color: 'var(--text-heading)' }}>{product.name}</div>
+                      <div style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', color: 'var(--text-muted)', marginTop: 4, maxWidth: '34ch' }}>{product.blurb}</div>
+                    </div>
+                    <div style={{ fontFamily: 'var(--font-body)', fontWeight: 700, color: 'var(--text-heading)' }}>{usd(product.amount)}</div>
+                  </div>
+                  <div style={{ borderTop: '1px solid var(--border-subtle)', marginTop: 16, paddingTop: 14, display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-body)' }}>
+                    <span style={{ fontWeight: 700, color: 'var(--text-heading)' }}>Total due</span>
+                    <span style={{ fontWeight: 800, color: 'var(--text-heading)' }}>{usd(product.amount)} USD</span>
+                  </div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 16, fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)' }}>
+                  <i data-lucide="shield-check" style={{ width: 15, height: 15, color: 'var(--cw-success)' }}></i>Payments are processed securely by Stripe.
+                </div>
+              </div>
+
+              {/* Payment form */}
+              <form onSubmit={pay} style={{ background: '#fff', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-xl)', boxShadow: 'var(--shadow-card)', padding: 'clamp(1.5rem, 3vw, 2rem)', display: 'grid', gap: 16 }}>
+                <Field label="Email"><input type="email" required placeholder="you@organization.org" style={inputCss} /></Field>
+                <Field label="Card information">
+                  <div style={{ border: '1px solid var(--border-strong)', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
+                    <input required placeholder="1234 1234 1234 1234" style={{ ...inputCss, border: 'none', borderRadius: 0, borderBottom: '1px solid var(--border-strong)' }} />
+                    <div style={{ display: 'flex' }}>
+                      <input required placeholder="MM / YY" style={{ ...inputCss, border: 'none', borderRadius: 0, borderRight: '1px solid var(--border-strong)' }} />
+                      <input required placeholder="CVC" style={{ ...inputCss, border: 'none', borderRadius: 0 }} />
+                    </div>
+                  </div>
+                </Field>
+                <Field label="Name on card"><input required placeholder="Full name" style={inputCss} /></Field>
+                <Field label="Organization (optional)"><input placeholder="Organization name" style={inputCss} /></Field>
+                <Button type="submit" size="lg" disabled={busy} style={{ width: '100%', marginTop: 4 }}>
+                  {busy ? 'Processing…' : 'Pay ' + usd(product.amount)}
+                </Button>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)', textAlign: 'center', margin: 0, lineHeight: 1.5 }}>
+                  This is a front-end demo checkout. No card is charged. In production this redirects to a real Stripe Checkout session.
+                </p>
+              </form>
+            </div>
+          </main>
+
+          <footer style={{ borderTop: '1px solid var(--border-subtle)', background: '#fff' }}>
+            <div style={{ maxWidth: 960, margin: '0 auto', padding: '16px var(--container-pad)', display: 'flex', flexWrap: 'wrap', gap: 16, justifyContent: 'space-between', fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)' }}>
+              <span>© 2026 Creative Works</span>
+              <span style={{ display: 'flex', gap: 18 }}>
+                <a href="terms-of-service.html" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Terms</a>
+                <a href="privacy-policy.html" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Privacy</a>
+              </span>
+            </div>
+          </footer>
+        </div>
+      );
+    }
+
+    mountRaw(<Checkout />);
+  </script>
+</body>
+</html>

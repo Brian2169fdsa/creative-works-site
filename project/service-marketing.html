@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketing Services | Creative Works for Behavioral Health</title>
+<meta name="description" content="Mission-focused marketing for behavioral health organizations, brand positioning, websites, social media, referral materials, and community awareness campaigns.">
+<meta property="og:title" content="Marketing Services | Creative Works">
+<meta property="og:description" content="Strategic, mission-focused marketing that builds trust and grows your reach.">
+<meta property="og:image" content="assets/phoenix-mark.png">
+<link rel="canonical" href="https://www.creativeworksaz.com/services/marketing">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" src="lib/service-page.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { ServicePage, mount } = window.CW;
+    mount(ServicePage({
+      slug: 'marketing', icon: 'megaphone', eyebrow: 'Marketing',
+      title: 'Mission-focused marketing that builds trust.',
+      lead: 'Behavioral health is built on trust. We help you communicate clearly, reach the people who need you, and strengthen the relationships that grow your mission, without the hype.',
+      heroPlaceholder: 'Marketing collateral & brand, photo placeholder',
+      problem: {
+        title: 'When your message is unclear, your mission gets lost.',
+        lead: 'Many behavioral health organizations do meaningful work but struggle to communicate it. The result is missed referrals, weak community awareness, and a brand that does not reflect the quality of care.',
+        items: [
+          'Inconsistent messaging across channels',
+          'A weak or outdated online presence',
+          'Poor referral partner materials',
+          'Unclear service descriptions',
+          'Low community awareness',
+          'Disconnected, inactive social media',
+        ],
+      },
+      provide: {
+        title: 'What we provide', eyebrow: 'What We Provide',
+        lead: 'A complete marketing toolkit, built for the realities of behavioral health.', columns: 4,
+        cards: [
+          { icon: 'compass', title: 'Brand Positioning', desc: 'Clarify who you serve and what makes your care different.' },
+          { icon: 'layout-template', title: 'Website Messaging', desc: 'Clear, credible copy and structure for your site.' },
+          { icon: 'share-2', title: 'Social Media', desc: 'Consistent content that builds awareness and trust.' },
+          { icon: 'megaphone', title: 'Facebook & LinkedIn Ads', desc: 'Targeted campaigns that reach the right audiences.' },
+          { icon: 'handshake', title: 'Referral Partner Collateral', desc: 'Materials that make it easy for partners to refer.' },
+          { icon: 'users-round', title: 'Community Awareness', desc: 'Campaigns that connect you with your community.' },
+          { icon: 'printer', title: 'Print & Digital Materials', desc: 'Brochures, flyers, and packets that look the part.' },
+          { icon: 'calendar-range', title: 'Campaign Planning', desc: 'A content calendar and plan you can actually follow.' },
+        ],
+      },
+      sections: [
+        { type: 'checklist', tone: 'white', eyebrow: 'Example Deliverables', title: 'The kinds of things we deliver.',
+          lead: 'Tangible assets your team can put to work right away.', columns: 3, icon: 'file-check-2',
+          items: ['Social media ad graphics', 'Landing pages', 'Brochures & service flyers', 'Email campaigns', 'Referral packets', 'Messaging guides', 'Content calendars', 'Brand & style guidelines', 'Campaign reporting'] },
+      ],
+      benefits: {
+        title: 'How it helps your organization.',
+        items: [
+          { title: 'Clearer communication', desc: 'A message your whole team can stand behind.' },
+          { title: 'Stronger trust', desc: 'Materials that reflect the quality of your care.' },
+          { title: 'Consistent presence', desc: 'One brand voice across every channel.' },
+          { title: 'Better referral engagement', desc: 'Partners who know exactly when to send people your way.' },
+          { title: 'Improved visibility', desc: 'More of the right people find you.' },
+          { title: 'More professional outreach', desc: 'Outreach that opens doors instead of closing them.' },
+        ],
+      },
+      related: ['operations', 'staffing', 'sharepoint'],
+      cta: { title: 'Ready to tell your story clearly?', body: 'Schedule a consultation and we will map a marketing plan that fits your mission and your budget.' },
+    }), 'services');
+  </script>
+</body>
+</html>

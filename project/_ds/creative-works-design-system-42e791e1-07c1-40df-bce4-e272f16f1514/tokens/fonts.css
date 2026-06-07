@@ -1,0 +1,6 @@
+/* Creative Works webfonts.
+   Inter  = body + UI (brand primary).
+   Sora   = display headings — bold, rounded, geometric; closest open match to the
+            custom Creative Works wordmark. SUBSTITUTION: flag to client if exact
+            brand typeface is available. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The hidden cost of disorganized systems | Creative Works Resources</title>
+<meta name="description" content="When documents are scattered and workflows are unclear, the cost is staff burnout, slower onboarding, and missed opportunities. Here is how to spot it and where to start.">
+<meta property="og:title" content="The hidden cost of disorganized systems in behavioral health">
+<meta property="og:description" content="A Creative Works resource for behavioral health leaders.">
+<meta property="og:image" content="assets/phoenix-mark.png">
+<link rel="canonical" href="https://www.creativeworksaz.com/resources/hidden-cost-of-disorganized-systems">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/styles.css">
+<style>
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--color-bg);}
+  a{color:inherit;} img{max-width:100%;}
+  .cw-mobile-btn{display:none !important;}
+  @media (max-width: 900px){ .cw-desktop-nav{display:none !important;} .cw-mobile-btn{display:flex !important;align-items:center;justify-content:center;} }
+  .cw-article p{font-family:var(--font-body);font-size:var(--fs-body-lg);line-height:var(--lh-relaxed);color:var(--text-body);margin:0 0 22px;}
+  .cw-article h2{font-family:var(--font-display);font-weight:800;font-size:var(--fs-h3);color:var(--text-heading);letter-spacing:var(--ls-heading);margin:40px 0 16px;}
+  .cw-article ul{margin:0 0 22px;padding-left:0;list-style:none;display:grid;gap:12px;}
+  .cw-article li{display:flex;gap:12px;font-family:var(--font-body);font-size:var(--fs-body-lg);line-height:var(--lh-normal);color:var(--text-body);}
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="image-slot.js"></script>
+  <script src="_ds/creative-works-design-system-42e791e1-07c1-40df-bce4-e272f16f1514/_ds_bundle.js"></script>
+  <script type="text/babel" src="lib/site.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { Container, Section, Breadcrumb, Placeholder, ImageFrame, CONSULT_HREF, mount } = window.CW;
+    const { Eyebrow, Badge, CTASection, TestimonialCard } = window.CreativeWorksDesignSystem_42e791;
+
+    function RelatedArticle({ cat, title }) {
+      return (
+        <a href="resource-article.html" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 10, background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)', overflow: 'hidden' }}>
+          <Placeholder label={cat} ratio="16 / 9" icon="newspaper" style={{ borderRadius: 0, border: 'none', borderBottom: '1px solid var(--border-subtle)' }} />
+          <div style={{ padding: '16px 18px 20px' }}>
+            <Badge tone="orange">{cat}</Badge>
+            <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'var(--fs-h4)', color: 'var(--text-heading)', margin: '10px 0 0', lineHeight: 1.25 }}>{title}</h3>
+          </div>
+        </a>
+      );
+    }
+
+    function Page() {
+      return (
+        <React.Fragment>
+          <Section tone="cloud" pad="clamp(2rem, 4vw, 3rem)">
+            <div style={{ maxWidth: 760, margin: '0 auto' }}>
+              <Breadcrumb items={[{ label: 'Home', href: 'index.html' }, { label: 'Resources', href: 'resources.html' }, { label: 'Operations' }]} />
+              <Badge tone="orange">Operations</Badge>
+              <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--fs-h1-fluid)', lineHeight: 'var(--lh-tight)', letterSpacing: 'var(--ls-tight)', color: 'var(--text-heading)', margin: '16px 0 0' }}>The hidden cost of disorganized systems in behavioral health</h1>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, marginTop: 18, fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', color: 'var(--text-muted)' }}>
+                <span>By Creative Works</span><span aria-hidden="true">·</span><span>June 2026</span><span aria-hidden="true">·</span><span>7 min read</span>
+              </div>
+            </div>
+          </Section>
+
+          <Section pad="clamp(1.5rem, 4vw, 2.5rem)">
+            <div style={{ maxWidth: 760, margin: '0 auto' }}>
+              <ImageFrame src="assets/photo-meeting.jpg" alt="Team reviewing operations together" curve="none" ratio="16 / 8" shadow="var(--shadow-card)" style={{ marginBottom: 36 }} />
+              <article className="cw-article">
+                <p style={{ fontSize: 'var(--fs-h4)', fontWeight: 600, color: 'var(--text-heading)', lineHeight: 1.5 }}>
+                  Most behavioral health teams do not lose time in dramatic ways. They lose it in small, invisible moments, the search for a current form, the second guess about a policy, the new hire waiting on access. Added up, that quiet friction becomes one of the largest hidden costs in the organization.
+                </p>
+                <p>This is a placeholder article that demonstrates the resource template. Replace this content with your own insights, the structure, typography, and spacing are ready to go.</p>
+                <h2>Where the cost actually hides</h2>
+                <p>Disorganization rarely announces itself. It shows up as a slightly longer onboarding, a meeting that could have been an email, a duplicated document that creates confusion later. None of these feels urgent on its own, which is exactly why they persist.</p>
+                <ul>
+                  <li><i data-lucide="circle-check-big" style={{ width: 22, height: 22, color: 'var(--cw-orange)', flexShrink: 0, marginTop: 2 }}></i>Staff time spent searching instead of serving.</li>
+                  <li><i data-lucide="circle-check-big" style={{ width: 22, height: 22, color: 'var(--cw-orange)', flexShrink: 0, marginTop: 2 }}></i>Slower, less consistent onboarding for new hires.</li>
+                  <li><i data-lucide="circle-check-big" style={{ width: 22, height: 22, color: 'var(--cw-orange)', flexShrink: 0, marginTop: 2 }}></i>Compliance risk from outdated or duplicated documents.</li>
+                </ul>
+                <figure style={{ margin: '32px 0' }}>
+                  <TestimonialCard quote="When we finally organized our systems, it felt like our team could breathe again, and our new staff got up to speed in half the time." name="Operations Director" role="Behavioral Health Organization" />
+                </figure>
+                <h2>Where to start</h2>
+                <p>You do not need to fix everything at once. Start with the systems your team touches most, the documents, the intake workflow, the onboarding path, and bring order there first. Small wins build momentum and make the bigger changes easier to adopt.</p>
+                <p>When you are ready to map it out, that is exactly the kind of work we do. A short Discovery &amp; Operations Assessment can pinpoint where your organization is losing time and give you a clear plan to fix it.</p>
+              </article>
+
+              <div style={{ borderTop: '1px solid var(--border-subtle)', marginTop: 8, paddingTop: 24, display: 'flex', alignItems: 'center', gap: 14 }}>
+                <img src="assets/phoenix-mark.png" alt="" style={{ width: 44, height: 44 }} />
+                <div>
+                  <div style={{ fontFamily: 'var(--font-body)', fontWeight: 700, color: 'var(--text-heading)' }}>Creative Works</div>
+                  <div style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-sm)', color: 'var(--text-muted)' }}>Professional services for behavioral health organizations.</div>
+                </div>
+              </div>
+            </div>
+          </Section>
+
+          <Section tone="cloud">
+            <Eyebrow>Related Resources</Eyebrow>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20, marginTop: 24 }}>
+              <RelatedArticle cat="SharePoint" title="A simple SharePoint structure every clinic can use" />
+              <RelatedArticle cat="Operations" title="How to map a workflow your whole team understands" />
+              <RelatedArticle cat="BH Leadership" title="Five systems every growing program should formalize" />
+            </div>
+          </Section>
+
+          <CTASection title="Want help putting this into practice?" body="Schedule a consultation and we will help you turn insight into a concrete plan." buttonLabel="Schedule a Consultation" href={CONSULT_HREF} phoenixSrc="assets/phoenix-mark.png" />
+        </React.Fragment>
+      );
+    }
+
+    mount(<Page />, 'resources');
+  </script>
+</body>
+</html>

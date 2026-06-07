@@ -94,19 +94,21 @@ export default function LeadershipPage() {
           {LEADERS.map((leader, idx) => (
             <div
               key={leader.name}
-              className={`grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10 items-start ${
-                idx % 2 === 1 ? "lg:grid-cols-[1fr_300px]" : ""
+              className={`grid grid-cols-1 gap-10 items-center ${
+                idx % 2 === 0
+                  ? "lg:grid-cols-[1fr_260px]"
+                  : "lg:grid-cols-[260px_1fr]"
               }`}
             >
-              {/* Photo — right on odd rows */}
+              {/* Odd rows: photo renders first in DOM → left column */}
               {idx % 2 === 1 && (
-                <div className="hidden lg:block order-2">
+                <div className="hidden lg:block">
                   <LeaderPhoto leader={leader} />
                 </div>
               )}
 
               {/* Content */}
-              <div className={idx % 2 === 1 ? "order-1" : ""}>
+              <div>
                 {/* Mobile photo */}
                 <div className="lg:hidden mb-8">
                   <LeaderPhoto leader={leader} />
@@ -154,7 +156,7 @@ export default function LeadershipPage() {
                 </div>
               </div>
 
-              {/* Photo — left side on even rows */}
+              {/* Even rows: photo renders last in DOM → right column */}
               {idx % 2 === 0 && (
                 <div className="hidden lg:block">
                   <LeaderPhoto leader={leader} />

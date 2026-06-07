@@ -177,11 +177,23 @@ export default function ServicePage(cfg: ServiceConfig) {
                 </Button>
               </div>
             </div>
-            <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] bg-navy-700/10 flex items-center justify-center">
-              <div className="text-center p-8 text-gray-400">
-                <Icon className="w-16 h-16 mx-auto mb-3 text-orange/30" aria-hidden="true" />
-                <p className="text-sm">{cfg.heroPlaceholder || `${cfg.eyebrow}, photo placeholder`}</p>
-              </div>
+            <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] shadow-lg">
+              {cfg.heroImage ? (
+                <Image
+                  src={cfg.heroImage}
+                  alt={`${cfg.eyebrow} hero`}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              ) : (
+                <div className="absolute inset-0 bg-navy-700/10 flex items-center justify-center">
+                  <div className="text-center p-8 text-gray-400">
+                    <Icon className="w-16 h-16 mx-auto mb-3 text-orange/30" aria-hidden="true" />
+                    <p className="text-sm">{cfg.heroPlaceholder || `${cfg.eyebrow}, photo placeholder`}</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -38,6 +38,7 @@ export interface ServiceConfig {
   title: string;
   lead: string;
   heroPlaceholder?: string;
+  heroImage?: string;
   href: string;
   tagline: string;
   short: string;
@@ -87,6 +88,7 @@ export const SERVICES: ServiceConfig[] = [
     title: "Marketing that reaches your community and grows your mission.",
     lead: "Behavioral health organizations do vital work that most communities do not fully understand. We help you build awareness, connect with the people who need you, and create marketing that genuinely reflects your mission.",
     heroPlaceholder: "Marketing team at work, photo placeholder",
+    heroImage: "/images/marketing-hero.png",
     href: "/services/marketing",
     tagline: "Reach more people. Grow your mission.",
     short:
@@ -235,6 +237,7 @@ export const SERVICES: ServiceConfig[] = [
     title: "SharePoint, organized around how your team actually works.",
     lead: "A well-built SharePoint portal turns document chaos into a system everyone can use. We design, configure, and launch portals that make internal collaboration easier and information actually findable.",
     heroPlaceholder: "SharePoint portal, screenshot placeholder",
+    heroImage: "/images/sharepoint-hero.png",
     href: "/services/sharepoint-setup",
     tagline: "Smarter systems. Stronger collaboration.",
     short:
@@ -383,6 +386,7 @@ export const SERVICES: ServiceConfig[] = [
     title: "Salesforce, built around how you deliver care.",
     lead: "A CRM is only as good as the way it fits your work. We design, configure, and automate Salesforce around your intake, referrals, and reporting, so your team gets a system that helps, not another tool to fight.",
     heroPlaceholder: "Salesforce dashboard, screenshot placeholder",
+    heroImage: "/images/salesforce-hero.png",
     href: "/services/salesforce-build-outs",
     tagline: "A CRM built around your care model.",
     short:

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Creative Works | Professional Services for Behavioral Health",
     description: "We help behavioral health organizations strengthen the systems behind care.",
-    images: [{ url: "/images/photo-hero.jpg" }],
+    images: [{ url: "/images/home-hero.png" }],
   },
 };
 
@@ -127,8 +127,8 @@ export default function HomePage() {
             </div>
             <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] shadow-lg">
               <Image
-                src="/images/photo-hero.jpg"
-                alt="Behavioral health leaders meeting around a table"
+                src="/images/home-hero.png"
+                alt="Creative Works hero"
                 fill
                 className="object-cover"
                 priority
@@ -207,8 +207,8 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative rounded-xl overflow-hidden aspect-[5/3.2] shadow-card">
             <Image
-              src="/images/photo-phoenix.jpg"
-              alt="Phoenix, Arizona skyline at sunset"
+              src="/images/home-secondary.png"
+              alt="Creative Works community"
               fill
               className="object-cover"
             />

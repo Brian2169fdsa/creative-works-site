@@ -96,8 +96,8 @@ export default function LeadershipPage() {
               key={leader.name}
               className={`grid grid-cols-1 gap-10 items-center ${
                 idx % 2 === 0
-                  ? "lg:grid-cols-[1fr_260px]"
-                  : "lg:grid-cols-[260px_1fr]"
+                  ? "lg:grid-cols-[1fr_360px]"
+                  : "lg:grid-cols-[360px_1fr]"
               }`}
             >
               {/* Odd rows: photo renders first in DOM → left column */}

@@ -211,6 +211,29 @@ export default function AboutPage() {
         </div>
       </Section>
 
+      {/* Leadership teaser */}
+      <Section tone="cloud">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div>
+            <Eyebrow>Our Team</Eyebrow>
+            <h2 className="font-display font-extrabold text-2xl md:text-3xl tracking-tight leading-snug text-navy-midnight mt-3 mb-3">
+              Led by people who believe in the work.
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">
+              Creative Works is led by an experienced team spanning strategy,
+              finance, and operations. Meet the leadership behind every
+              engagement.
+            </p>
+          </div>
+          <a
+            href="/about/leadership"
+            className="flex-shrink-0 inline-flex items-center gap-2 bg-white border border-gray-200 rounded-pill px-6 py-3 font-semibold text-navy-midnight shadow-sm hover:border-orange hover:text-orange transition-colors whitespace-nowrap"
+          >
+            Meet Our Leadership →
+          </a>
+        </div>
+      </Section>
+
       <CTASection
         title="Let's build something stronger, together."
         body="Schedule a consultation and tell us about the mission you are working to advance."

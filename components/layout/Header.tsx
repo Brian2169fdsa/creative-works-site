@@ -19,6 +19,8 @@ import {
   BadgeCheck,
   Zap,
   Bot,
+  Film,
+  Sparkles,
   ArrowRight,
   Building2,
   Heart,
@@ -99,6 +101,18 @@ const SERVICES_MENU = [
     label: "AI Development",
     tagline: "Custom AI agents and Claude integrations.",
     href: "/services/ai-development",
+  },
+  {
+    icon: Film,
+    label: "Video Editing",
+    tagline: "Professional video, polished and on brand.",
+    href: "/services/video-editing",
+  },
+  {
+    icon: Sparkles,
+    label: "Motion Graphics",
+    tagline: "Animation that brings brands to life.",
+    href: "/services/motion-graphics",
   },
 ];
 

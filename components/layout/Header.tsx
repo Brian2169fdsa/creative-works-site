@@ -310,6 +310,16 @@ export default function Header() {
           </Link>
 
           <Link
+            href="/customers"
+            className={cn(
+              "px-3.5 py-2 text-sm font-semibold rounded-sm transition-colors",
+              isActive("/customers") ? "text-orange" : "text-navy-midnight hover:text-orange"
+            )}
+          >
+            Customers
+          </Link>
+
+          <Link
             href="/contact"
             className={cn(
               "px-3.5 py-2 text-sm font-semibold rounded-sm transition-colors",
@@ -413,6 +423,7 @@ export default function Header() {
             </MobileAccordion>
 
             <MobileNavItem label="Resources" href="/resources" onClick={() => setMobileOpen(false)} />
+            <MobileNavItem label="Customers" href="/customers" onClick={() => setMobileOpen(false)} />
             <MobileNavItem label="Contact" href="/contact" onClick={() => setMobileOpen(false)} />
 
             <div className="mt-5 pt-4 border-t border-gray-100">

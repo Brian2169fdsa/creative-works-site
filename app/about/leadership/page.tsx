@@ -96,8 +96,8 @@ export default function LeadershipPage() {
               key={leader.name}
               className={`grid grid-cols-1 gap-10 items-center ${
                 idx % 2 === 0
-                  ? "lg:grid-cols-[1fr_440px]"
-                  : "lg:grid-cols-[440px_1fr]"
+                  ? "lg:grid-cols-[1fr_auto]"
+                  : "lg:grid-cols-[auto_1fr]"
               }`}
             >
               {/* Odd rows: photo renders first in DOM → left column */}
@@ -232,16 +232,18 @@ function LeaderPhoto({
         aria-hidden="true"
         className="absolute -top-4 -right-4 w-28 h-28 rounded-full border-[3px] border-orange opacity-60 pointer-events-none z-10"
       />
-      <div className="relative rounded-xl overflow-hidden aspect-[3/3.6] shadow-card bg-cloud">
+      <div className="rounded-xl overflow-hidden shadow-card bg-cloud">
         {leader.photo ? (
           <Image
             src={leader.photo}
             alt={leader.name}
-            fill
-            className="object-cover object-center"
+            width={0}
+            height={0}
+            sizes="(max-width: 1023px) 100vw, 45vw"
+            className="w-full h-auto"
           />
         ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+          <div className="aspect-[3/3.6] flex flex-col items-center justify-center gap-4">
             <div className="w-24 h-24 rounded-full bg-navy-midnight flex items-center justify-center">
               <span className="font-display font-extrabold text-3xl text-white tracking-tight">
                 {leader.name.split(" ").map((n) => n[0]).join("")}

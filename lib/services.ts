@@ -60,6 +60,13 @@ export interface ServiceConfig {
     cards: ServiceProvideCard[];
     columns?: number;
   };
+  features?: {
+    eyebrow?: string;
+    title: string;
+    lead?: string;
+    items: { title: string; desc: string }[];
+    columns?: number;
+  };
   sections?: ServiceSection[];
   process?: {
     eyebrow?: string;
@@ -1326,6 +1333,164 @@ export const SERVICES: ServiceConfig[] = [
     cta: {
       title: "Navigating licensure or accreditation?",
       body: "Schedule a consultation and we will help you map the requirements and build a clear path forward.",
+    },
+  },
+  {
+    slug: "automation",
+    icon: "Zap",
+    eyebrow: "Automation",
+    tagline: "Make, n8n, and Temporal workflows.",
+    short: "We design and build automated workflows on Make, n8n, and Temporal — connecting your systems, eliminating manual tasks, and scaling operations without adding headcount.",
+    href: "/services/automation",
+    title: "Automate the work that slows you down.",
+    lead: "Your team is spending time on tasks that should run themselves. We build automated workflows on Make, n8n, and Temporal that connect your systems, move your data, and keep your operations running without manual intervention.",
+    heroPlaceholder: "Automation workflow visualization, screenshot placeholder",
+    problem: {
+      eyebrow: "The Problem",
+      title: "Manual work is expensive, error-prone, and exhausting.",
+      lead: "Every manual handoff is a potential failure point. Data copied between systems, tasks waiting in inboxes, reports pulled by hand — these slow your team down and introduce mistakes at scale.",
+      items: [
+        "Staff spending hours on repetitive data entry and transfers",
+        "Critical tasks falling through the cracks between systems",
+        "No visibility into whether processes are running correctly",
+        "Scaling operations requires hiring more people, not working smarter",
+        "Disconnected tools that do not communicate with each other",
+        "Errors introduced every time a human touches a routine process",
+      ],
+      columns: 2,
+    },
+    features: {
+      eyebrow: "What We Build",
+      title: "Workflows that run while your team focuses on the mission.",
+      items: [
+        { title: "Make.com Workflows", desc: "Visual automation flows connecting hundreds of apps — CRMs, email, forms, databases, and more — without writing code." },
+        { title: "n8n Pipelines", desc: "Self-hosted or cloud automation with advanced logic, custom code nodes, and full control over your data." },
+        { title: "Temporal Orchestration", desc: "Durable, fault-tolerant workflow orchestration for complex, long-running processes that cannot afford to fail." },
+        { title: "System Integrations", desc: "Connect your EHR, CRM, billing, HR, and communication tools into a single coordinated operation." },
+        { title: "Data Sync and Transforms", desc: "Keep data consistent across platforms with scheduled and event-driven sync pipelines." },
+        { title: "Trigger-Based Automation", desc: "Kick off processes automatically on form submissions, status changes, emails, webhooks, and scheduled intervals." },
+      ],
+    },
+    sections: [
+      {
+        type: "callout" as const,
+        tone: "navy",
+        eyebrow: "Platform Expertise",
+        title: "The right tool for every workflow.",
+        body: "Not every automation problem needs the same solution. We match the platform to your use case — Make for accessible visual workflows, n8n for self-hosted control and custom logic, and Temporal for mission-critical processes that require durability and fault tolerance.",
+        points: [
+          "Make.com for rapid, visual, multi-app integrations",
+          "n8n for full control, custom code, and sensitive data workflows",
+          "Temporal for complex, long-running, stateful process orchestration",
+        ],
+        placeholder: "Automation platform diagram, screenshot placeholder",
+      },
+    ],
+    process: {
+      eyebrow: "How It Works",
+      title: "From manual to automated in weeks, not months.",
+      steps: [
+        { title: "Process Mapping", desc: "We audit your current manual workflows and identify the highest-impact automation opportunities." },
+        { title: "Platform Selection", desc: "We recommend the right tool for each workflow based on complexity, data sensitivity, and scale requirements." },
+        { title: "Build and Test", desc: "We build, test, and document every workflow with edge cases and error handling built in from the start." },
+        { title: "Deploy and Monitor", desc: "We deploy to production and set up monitoring so you always know when something needs attention." },
+        { title: "Handoff and Train", desc: "We train your team to manage, modify, and extend automations as your needs evolve." },
+      ],
+    },
+    benefits: {
+      title: "What automation gives your organization.",
+      items: [
+        { title: "Hours returned to your team", desc: "Eliminate routine tasks so staff focus on the work that actually requires a human." },
+        { title: "Fewer errors", desc: "Automated processes do not mistype, forget, or skip steps." },
+        { title: "Consistent execution", desc: "Every workflow runs exactly the same way, every time." },
+        { title: "Real-time visibility", desc: "Know the moment something needs attention instead of discovering it days later." },
+        { title: "Scale without headcount", desc: "Grow your operational capacity without proportionally growing your team." },
+        { title: "Connected systems", desc: "Your tools finally work together instead of creating more manual work." },
+      ],
+    },
+    related: ["ai-development", "operational-support", "salesforce-build-outs"],
+    cta: {
+      title: "Ready to stop doing work that should run itself?",
+      body: "Schedule a consultation and we will map your highest-impact automation opportunities.",
+    },
+  },
+  {
+    slug: "ai-development",
+    icon: "Bot",
+    eyebrow: "AI Development",
+    tagline: "Custom AI agents and Claude integrations.",
+    short: "We build custom AI solutions — from simple Claude integrations and prompt workflows to fully autonomous agents and AI-powered business processes.",
+    href: "/services/ai-development",
+    title: "Custom AI built around the way you work.",
+    lead: "AI is not one-size-fits-all. We build purpose-built AI for your organization — from simple Claude-powered skills that augment your team, to custom agents that act autonomously, to full AI-to-workflow integrations that reshape how work gets done.",
+    heroPlaceholder: "AI development workflow, screenshot placeholder",
+    problem: {
+      eyebrow: "The Challenge",
+      title: "Generic AI tools were not built for your work.",
+      lead: "Off-the-shelf AI is built for the broadest possible audience. Your organization has specific workflows, specific data, and specific compliance requirements that generic tools cannot address.",
+      items: [
+        "Chatbots that do not understand your domain or client population",
+        "AI tools that cannot connect to your actual systems and data",
+        "No control over how AI handles sensitive client information",
+        "Workflows that still require manual steps AI could handle",
+        "Teams uncertain how to use AI safely and effectively",
+        "No clear path from AI experiments to real operational value",
+      ],
+      columns: 2,
+    },
+    features: {
+      eyebrow: "What We Build",
+      title: "AI that fits your mission, not the other way around.",
+      items: [
+        { title: "Claude AI Integrations", desc: "Embed Anthropic's Claude into your tools and workflows — document processing, drafting, analysis, summarization, and more." },
+        { title: "Custom AI Agents", desc: "Autonomous agents that take action, make decisions, and complete multi-step tasks without requiring human intervention at every step." },
+        { title: "Workflow AI Attachment", desc: "Connect AI to your automation pipelines — trigger analysis, generation, or decisions as part of a larger automated workflow." },
+        { title: "Knowledge Base AI", desc: "AI grounded in your documents, policies, and SOPs to answer staff and client questions with accuracy and context." },
+        { title: "AI-Powered Intake and Forms", desc: "Intelligent intake that asks smart follow-up questions, validates responses, and routes submissions to the right destination." },
+        { title: "AI Reporting and Summarization", desc: "Automated summarization, reporting, and insight generation from your operational and clinical data." },
+      ],
+    },
+    sections: [
+      {
+        type: "callout" as const,
+        tone: "navy",
+        eyebrow: "Built Responsibly",
+        title: "AI that respects the people you serve.",
+        body: "Behavioral health organizations handle sensitive data and serve vulnerable populations. Every AI solution we build is designed with privacy, compliance, and ethical use as core requirements — not afterthoughts. We build AI your team can trust and your clients deserve.",
+        points: [
+          "Data privacy and HIPAA alignment built into every architecture",
+          "Human oversight and escalation paths for high-stakes decisions",
+          "Transparent AI behavior your staff can understand and rely on",
+        ],
+        placeholder: "AI architecture and compliance diagram, screenshot placeholder",
+      },
+    ],
+    process: {
+      eyebrow: "How It Works",
+      title: "From AI idea to working solution.",
+      steps: [
+        { title: "Discovery", desc: "We learn your workflows, data, compliance requirements, and where AI can deliver the most meaningful impact." },
+        { title: "Solution Design", desc: "We design an AI architecture that fits your stack, your data model, and your team's real-world capabilities." },
+        { title: "Build and Prompt Engineering", desc: "We build the integration, engineer and refine prompts, and configure agents for reliable, consistent output." },
+        { title: "Testing and Safety Review", desc: "We test thoroughly for accuracy, edge cases, and failure modes before anything touches production." },
+        { title: "Deploy and Support", desc: "We deploy, train your team, and stay engaged as your AI solution grows and your needs evolve." },
+      ],
+    },
+    benefits: {
+      title: "What custom AI gives your organization.",
+      items: [
+        { title: "AI that knows your work", desc: "Purpose-built solutions trained on your domain, not generic internet content." },
+        { title: "Automation of cognitive tasks", desc: "Drafting, summarizing, classifying, and analyzing — done at scale without staff hours." },
+        { title: "Consistent quality", desc: "AI delivers the same quality of output at 1 task or 10,000." },
+        { title: "Faster decisions", desc: "AI surfaces the right information at the right moment so your team acts with confidence." },
+        { title: "Responsible by design", desc: "Privacy, compliance, and ethical guardrails built in from the start." },
+        { title: "A path forward", desc: "A partner who helps you grow your AI capabilities as the technology and your organization evolve." },
+      ],
+    },
+    related: ["automation", "consulting", "operational-support"],
+    cta: {
+      title: "Ready to put AI to work for your mission?",
+      body: "Schedule a consultation and we will identify the highest-impact AI opportunities for your organization.",
     },
   },
 ];

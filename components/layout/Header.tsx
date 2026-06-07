@@ -17,6 +17,8 @@ import {
   ListChecks,
   Lightbulb,
   BadgeCheck,
+  Zap,
+  Bot,
   ArrowRight,
   Building2,
   Heart,
@@ -85,6 +87,18 @@ const SERVICES_MENU = [
     label: "Licensure Services",
     tagline: "Open and stay compliant with confidence.",
     href: "/services/licensure",
+  },
+  {
+    icon: Zap,
+    label: "Automation",
+    tagline: "Make, n8n, and Temporal workflows.",
+    href: "/services/automation",
+  },
+  {
+    icon: Bot,
+    label: "AI Development",
+    tagline: "Custom AI agents and Claude integrations.",
+    href: "/services/ai-development",
   },
 ];
 
@@ -429,9 +443,8 @@ function ServicesMegaMenu() {
           aria-hidden="true"
           className="absolute -bottom-4 -right-4 w-32 h-32 opacity-[0.07] pointer-events-none select-none"
         />
-        {/* Image placeholder */}
-        <div className="relative rounded-lg overflow-hidden aspect-video bg-navy-700 mb-4 border border-white/10 flex items-center justify-center">
-          <span className="text-xs text-white/30 font-medium">Services image</span>
+        <div className="relative rounded-lg overflow-hidden aspect-video mb-4 border border-white/10">
+          <Image src="/images/mega-services.png" alt="Services" fill className="object-cover" />
         </div>
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-orange mb-2">
@@ -453,7 +466,7 @@ function ServicesMegaMenu() {
       </div>
 
       {/* Services grid */}
-      <div className="grid grid-cols-3 gap-1">
+      <div className="grid grid-cols-3 xl:grid-cols-4 gap-1">
         {SERVICES_MENU.map((s) => (
           <Link
             key={s.href}
@@ -491,8 +504,8 @@ function IndustriesMegaMenu() {
           aria-hidden="true"
           className="absolute -bottom-4 -right-4 w-32 h-32 opacity-[0.07] pointer-events-none select-none"
         />
-        <div className="relative rounded-lg overflow-hidden aspect-video bg-navy-700 mb-4 border border-white/10 flex items-center justify-center">
-          <span className="text-xs text-white/30 font-medium">Industry image</span>
+        <div className="relative rounded-lg overflow-hidden aspect-video mb-4 border border-white/10">
+          <Image src="/images/mega-industries.png" alt="Industries" fill className="object-cover" />
         </div>
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-orange mb-2">
@@ -564,8 +577,8 @@ function AboutMegaMenu() {
           aria-hidden="true"
           className="absolute -bottom-4 -right-4 w-32 h-32 opacity-[0.07] pointer-events-none select-none"
         />
-        <div className="relative rounded-lg overflow-hidden aspect-video bg-navy-700 mb-4 border border-white/10 flex items-center justify-center">
-          <span className="text-xs text-white/30 font-medium">Team image</span>
+        <div className="relative rounded-lg overflow-hidden aspect-video mb-4 border border-white/10">
+          <Image src="/images/mega-about.png" alt="About Creative Works" fill className="object-cover" />
         </div>
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-orange mb-2">

@@ -130,7 +130,7 @@ export default function HomePage() {
                 src="/images/home-hero.png"
                 alt="Creative Works hero"
                 fill
-                className="object-cover"
+                className="object-cover object-right"
                 priority
               />
             </div>
@@ -210,7 +210,7 @@ export default function HomePage() {
               src="/images/home-secondary.png"
               alt="Creative Works community"
               fill
-              className="object-cover object-top"
+              className="object-cover object-bottom"
             />
           </div>
           <div>

@@ -22,6 +22,7 @@ export interface ServiceSection {
   body?: string;
   lead?: string;
   points?: string[];
+  image?: string;
   items?: string[];
   cards?: ServiceProvideCard[];
   columns?: number;
@@ -167,6 +168,7 @@ export const SERVICES: ServiceConfig[] = [
         ],
         placeholder: "Marketing materials, photo placeholder",
         placeholderIcon: "Megaphone",
+        image: "/images/marketing-hero.png",
       },
     ],
     process: {
@@ -316,6 +318,7 @@ export const SERVICES: ServiceConfig[] = [
         ],
         placeholder: "Team using SharePoint, photo placeholder",
         placeholderIcon: "FolderCog",
+        image: "/images/sharepoint-hero.png",
       },
     ],
     process: {
@@ -465,6 +468,7 @@ export const SERVICES: ServiceConfig[] = [
         ],
         placeholder: "Team using Salesforce, photo placeholder",
         placeholderIcon: "CloudCog",
+        image: "/images/salesforce-secondary.png",
       },
     ],
     process: {

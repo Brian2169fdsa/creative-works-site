@@ -84,10 +84,16 @@ function CalloutSection({ s }: CalloutSectionProps) {
             </div>
           )}
         </div>
-        <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] bg-navy-700/20 flex items-center justify-center">
-          <div className={cn("text-center p-8", dark ? "text-white/40" : "text-gray-400")}>
-            <p className="text-sm">{s.placeholder || "Image placeholder"}</p>
-          </div>
+        <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] shadow-lg">
+          {s.image ? (
+            <Image src={s.image} alt={s.title} fill className="object-cover" />
+          ) : (
+            <div className="absolute inset-0 bg-navy-700/20 flex items-center justify-center">
+              <div className={cn("text-center p-8", dark ? "text-white/40" : "text-gray-400")}>
+                <p className="text-sm">{s.placeholder || "Image placeholder"}</p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </Section>

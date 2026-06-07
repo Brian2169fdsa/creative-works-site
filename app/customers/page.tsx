@@ -21,6 +21,7 @@ export const metadata: Metadata = {
 const CUSTOMERS = [
   {
     name: "Phoenix Rising Window Cleaning",
+    label: "customers/1",
     fullName: null,
     category: "Home Services",
     location: "Phoenix, AZ",
@@ -34,6 +35,7 @@ const CUSTOMERS = [
   },
   {
     name: "Cholla Behavioral Health",
+    label: "customers/2",
     category: "Behavioral Health Provider",
     location: "Phoenix, AZ",
     services: ["Website Design and Development", "AI Development", "Automation"],
@@ -46,6 +48,7 @@ const CUSTOMERS = [
   },
   {
     name: "ABCAC",
+    label: "customers/3",
     fullName: "Arizona Board for Certification of Addiction Counselors",
     category: "Certification Board",
     location: "Arizona",
@@ -59,6 +62,7 @@ const CUSTOMERS = [
   },
   {
     name: "Da Vinci Consulting Services",
+    label: "customers/4",
     fullName: null,
     category: "Behavioral Health Consulting",
     location: "Arizona",
@@ -72,6 +76,7 @@ const CUSTOMERS = [
   },
   {
     name: "Rooted Practice",
+    label: "customers/5",
     fullName: null,
     category: "Clinical Resources and E-Commerce",
     location: "Nationwide",
@@ -85,6 +90,7 @@ const CUSTOMERS = [
   },
   {
     name: "At the Crossroads Therapy",
+    label: "customers/6",
     fullName: null,
     category: "Telehealth and Counseling",
     location: "Arizona",
@@ -244,6 +250,7 @@ function ScreenshotFrame({
           <div className="text-center px-6">
             <p className="text-sm font-semibold text-gray-400">{customer.name}</p>
             <p className="text-xs text-gray-300 mt-1">Screenshot coming soon</p>
+            <p className="text-xs font-mono text-orange/60 mt-2 bg-orange/5 border border-orange/20 rounded px-2 py-0.5">{customer.label}</p>
           </div>
         </div>
       </div>

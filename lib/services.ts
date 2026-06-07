@@ -553,7 +553,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "IT Services",
     title: "Technology that just works, so your team can focus on care.",
     lead: "Reliable systems are the quiet foundation behind everything your organization does. We provide practical, secure IT support that keeps accounts, devices, and tools running without the headaches.",
-    heroPlaceholder: "IT and systems support, photo placeholder",
+    heroPlaceholder: "it-services/1",
     href: "/services/it-services",
     tagline: "Secure, reliable technology support.",
     short:
@@ -633,7 +633,7 @@ export const SERVICES: ServiceConfig[] = [
           "Clear onboarding and offboarding",
           "Documented systems your team understands",
         ],
-        placeholder: "Secure systems, illustration placeholder",
+        placeholder: "it-services/2",
         placeholderIcon: "Lock",
       },
       {
@@ -739,7 +739,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Staffing Support",
     title: "The right people, when and where your team needs them.",
     lead: "Staffing gaps happen. Whether you need temporary coverage, help finding a key hire, or support planning your team structure, we connect you with qualified professionals who understand behavioral health.",
-    heroPlaceholder: "Team collaboration, photo placeholder",
+    heroPlaceholder: "staffing-support/1",
     href: "/services/staffing-support",
     tagline: "The right people, when you need them.",
     short:
@@ -857,7 +857,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Operational Support",
     title: "Stronger processes. A calmer, more effective organization.",
     lead: "Operations is everything behind the scenes that makes care possible. We help you map, improve, and sustain the processes that keep your organization moving forward, reliably and consistently.",
-    heroPlaceholder: "Operations team at work, photo placeholder",
+    heroPlaceholder: "operational-support/1",
     href: "/services/operational-support",
     tagline: "Better processes. Better outcomes.",
     short:
@@ -979,7 +979,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Business Process Services",
     title: "The back office, handled right.",
     lead: "Billing, intake, HR, and administrative work are critical to your organization, but they do not have to be done by the people closest to clinical care. We help you optimize, document, or outsource these processes so your team can focus on what matters most.",
-    heroPlaceholder: "Business process work, photo placeholder",
+    heroPlaceholder: "business-process/1",
     href: "/services/business-process-services",
     tagline: "Run the back office, done right.",
     short:
@@ -1101,7 +1101,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Consulting Services",
     title: "Guidance for the decisions that shape your organization's future.",
     lead: "Sometimes you need an experienced outside perspective. We provide strategic consulting for behavioral health organizations navigating growth, change, technology decisions, and operational challenges.",
-    heroPlaceholder: "Strategy session, photo placeholder",
+    heroPlaceholder: "consulting/1",
     href: "/services/consulting",
     tagline: "Guidance for the decisions that matter.",
     short:
@@ -1219,7 +1219,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Licensure Services",
     title: "Open your program and stay compliant, with confidence.",
     lead: "Behavioral health licensure and accreditation are complex, time-consuming, and unforgiving of errors. We guide organizations through the application, compliance, and accreditation processes so you can open your doors on schedule.",
-    heroPlaceholder: "Compliance and licensing documentation, photo placeholder",
+    heroPlaceholder: "licensure/1",
     href: "/services/licensure",
     tagline: "Open and stay compliant with confidence.",
     short:
@@ -1344,7 +1344,7 @@ export const SERVICES: ServiceConfig[] = [
     href: "/services/automation",
     title: "Automate the work that slows you down.",
     lead: "Your team is spending time on tasks that should run themselves. We build automated workflows on Make, n8n, and Temporal that connect your systems, move your data, and keep your operations running without manual intervention.",
-    heroPlaceholder: "Automation workflow visualization, screenshot placeholder",
+    heroPlaceholder: "automation/1",
     problem: {
       eyebrow: "The Problem",
       title: "Manual work is expensive, error-prone, and exhausting.",
@@ -1383,7 +1383,7 @@ export const SERVICES: ServiceConfig[] = [
           "n8n for full control, custom code, and sensitive data workflows",
           "Temporal for complex, long-running, stateful process orchestration",
         ],
-        placeholder: "Automation platform diagram, screenshot placeholder",
+        placeholder: "automation/2",
       },
     ],
     process: {
@@ -1423,7 +1423,7 @@ export const SERVICES: ServiceConfig[] = [
     href: "/services/ai-development",
     title: "Custom AI built around the way you work.",
     lead: "AI is not one-size-fits-all. We build purpose-built AI for your organization — from simple Claude-powered skills that augment your team, to custom agents that act autonomously, to full AI-to-workflow integrations that reshape how work gets done.",
-    heroPlaceholder: "AI development workflow, screenshot placeholder",
+    heroPlaceholder: "ai-development/1",
     problem: {
       eyebrow: "The Challenge",
       title: "Generic AI tools were not built for your work.",
@@ -1462,7 +1462,7 @@ export const SERVICES: ServiceConfig[] = [
           "Human oversight and escalation paths for high-stakes decisions",
           "Transparent AI behavior your staff can understand and rely on",
         ],
-        placeholder: "AI architecture and compliance diagram, screenshot placeholder",
+        placeholder: "ai-development/2",
       },
     ],
     process: {
@@ -1502,7 +1502,7 @@ export const SERVICES: ServiceConfig[] = [
     href: "/services/video-editing",
     title: "Video that tells your story the right way.",
     lead: "Great video content does not happen by accident. We take your raw footage and shape it into polished, purposeful video — edited, color graded, scored, and captioned — ready to perform on every platform your audience uses.",
-    heroPlaceholder: "Video editing timeline, screenshot placeholder",
+    heroPlaceholder: "video-editing/1",
     problem: {
       eyebrow: "The Problem",
       title: "Raw footage is not content.",
@@ -1541,7 +1541,7 @@ export const SERVICES: ServiceConfig[] = [
           "Music selection and audio mixing that fits your tone",
           "Multi-platform delivery in the formats and specs each channel requires",
         ],
-        placeholder: "Video brand edit example, screenshot placeholder",
+        placeholder: "video-editing/2",
       },
     ],
     process: {
@@ -1581,7 +1581,7 @@ export const SERVICES: ServiceConfig[] = [
     href: "/services/motion-graphics",
     title: "Motion that makes your brand impossible to ignore.",
     lead: "Static design stops scrollers for a moment. Motion design stops them in their tracks. We create animated graphics, explainer content, and brand motion systems that communicate faster, look sharper, and stick longer than anything static can.",
-    heroPlaceholder: "Motion graphics reel, screenshot placeholder",
+    heroPlaceholder: "motion-graphics/1",
     problem: {
       eyebrow: "The Problem",
       title: "Static content is getting scrolled past.",
@@ -1620,7 +1620,7 @@ export const SERVICES: ServiceConfig[] = [
           "Higher volume output at competitive timelines",
           "Consistent quality across every deliverable in a campaign",
         ],
-        placeholder: "AI motion workflow example, screenshot placeholder",
+        placeholder: "motion-graphics/2",
       },
     ],
     process: {

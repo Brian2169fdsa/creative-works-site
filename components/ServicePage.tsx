@@ -90,7 +90,7 @@ function CalloutSection({ s }: CalloutSectionProps) {
           ) : (
             <div className="absolute inset-0 bg-navy-700/20 flex items-center justify-center">
               <div className={cn("text-center p-8", dark ? "text-white/40" : "text-gray-400")}>
-                <p className="text-sm">{s.placeholder || "Image placeholder"}</p>
+                <p className="text-xs font-mono text-orange/70 bg-orange/5 border border-orange/20 rounded px-3 py-1 inline-block">{s.placeholder || "Image placeholder"}</p>
               </div>
             </div>
           )}
@@ -197,7 +197,7 @@ export default function ServicePage(cfg: ServiceConfig) {
                 <div className="absolute inset-0 bg-navy-700/10 flex items-center justify-center">
                   <div className="text-center p-8 text-gray-400">
                     <Icon className="w-16 h-16 mx-auto mb-3 text-orange/30" aria-hidden="true" />
-                    <p className="text-sm">{cfg.heroPlaceholder || `${cfg.eyebrow}, photo placeholder`}</p>
+                    <p className="text-xs font-mono text-orange/60 bg-orange/5 border border-orange/20 rounded px-3 py-1 mt-2 inline-block">{cfg.heroPlaceholder || `${cfg.eyebrow}/1`}</p>
                   </div>
                 </div>
               )}

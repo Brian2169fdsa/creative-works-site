@@ -96,8 +96,8 @@ export default function LeadershipPage() {
               key={leader.name}
               className={`grid grid-cols-1 gap-10 items-center ${
                 idx % 2 === 0
-                  ? "lg:grid-cols-[1fr_360px]"
-                  : "lg:grid-cols-[360px_1fr]"
+                  ? "lg:grid-cols-[1fr_440px]"
+                  : "lg:grid-cols-[440px_1fr]"
               }`}
             >
               {/* Odd rows: photo renders first in DOM → left column */}
@@ -238,7 +238,7 @@ function LeaderPhoto({
             src={leader.photo}
             alt={leader.name}
             fill
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">

@@ -131,7 +131,7 @@ export default function HomePage() {
                 alt="Creative Works hero"
                 fill
                 className="object-cover"
-                style={{ objectPosition: "85% center" }}
+                style={{ objectPosition: "100% center" }}
                 priority
               />
             </div>

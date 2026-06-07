@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-gray-800 antialiased;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+@layer utilities {
+  .bg-orange\/8 {
+    background-color: rgb(241 90 36 / 0.08);
+  }
+  .bg-white\/92 {
+    background-color: rgb(255 255 255 / 0.92);
+  }
+}

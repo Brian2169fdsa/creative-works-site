@@ -70,6 +70,32 @@ const CUSTOMERS = [
     secondaryLabel: null,
     screenshot: null,
   },
+  {
+    name: "Rooted Practice",
+    fullName: null,
+    category: "Clinical Resources and E-Commerce",
+    location: "Nationwide",
+    services: ["Website Design and Development", "Marketing"],
+    bio: "Creative Works partnered with Rooted Practice to design and develop their digital storefront and lead their marketing. We built a clean, professional e-commerce experience that makes it easy for therapists, group facilitators, and recovery centers to browse and purchase Rooted Practice's research-based clinical tools - from IOP and PHP curricula and facilitator kits to grief modules, mindfulness decks, and curated psychology book collections. Alongside the build, we developed a marketing strategy that positions Rooted Practice as a trusted, trauma-informed resource used by clinicians nationwide, driving visibility, traffic, and sales across the behavioral health field. The result is a polished, credible platform that turns deep clinical expertise into ready-to-use resources behavioral health professionals can put to work the same day.",
+    primaryHref: "https://www.rooted-practice.com",
+    primaryLabel: "Visit Site",
+    secondaryHref: null,
+    secondaryLabel: null,
+    screenshot: null,
+  },
+  {
+    name: "At the Crossroads Therapy",
+    fullName: null,
+    category: "Telehealth and Counseling",
+    location: "Arizona",
+    services: ["Website Design and Development", "Marketing"],
+    bio: "Creative Works partnered with At the Crossroads Therapy to build their website and drive their marketing. We designed and developed a warm, trustworthy telehealth platform that clearly presents their virtual counseling services - individual therapy, group counseling, CBT, and trauma-informed substance use care - with streamlined online scheduling that makes taking the first step simple. We paid special attention to the practice's mission of serving veterans, first responders, and law enforcement, shaping messaging that speaks directly to those who have spent their lives in service. On the marketing side, we built a strategy to grow the practice's reach and connect more individuals to compassionate, research-based care, anywhere they are. The result is a professional, approachable online presence built to meet people exactly where they are in their recovery journey.",
+    primaryHref: "https://www.atthecrossroadstherapy.com",
+    primaryLabel: "Visit Site",
+    secondaryHref: null,
+    secondaryLabel: null,
+    screenshot: null,
+  },
 ];
 
 export default function CustomersPage() {

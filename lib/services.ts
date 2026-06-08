@@ -251,7 +251,7 @@ export const SERVICES: ServiceConfig[] = [
     lead: "A well-built SharePoint portal turns document chaos into a system everyone can use. We design, configure, and launch portals that make internal collaboration easier and information actually findable.",
     heroPlaceholder: "SharePoint portal, screenshot placeholder",
     heroImage: "/images/sharepoint-hero2.png",
-    heroImagePosition: "center center",
+    heroImagePosition: "left center",
     href: "/services/sharepoint-setup",
     tagline: "Smarter systems. Stronger collaboration.",
     short:

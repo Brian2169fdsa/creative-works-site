@@ -555,6 +555,8 @@ export const SERVICES: ServiceConfig[] = [
     title: "Technology that just works, so your team can focus on care.",
     lead: "Reliable systems are the quiet foundation behind everything your organization does. We provide practical, secure IT support that keeps accounts, devices, and tools running without the headaches.",
     heroPlaceholder: "it-services/1",
+    heroImage: "/images/it-hero.png",
+    heroImagePosition: "left center",
     href: "/services/it-services",
     tagline: "Secure, reliable technology support.",
     short:
@@ -635,6 +637,7 @@ export const SERVICES: ServiceConfig[] = [
           "Documented systems your team understands",
         ],
         placeholder: "it-services/2",
+        image: "/images/it-secondary.png",
         placeholderIcon: "Lock",
       },
       {

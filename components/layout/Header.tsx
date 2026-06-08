@@ -134,13 +134,13 @@ const INDUSTRIES_MENU = {
       icon: Building2,
       label: "Human Services",
       desc: "Community-based organizations.",
-      href: "/industries",
+      href: "/industries/human-services",
     },
     {
       icon: BookOpen,
       label: "Nonprofits",
       desc: "Mission-driven organizations.",
-      href: "/industries",
+      href: "/industries/nonprofits",
     },
     {
       icon: Building2,

@@ -743,7 +743,8 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Staffing Support",
     title: "The right people, when and where your team needs them.",
     lead: "Staffing gaps happen. Whether you need temporary coverage, help finding a key hire, or support planning your team structure, we connect you with qualified professionals who understand behavioral health.",
-    heroPlaceholder: "staffing-support/1",
+    heroImage: "/images/staffing-hero.png",
+    heroImagePosition: "center center",
     href: "/services/staffing-support",
     tagline: "The right people, when you need them.",
     short:

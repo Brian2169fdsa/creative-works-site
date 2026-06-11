@@ -15,6 +15,7 @@ import {
   ListChecks,
   Lightbulb,
   BadgeCheck,
+  Stethoscope,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Section from "@/components/ui/Section";
@@ -58,6 +59,7 @@ const SERVICE_ICONS: Record<string, LucideIcon> = {
   "business-process-services": ListChecks,
   consulting: Lightbulb,
   licensure: BadgeCheck,
+  "bhp-oversight": Stethoscope,
 };
 
 const WHY_ICONS: Record<string, LucideIcon> = {

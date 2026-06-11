@@ -21,6 +21,7 @@ import {
   Bot,
   Film,
   Sparkles,
+  Stethoscope,
   ArrowRight,
   Building2,
   Heart,
@@ -89,6 +90,12 @@ const SERVICES_MENU = [
     label: "Licensure Services",
     tagline: "Open and stay compliant with confidence.",
     href: "/services/licensure",
+  },
+  {
+    icon: Stethoscope,
+    label: "BHP Oversight",
+    tagline: "Clinical supervision, quality, and governance.",
+    href: "/services/bhp-oversight",
   },
   {
     icon: Zap,
@@ -476,7 +483,7 @@ function ServicesMegaMenu() {
             Full-Service Support
           </p>
           <h3 className="font-display font-bold text-lg text-white leading-snug mb-2">
-            Nine services. One trusted partner.
+            Every service. One trusted partner.
           </h3>
           <p className="text-xs text-white/60 leading-relaxed mb-4">
             Creative Works coordinates every operational function your organization needs.

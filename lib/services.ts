@@ -1334,10 +1334,178 @@ export const SERVICES: ServiceConfig[] = [
         },
       ],
     },
-    related: ["consulting", "operational-support", "business-process-services"],
+    related: ["consulting", "operational-support", "bhp-oversight"],
     cta: {
       title: "Navigating licensure or accreditation?",
       body: "Schedule a consultation and we will help you map the requirements and build a clear path forward.",
+    },
+  },
+  {
+    slug: "bhp-oversight",
+    icon: "Stethoscope",
+    eyebrow: "BHP Oversight",
+    title: "Clinical oversight that keeps your programs safe, compliant, and effective.",
+    lead: "Behavioral Health Professional (BHP) oversight provides the clinical supervision, program consultation, quality assurance, and operational support that ensure your services are delivered in line with regulatory, payer, and best-practice standards.",
+    heroPlaceholder: "bhp-oversight/1",
+    href: "/services/bhp-oversight",
+    tagline: "Clinical supervision, quality, and governance.",
+    short:
+      "Clinical supervision, quality assurance, compliance, and program oversight delivered by experienced behavioral health professionals.",
+    problem: {
+      title: "Without clinical oversight, quality and compliance drift.",
+      lead: "Behavioral health programs operate under demanding regulatory and payer expectations. When clinical supervision and quality assurance are thin, documentation gaps, medical necessity issues, and compliance risk quietly accumulate, and the people in your care feel it first.",
+      items: [
+        "Inconsistent or insufficient clinical supervision",
+        "Documentation that does not hold up to audit or payer review",
+        "Medical necessity and treatment plans lacking clinical oversight",
+        "Compliance findings with no clear corrective action plan",
+        "Staff without structured coaching or competency development",
+        "No reliable measurement of outcomes or program performance",
+      ],
+      columns: 2,
+    },
+    provide: {
+      title: "What our BHP oversight covers",
+      eyebrow: "What We Provide",
+      lead: "End-to-end clinical and operational oversight delivered by experienced behavioral health professionals.",
+      columns: 4,
+      cards: [
+        {
+          icon: "UserCheck",
+          title: "Clinical Supervision",
+          desc: "Clinical supervision and consultation that supports your team and protects quality of care.",
+        },
+        {
+          icon: "Workflow",
+          title: "Program Development",
+          desc: "Program development and implementation support from concept through launch.",
+        },
+        {
+          icon: "FileCheck",
+          title: "Documentation QA",
+          desc: "Documentation review and quality assurance that stands up to audit and payer review.",
+        },
+        {
+          icon: "ClipboardCheck",
+          title: "Treatment Plan Oversight",
+          desc: "Medical necessity and treatment plan oversight grounded in clinical standards.",
+        },
+        {
+          icon: "ShieldCheck",
+          title: "Compliance Monitoring",
+          desc: "Compliance monitoring and corrective action support to close gaps before they grow.",
+        },
+        {
+          icon: "GraduationCap",
+          title: "Staff Training & Coaching",
+          desc: "Staff training, coaching, and competency development that builds lasting skill.",
+        },
+        {
+          icon: "FileText",
+          title: "Policy & Procedure Development",
+          desc: "Policies and procedures written for your programs and regulatory environment.",
+        },
+        {
+          icon: "BadgeCheck",
+          title: "Accreditation Readiness",
+          desc: "AHCCCS, CMS, and accreditation readiness support so reviews go smoothly.",
+        },
+        {
+          icon: "GitBranch",
+          title: "Workflow Improvement",
+          desc: "Clinical workflow and operational process improvement that reduces friction.",
+        },
+        {
+          icon: "BarChart3",
+          title: "Outcome Measurement",
+          desc: "Outcome measurement and performance improvement initiatives that show impact.",
+        },
+        {
+          icon: "ClipboardList",
+          title: "Program Evaluation & Auditing",
+          desc: "Behavioral health program evaluation and auditing to keep quality on track.",
+        },
+        {
+          icon: "Scale",
+          title: "Risk & Clinical Governance",
+          desc: "Risk management and clinical governance support that protects your organization.",
+        },
+      ],
+    },
+    sections: [
+      {
+        type: "callout",
+        tone: "navy",
+        eyebrow: "Standards-Aligned",
+        title: "Oversight measured against the standards that matter.",
+        body: "Every program we oversee is held to regulatory, payer, and best-practice expectations, from AHCCCS and CMS requirements to accreditation standards. We help you meet them consistently, document them clearly, and demonstrate them confidently when it counts.",
+        points: [
+          "Aligned with AHCCCS, CMS, and accreditation requirements",
+          "Built on payer expectations and clinical best practice",
+          "Documented and defensible under audit and review",
+        ],
+        placeholder: "bhp-oversight/2",
+      },
+    ],
+    process: {
+      title: "How we provide oversight.",
+      eyebrow: "How It Works",
+      steps: [
+        {
+          title: "Clinical Review",
+          desc: "We assess your programs, documentation, supervision, and compliance posture.",
+        },
+        {
+          title: "Gap Analysis",
+          desc: "We identify quality, compliance, and clinical risks and their root causes.",
+        },
+        {
+          title: "Oversight Plan",
+          desc: "We establish supervision, QA, and governance structures tailored to your programs.",
+        },
+        {
+          title: "Implement and Coach",
+          desc: "We deliver supervision, training, and corrective action support on the ground.",
+        },
+        {
+          title: "Monitor and Improve",
+          desc: "We measure outcomes and drive continuous performance improvement over time.",
+        },
+      ],
+    },
+    benefits: {
+      title: "What strong clinical oversight gives your organization.",
+      items: [
+        {
+          title: "Audit-ready documentation",
+          desc: "Records that hold up to payer and regulatory review.",
+        },
+        {
+          title: "Reduced compliance risk",
+          desc: "Gaps identified and corrected before they become findings.",
+        },
+        {
+          title: "Stronger clinical quality",
+          desc: "Supervision and QA that protect the people you serve.",
+        },
+        {
+          title: "More capable staff",
+          desc: "Coaching and competency development that builds your team.",
+        },
+        {
+          title: "Demonstrable outcomes",
+          desc: "Performance data that proves the impact of your programs.",
+        },
+        {
+          title: "Confident governance",
+          desc: "Clinical leadership and risk management you can rely on.",
+        },
+      ],
+    },
+    related: ["licensure", "consulting", "operational-support"],
+    cta: {
+      title: "Ready for clinical oversight you can trust?",
+      body: "Schedule a consultation and we will assess your programs and recommend the right oversight structure.",
     },
   },
   {

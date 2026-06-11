@@ -4,6 +4,7 @@ import Link from "next/link";
 import {
   Megaphone, FolderCog, CloudCog, ShieldCheck, Users,
   RefreshCw, ListChecks, Lightbulb, BadgeCheck, CheckCircle2,
+  Stethoscope,
 } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import Section from "@/components/ui/Section";
@@ -37,6 +38,7 @@ const SERVICE_ICONS: Record<string, LucideIcon> = {
   "business-process-services": ListChecks,
   consulting: Lightbulb,
   licensure: BadgeCheck,
+  "bhp-oversight": Stethoscope,
 };
 
 const SERVICE_DETAILS: Record<string, string[]> = {
@@ -49,6 +51,7 @@ const SERVICE_DETAILS: Record<string, string[]> = {
   "business-process-services": ["Billing and revenue cycle", "Intake and admin processes", "HR and onboarding ops"],
   consulting: ["Strategic planning", "Problem-solving support", "Change leadership"],
   licensure: ["Licensure applications", "Policy and compliance", "Accreditation readiness"],
+  "bhp-oversight": ["Clinical supervision and QA", "Compliance and corrective action", "Program evaluation and auditing"],
 };
 
 const STEPS = [

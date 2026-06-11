@@ -23,6 +23,7 @@ export const NAV: NavItem[] = [
       { label: "Business Process Services", href: "/services/business-process-services" },
       { label: "Consulting Services", href: "/services/consulting" },
       { label: "Licensure Services", href: "/services/licensure" },
+      { label: "BHP Oversight", href: "/services/bhp-oversight" },
       { label: "Automation", href: "/services/automation" },
       { label: "AI Development", href: "/services/ai-development" },
       { label: "Video Editing", href: "/services/video-editing" },

@@ -16,6 +16,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import Button from "@/components/ui/Button";
 import { SERVICES } from "@/lib/services";
 import { CONSULT_HREF } from "@/lib/navigation";
+import AnyVerticalNote from "@/components/ui/AnyVerticalNote";
 import type { LucideIcon } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -232,6 +233,8 @@ export default function BehavioralHealthPage() {
           ))}
         </div>
       </Section>
+
+      <AnyVerticalNote />
 
       <CTASection
         title="Let's strengthen the systems behind your care."

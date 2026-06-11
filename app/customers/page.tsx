@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import { ExternalLink, Monitor } from "lucide-react";
+import Link from "next/link";
+import { ExternalLink, Monitor, ArrowRight } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTASection from "@/components/ui/CTASection";
 import Eyebrow from "@/components/ui/Eyebrow";
+import { CUSTOMERS } from "@/lib/customers";
 import { CONSULT_HREF } from "@/lib/navigation";
 
 export const metadata: Metadata = {
@@ -17,92 +18,6 @@ export const metadata: Metadata = {
     description: "Real partnerships. Real results. Organizations we are proud to serve.",
   },
 };
-
-const CUSTOMERS = [
-  {
-    name: "Phoenix Rising Window Cleaning",
-    label: "customers/1",
-    fullName: null,
-    category: "Home Services",
-    location: "Phoenix, AZ",
-    services: ["Brand Development", "Website Design and Development", "Marketing", "Social Media Management", "Google Ads", "AI Development", "Automation"],
-    bio: "Creative Works built Phoenix Rising Window Cleaning from the ground up as a true end-to-end partner. We developed their complete brand identity - name presence, logo, and a clean \"crystal-clear, Phoenix strong\" visual language that feels premium and local at once - then designed and built their full website, including service pages, online booking, pricing, a before/after gallery, and a service-area experience covering the entire Phoenix metro. Beyond the build, we run the whole growth engine: marketing strategy, social media management, and Google Ads campaigns that turn searches into booked jobs. And under the hood, we deployed custom AI and automation to streamline quoting, scheduling, and customer follow-up - so the team can focus on spotless glass while the back office runs itself. From brand to booking to lead generation, Phoenix Rising runs on infrastructure we designed, built, and manage end to end - the full package.",
-    primaryHref: "https://phoenix-rising-web.vercel.app",
-    primaryLabel: "Visit Site",
-    secondaryHref: null,
-    secondaryLabel: null,
-    screenshot: null,
-  },
-  {
-    name: "Cholla Behavioral Health",
-    label: "customers/2",
-    category: "Behavioral Health Provider",
-    location: "Phoenix, AZ",
-    services: ["Website Design and Development", "AI Development", "Automation"],
-    bio: "Creative Works partnered with Cholla Behavioral Health to design and build their website - a clean, patient-centered digital presence that reflects Cholla's mission of bridging behavioral health, physical health, and social support through compassionate, evidence-based care. Beyond the site, we delivered custom AI and automation solutions to streamline Cholla's operations, strengthen how the team connects with prospective clients, and create faster, more seamless pathways to care. Our goal throughout was simple: give a Phoenix-based treatment provider the kind of modern, reliable digital infrastructure that lets their clinicians focus on what they do best - helping people get well.",
-    primaryHref: "#",
-    primaryLabel: "Visit Site",
-    secondaryHref: null,
-    secondaryLabel: null,
-    screenshot: null,
-  },
-  {
-    name: "ABCAC",
-    label: "customers/3",
-    fullName: "Arizona Board for Certification of Addiction Counselors",
-    category: "Certification Board",
-    location: "Arizona",
-    services: ["Website Development", "Member Portal", "AI Development", "Automation"],
-    bio: "Creative Works partnered with the Arizona Board for Certification of Addiction Counselors (ABCAC) to build and modernize their entire digital presence. We developed their current website along with a brand-new member portal that gives Arizona's addiction counseling professionals one trusted place to apply for certification, register for IC&RC exams, manage recertifications and CEUs, and handle credential reciprocity. We are now rolling out a fully redesigned, faster site launching soon - built on a modern Next.js and Vercel stack, cleaner, mobile-first, and built to scale with ABCAC's 1,200+ certified professionals. Beyond design and development, we delivered custom AI and automation solutions that streamline credentialing workflows, reduce manual administrative load, and create a smoother experience for both staff and applicants. Our goal was to give a respected, IC&RC-recognized certification board the kind of reliable, modern infrastructure that lets them focus on setting the standard for addiction counselor certification in Arizona.",
-    primaryHref: "https://aback.org",
-    primaryLabel: "Visit Current Site",
-    secondaryHref: "https://abcac.vercel.app",
-    secondaryLabel: "Preview New Site",
-    screenshot: null,
-  },
-  {
-    name: "Da Vinci Consulting Services",
-    label: "customers/4",
-    fullName: null,
-    category: "Behavioral Health Consulting",
-    location: "Arizona",
-    services: ["Website Development", "Brand Development", "Marketing"],
-    bio: "Creative Works partnered with Da Vinci Consulting Services to build their digital presence and brand from the ground up. We designed and developed their website - a clean, professional platform that clearly communicates Da Vinci's full range of behavioral healthcare consulting services, from Medicaid credentialing and Joint Commission preparation to compliance training, leadership development, and operational consulting. Beyond the build, we led brand development and marketing strategy, shaping a polished, trustworthy identity that reflects the firm's 13+ years of expertise and its reputation for results-driven, compassionate consulting. The result is a cohesive brand and online presence that positions Da Vinci as a go-to partner for behavioral health organizations looking to strengthen compliance, streamline operations, and grow sustainably.",
-    primaryHref: "https://davinciconsultingservices.com",
-    primaryLabel: "Visit Site",
-    secondaryHref: null,
-    secondaryLabel: null,
-    screenshot: null,
-  },
-  {
-    name: "Rooted Practice",
-    label: "customers/5",
-    fullName: null,
-    category: "Clinical Resources and E-Commerce",
-    location: "Nationwide",
-    services: ["Website Design and Development", "Marketing"],
-    bio: "Creative Works partnered with Rooted Practice to design and develop their digital storefront and lead their marketing. We built a clean, professional e-commerce experience that makes it easy for therapists, group facilitators, and recovery centers to browse and purchase Rooted Practice's research-based clinical tools - from IOP and PHP curricula and facilitator kits to grief modules, mindfulness decks, and curated psychology book collections. Alongside the build, we developed a marketing strategy that positions Rooted Practice as a trusted, trauma-informed resource used by clinicians nationwide, driving visibility, traffic, and sales across the behavioral health field. The result is a polished, credible platform that turns deep clinical expertise into ready-to-use resources behavioral health professionals can put to work the same day.",
-    primaryHref: "https://www.rooted-practice.com",
-    primaryLabel: "Visit Site",
-    secondaryHref: null,
-    secondaryLabel: null,
-    screenshot: null,
-  },
-  {
-    name: "At the Crossroads Therapy",
-    label: "customers/6",
-    fullName: null,
-    category: "Telehealth and Counseling",
-    location: "Arizona",
-    services: ["Website Design and Development", "Marketing"],
-    bio: "Creative Works partnered with At the Crossroads Therapy to build their website and drive their marketing. We designed and developed a warm, trustworthy telehealth platform that clearly presents their virtual counseling services - individual therapy, group counseling, CBT, and trauma-informed substance use care - with streamlined online scheduling that makes taking the first step simple. We paid special attention to the practice's mission of serving veterans, first responders, and law enforcement, shaping messaging that speaks directly to those who have spent their lives in service. On the marketing side, we built a strategy to grow the practice's reach and connect more individuals to compassionate, research-based care, anywhere they are. The result is a professional, approachable online presence built to meet people exactly where they are in their recovery journey.",
-    primaryHref: "https://www.atthecrossroadstherapy.com",
-    primaryLabel: "Visit Site",
-    secondaryHref: null,
-    secondaryLabel: null,
-    screenshot: null,
-  },
-];
 
 export default function CustomersPage() {
   return (
@@ -121,9 +36,7 @@ export default function CustomersPage() {
           {CUSTOMERS.map((customer, idx) => (
             <div
               key={customer.name}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${
-                idx % 2 === 1 ? "lg:direction-rtl" : ""
-              }`}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
             >
               {/* Odd rows: screenshot on left */}
               {idx % 2 === 1 && (
@@ -161,12 +74,18 @@ export default function CustomersPage() {
                 <p className="text-base text-gray-600 leading-relaxed mb-7">{customer.bio}</p>
 
                 <div className="flex flex-wrap gap-3">
+                  <Link
+                    href={`/customers/${customer.slug}`}
+                    className="inline-flex items-center gap-2 bg-orange text-white font-semibold rounded-pill px-5 py-2.5 text-sm hover:bg-orange/90 transition-colors"
+                  >
+                    View Our Work <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </Link>
                   {customer.primaryHref && customer.primaryHref !== "#" && (
                     <a
                       href={customer.primaryHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-orange text-white font-semibold rounded-pill px-5 py-2.5 text-sm hover:bg-orange/90 transition-colors"
+                      className="inline-flex items-center gap-2 border border-gray-200 text-navy-midnight font-semibold rounded-pill px-5 py-2.5 text-sm hover:border-orange hover:text-orange transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" aria-hidden="true" />
                       {customer.primaryLabel}
@@ -224,14 +143,11 @@ function ScreenshotFrame({
 }) {
   return (
     <div className="relative">
-      {/* Orange accent arc */}
       <div
         aria-hidden="true"
         className="absolute -top-4 -right-4 w-24 h-24 rounded-full border-[3px] border-orange opacity-50 pointer-events-none z-10"
       />
-      {/* Browser chrome frame */}
       <div className="rounded-xl overflow-hidden shadow-card border border-gray-200">
-        {/* Browser bar */}
         <div className="bg-gray-100 border-b border-gray-200 px-4 py-2.5 flex items-center gap-3">
           <div className="flex gap-1.5">
             <div className="w-3 h-3 rounded-full bg-red-400" />
@@ -240,17 +156,18 @@ function ScreenshotFrame({
           </div>
           <div className="flex-1 bg-white rounded-md px-3 py-1 text-xs text-gray-400 font-mono truncate border border-gray-200">
             {customer.primaryHref && customer.primaryHref !== "#"
-              ? customer.primaryHref.replace("https://", "")
+              ? customer.primaryHref.replace("https://www.", "").replace("https://", "")
               : customer.name.toLowerCase().replace(/\s+/g, "") + ".com"}
           </div>
         </div>
-        {/* Screenshot area */}
         <div className="relative bg-gradient-to-br from-cloud to-gray-100 aspect-[16/10] flex flex-col items-center justify-center gap-3">
           <Monitor className="w-12 h-12 text-gray-300" aria-hidden="true" />
           <div className="text-center px-6">
             <p className="text-sm font-semibold text-gray-400">{customer.name}</p>
             <p className="text-xs text-gray-300 mt-1">Screenshot coming soon</p>
-            <p className="text-xs font-mono text-orange/60 mt-2 bg-orange/5 border border-orange/20 rounded px-2 py-0.5">{customer.label}</p>
+            <p className="text-xs font-mono text-orange/60 mt-2 bg-orange/5 border border-orange/20 rounded px-2 py-0.5">
+              {customer.screenshotLabel}
+            </p>
           </div>
         </div>
       </div>

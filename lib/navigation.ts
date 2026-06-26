@@ -42,7 +42,6 @@ export const NAV: NavItem[] = [
     key: "about",
     menu: [
       { label: "About Creative Works", href: "/about" },
-      { label: "Leadership", href: "/about/leadership" },
     ],
   },
   { label: "Resources", href: "/resources", key: "resources" },

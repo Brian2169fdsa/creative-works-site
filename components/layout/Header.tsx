@@ -173,12 +173,6 @@ const ABOUT_MENU = {
       href: "/about",
     },
     {
-      icon: Users,
-      label: "Leadership",
-      desc: "Meet Brian, Sierra, and Wayne.",
-      href: "/about/leadership",
-    },
-    {
       icon: BookOpen,
       label: "Case Studies",
       desc: "Real results for real organizations.",

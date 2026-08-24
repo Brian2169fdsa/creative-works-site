@@ -1691,7 +1691,7 @@ export const SERVICES: ServiceConfig[] = [
     href: "/services/automation",
     title: "Automate the work that slows you down.",
     lead: "Your team is spending time on tasks that should run themselves. We build automated workflows on Make, n8n, and Temporal that connect your systems, move your data, and keep your operations running without manual intervention.",
-    heroPlaceholder: "automation/1",
+    heroImage: "/images/automation-hero.png",
     problem: {
       eyebrow: "The Problem",
       title: "Manual work is expensive, error-prone, and exhausting.",

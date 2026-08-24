@@ -1520,7 +1520,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "BHP Oversight",
     title: "Clinical oversight that keeps your programs safe, compliant, and effective.",
     lead: "Behavioral Health Professional (BHP) oversight provides the clinical supervision, program consultation, quality assurance, and operational support that ensure your services are delivered in line with regulatory, payer, and best-practice standards.",
-    heroPlaceholder: "bhp-oversight/1",
+    heroImage: "/images/bhp-oversight-hero.png",
     href: "/services/bhp-oversight",
     tagline: "Clinical supervision, quality, and governance.",
     short:

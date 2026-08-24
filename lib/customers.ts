@@ -29,36 +29,6 @@ export interface CustomerData {
 
 export const CUSTOMERS: CustomerData[] = [
   {
-    slug: "phoenix-rising",
-    name: "Phoenix Rising Window Cleaning",
-    screenshotLabel: "customers/1",
-    category: "Home Services",
-    location: "Phoenix, AZ",
-    services: ["Brand Development", "Website Design & Development", "Marketing", "Social Media Management", "Google Ads", "AI Development", "Automation"],
-    serviceslugs: ["marketing", "automation", "ai-development"],
-    tagline: "Built from the ground up — brand, website, and a full growth engine.",
-    bio: "Creative Works built Phoenix Rising Window Cleaning from the ground up as a true end-to-end partner. We developed their complete brand identity — name, logo, and a clean 'crystal-clear, Phoenix strong' visual language that feels premium and local at once — then designed and built their full website with service pages, online booking, pricing, a before/after gallery, and a service-area experience covering the entire Phoenix metro. Beyond the build, we run the whole growth engine: marketing strategy, social media management, and Google Ads campaigns that turn searches into booked jobs. Under the hood, we deployed custom AI and automation to streamline quoting, scheduling, and customer follow-up — so the team focuses on spotless glass while the back office runs itself.",
-    challenge: "Phoenix Rising needed to launch as a credible, professional brand in a crowded residential services market — with no prior identity, no website, and no marketing infrastructure.",
-    approach: "We handled everything from naming and brand identity through website build, Google Ads launch, and full back-office automation. Every piece was designed to work together as a single system.",
-    results: [
-      { stat: "0→1", label: "Brand built from scratch" },
-      { stat: "100%", label: "End-to-end partnership" },
-      { stat: "Auto", label: "Quoting and scheduling" },
-      { stat: "Live", label: "Google Ads running" },
-    ],
-    primaryHref: "https://phoenix-rising-web.vercel.app",
-    primaryLabel: "Visit Site",
-    screenshot: null,
-    deliverables: [
-      { title: "Brand Identity System", type: "Brand", placeholder: "phoenix-rising/work-1", description: "Logo, color palette, typography, and visual language built around 'crystal-clear, Phoenix strong.'" },
-      { title: "Full Website Build", type: "Web", placeholder: "phoenix-rising/work-2", description: "Service pages, booking flow, pricing, before/after gallery, and full Phoenix metro service area." },
-      { title: "Residential Services Flyer", type: "Print", placeholder: "phoenix-rising/work-3", description: "Door-hanger and leave-behind flyer for residential neighborhoods and HOA distribution." },
-      { title: "Google Ads Creative", type: "Digital", placeholder: "phoenix-rising/work-4", description: "Search and display ad creative driving booked jobs from high-intent local queries." },
-      { title: "Social Media Templates", type: "Social", placeholder: "phoenix-rising/work-5", description: "Branded Instagram and Facebook post templates for before/after photos, promotions, and seasonal campaigns." },
-      { title: "Quoting and Booking Automation", type: "AI", placeholder: "phoenix-rising/work-6", description: "AI-powered quoting flow and automated scheduling pipeline so every inquiry becomes a confirmed job without manual effort." },
-    ],
-  },
-  {
     slug: "cholla-behavioral-health",
     name: "Cholla Behavioral Health",
     screenshotLabel: "customers/2",

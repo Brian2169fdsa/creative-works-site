@@ -1158,7 +1158,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Business Process Services",
     title: "The back office, handled right.",
     lead: "Billing, intake, HR, and administrative work are critical to your organization, but they do not have to be done by the people closest to clinical care. We help you optimize, document, or outsource these processes so your team can focus on what matters most.",
-    heroPlaceholder: "business-process/1",
+    heroImage: "/images/business-process-hero.png",
     href: "/services/business-process-services",
     tagline: "Run the back office, done right.",
     short:

@@ -186,12 +186,6 @@ const ABOUT_MENU = {
       href: "/about/leadership",
     },
     {
-      icon: BookOpen,
-      label: "Case Studies",
-      desc: "Real results for real organizations.",
-      href: "/case-studies",
-    },
-    {
       icon: Phone,
       label: "Contact Us",
       desc: "Phoenix, AZ · 602-402-5121",

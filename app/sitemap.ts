@@ -17,7 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/industries`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/industries/behavioral-health`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/case-studies`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/contact`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.8 },
     { url: `${base}/schedule-consultation`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/privacy-policy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },

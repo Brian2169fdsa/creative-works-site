@@ -29,6 +29,7 @@ import {
   Phone,
   UserCircle2,
   ChevronRight,
+  Receipt,
 } from "lucide-react";
 import { CONSULT_HREF } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
@@ -37,6 +38,12 @@ import Button from "@/components/ui/Button";
 /* ─── data ────────────────────────────────────────────────────────────────── */
 
 const SERVICES_MENU = [
+  {
+    icon: Receipt,
+    label: "Behavioral Health Billing",
+    tagline: "The billing team that feels like your team.",
+    href: "/services/behavioral-health-billing",
+  },
   {
     icon: Megaphone,
     label: "Marketing",
@@ -321,16 +328,6 @@ export default function Header() {
           </button>
 
           <Link
-            href="/resources"
-            className={cn(
-              "px-3.5 py-2 text-sm font-semibold rounded-sm transition-colors",
-              isActive("/resources") ? "text-orange" : "text-navy-midnight hover:text-orange"
-            )}
-          >
-            Resources
-          </Link>
-
-          <Link
             href="/customers"
             className={cn(
               "px-3.5 py-2 text-sm font-semibold rounded-sm transition-colors",
@@ -443,7 +440,6 @@ export default function Header() {
               ))}
             </MobileAccordion>
 
-            <MobileNavItem label="Resources" href="/resources" onClick={() => setMobileOpen(false)} />
             <MobileNavItem label="Customers" href="/customers" onClick={() => setMobileOpen(false)} />
             <MobileNavItem label="Contact" href="/contact" onClick={() => setMobileOpen(false)} />
 

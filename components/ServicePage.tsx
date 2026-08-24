@@ -60,10 +60,12 @@ function CardRow({ cards }: CardRowProps) {
 
 interface CalloutSectionProps {
   s: NonNullable<ServiceConfig["sections"]>[0];
+  icon: string;
 }
 
-function CalloutSection({ s }: CalloutSectionProps) {
+function CalloutSection({ s, icon }: CalloutSectionProps) {
   const dark = s.tone === "navy";
+  const Icon = getIcon(icon);
   return (
     <Section tone={dark ? "navy" : "cloud"}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -89,8 +91,18 @@ function CalloutSection({ s }: CalloutSectionProps) {
             <Image src={s.image} alt={s.title} fill className="object-cover" style={s.imagePosition ? { objectPosition: s.imagePosition } : undefined} />
           ) : (
             <div className="absolute inset-0 bg-navy-700/20 flex items-center justify-center">
-              <div className={cn("text-center p-8", dark ? "text-white/40" : "text-gray-400")}>
-                <p className="text-xs font-mono text-orange/70 bg-orange/5 border border-orange/20 rounded px-3 py-1 inline-block">{s.placeholder || "Image placeholder"}</p>
+              <div
+                className={cn(
+                  "w-28 h-28 rounded-2xl border flex items-center justify-center",
+                  dark
+                    ? "bg-white/10 border-white/20"
+                    : "bg-orange/10 border-orange/20"
+                )}
+              >
+                <Icon
+                  className={cn("w-14 h-14", dark ? "text-white/50" : "text-orange/50")}
+                  aria-hidden="true"
+                />
               </div>
             </div>
           )}
@@ -195,9 +207,8 @@ export default function ServicePage(cfg: ServiceConfig) {
                 />
               ) : (
                 <div className="absolute inset-0 bg-navy-700/10 flex items-center justify-center">
-                  <div className="text-center p-8 text-gray-400">
-                    <Icon className="w-16 h-16 mx-auto mb-3 text-orange/30" aria-hidden="true" />
-                    <p className="text-xs font-mono text-orange/60 bg-orange/5 border border-orange/20 rounded px-3 py-1 mt-2 inline-block">{cfg.heroPlaceholder || `${cfg.eyebrow}/1`}</p>
+                  <div className="w-28 h-28 rounded-2xl bg-orange/10 border border-orange/20 flex items-center justify-center">
+                    <Icon className="w-14 h-14 text-orange/50" aria-hidden="true" />
                   </div>
                 </div>
               )}
@@ -239,7 +250,7 @@ export default function ServicePage(cfg: ServiceConfig) {
 
       {/* Custom sections */}
       {(cfg.sections || []).map((s, i) => {
-        if (s.type === "callout") return <CalloutSection key={i} s={s} />;
+        if (s.type === "callout") return <CalloutSection key={i} s={s} icon={cfg.icon} />;
         if (s.type === "cards") {
           return (
             <Section key={i} tone={(s.tone as "white" | "cloud" | "navy") || "white"}>

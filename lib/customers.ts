@@ -204,36 +204,6 @@ export const CUSTOMERS: CustomerData[] = [
       { title: "Email Outreach Templates", type: "Digital", placeholder: "at-the-crossroads/work-4", description: "Referral and partnership email templates for community organizations, employee assistance programs, and first responder leadership." },
     ],
   },
-  {
-    slug: "scottsdale-behavioral-health",
-    name: "Scottsdale Behavioral Health",
-    screenshotLabel: "customers/7",
-    category: "Behavioral Health Provider",
-    location: "Scottsdale, AZ",
-    services: ["Operational Support", "Business Process Services", "Marketing"],
-    serviceslugs: ["operational-support", "business-process-services", "marketing"],
-    tagline: "Stronger operations and a clearer market presence for a growing behavioral health provider.",
-    bio: "Creative Works partnered with Scottsdale Behavioral Health to strengthen the systems and marketing infrastructure behind their care delivery. We mapped and redesigned key operational workflows — from intake through clinical handoffs — and built standardized operating procedures that gave their team consistent, reliable processes to work from. Alongside the operational work, we built a marketing presence that clearly communicates their services to the Scottsdale and greater Phoenix community, including referral materials, digital presence updates, and a content strategy that positions them as a trusted provider in a competitive market.",
-    challenge: "Scottsdale Behavioral Health was growing quickly but experiencing the friction that comes with scale — informal processes, inconsistent workflows, and a marketing presence that did not yet match the quality of care being delivered.",
-    approach: "We started with an operational review, mapped the highest-friction workflows, built SOPs and process documentation, and ran parallel marketing work — so their external presence grew alongside their internal clarity.",
-    results: [
-      { stat: "↓", label: "Operational friction" },
-      { stat: "New", label: "SOPs documented" },
-      { stat: "Clear", label: "Intake-to-care workflow" },
-      { stat: "↑", label: "Referral partner awareness" },
-    ],
-    primaryHref: "https://www.scottsdalebh.com",
-    primaryLabel: "Visit Site",
-    screenshot: null,
-    deliverables: [
-      { title: "Operational Process Maps", type: "Operations", placeholder: "scottsdale-bh/work-1", description: "Visual workflow documentation covering intake, clinical handoffs, scheduling, and administrative processes." },
-      { title: "Standard Operating Procedures", type: "Operations", placeholder: "scottsdale-bh/work-2", description: "Written SOPs for critical functions — each written for the staff who actually do the work, not just for compliance files." },
-      { title: "Referral Partner Flyer", type: "Print", placeholder: "scottsdale-bh/work-3", description: "Professional leave-behind designed for referral partner conversations with physicians, schools, and community organizations." },
-      { title: "Service Overview Brochure", type: "Print", placeholder: "scottsdale-bh/work-4", description: "Printed and digital brochure clearly communicating the full range of behavioral health services offered and who they serve." },
-      { title: "Social Media Content Templates", type: "Social", placeholder: "scottsdale-bh/work-5", description: "Branded post templates for awareness, education, and community engagement across Instagram and Facebook." },
-      { title: "Intake Process Redesign", type: "Operations", placeholder: "scottsdale-bh/work-6", description: "Streamlined intake workflow reducing time-to-care and improving the client first-contact experience." },
-    ],
-  },
 ];
 
 export function getCustomer(slug: string): CustomerData | undefined {

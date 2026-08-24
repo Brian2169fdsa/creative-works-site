@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SERVICES } from "@/lib/services";
 
-const base = process.env.NEXT_PUBLIC_SITE_URL || "https://www.creativeworksaz.com";
+const base = process.env.NEXT_PUBLIC_SITE_URL || "https://www.phxcw.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const serviceRoutes = SERVICES.map((s) => ({

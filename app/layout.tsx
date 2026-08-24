@@ -19,7 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.creativeworksaz.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.phxcw.com"),
   title: {
     default: "Phoenix Creative Works | Full-Service Support for Behavioral Health Organizations",
     template: "%s | Phoenix Creative Works",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.creativeworksaz.com",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.phxcw.com",
     siteName: "Phoenix Creative Works",
     images: [{ url: "/images/photo-hero.jpg" }],
   },

@@ -146,7 +146,7 @@ export default function LeadershipPage() {
                     LinkedIn
                   </a>
                   <a
-                    href={`mailto:hello@phoenixcreativeworks.com`}
+                    href={`mailto:admin@phxcw.com`}
                     aria-label={`Email ${leader.name}`}
                     className="inline-flex items-center gap-2 text-sm font-semibold text-navy-midnight border border-gray-200 rounded-pill px-4 py-2 hover:border-orange hover:text-orange transition-colors"
                   >

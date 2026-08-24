@@ -36,7 +36,7 @@ export default function TermsOfServicePage() {
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
               By accessing or using the Phoenix Creative Works website
-              (creativeworksaz.com), you agree to be bound by these Terms of
+              (www.phxcw.com), you agree to be bound by these Terms of
               Service. Please read them carefully before using our website or
               engaging our services.
             </p>

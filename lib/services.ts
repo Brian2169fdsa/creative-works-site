@@ -1730,7 +1730,7 @@ export const SERVICES: ServiceConfig[] = [
           "n8n for full control, custom code, and sensitive data workflows",
           "Temporal for complex, long-running, stateful process orchestration",
         ],
-        placeholder: "automation/2",
+        image: "/images/automation-secondary.png",
       },
     ],
     process: {

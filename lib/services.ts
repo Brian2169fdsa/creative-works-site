@@ -1770,7 +1770,7 @@ export const SERVICES: ServiceConfig[] = [
     href: "/services/ai-development",
     title: "Custom AI built around the way you work.",
     lead: "AI is not one-size-fits-all. We build purpose-built AI for your organization — from simple Claude-powered skills that augment your team, to custom agents that act autonomously, to full AI-to-workflow integrations that reshape how work gets done.",
-    heroPlaceholder: "ai-development/1",
+    heroImage: "/images/ai-development-hero.png",
     problem: {
       eyebrow: "The Challenge",
       title: "Generic AI tools were not built for your work.",

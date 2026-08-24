@@ -1809,7 +1809,7 @@ export const SERVICES: ServiceConfig[] = [
           "Human oversight and escalation paths for high-stakes decisions",
           "Transparent AI behavior your staff can understand and rely on",
         ],
-        placeholder: "ai-development/2",
+        image: "/images/ai-development-secondary.png",
       },
     ],
     process: {

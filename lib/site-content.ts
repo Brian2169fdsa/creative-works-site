@@ -2,7 +2,7 @@ export const CONTACT = {
   city: "Phoenix, Arizona",
   phone: "602-402-5121",
   phoneHref: "tel:+16024025121",
-  email: "hello@phoenixcreativeworks.com",
+  email: "admin@phxcw.com",
   hours: ["Mon-Fri, 8:00 AM - 6:00 PM MST", "Weekends, By appointment"],
 };
 

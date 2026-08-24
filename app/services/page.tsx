@@ -11,6 +11,7 @@ import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProcessSteps from "@/components/ui/ProcessSteps";
 import ProblemSolution from "@/components/ui/ProblemSolution";
+import ImageFrame from "@/components/ui/ImageFrame";
 import CTASection from "@/components/ui/CTASection";
 import { SERVICES } from "@/lib/services";
 import { CONSULT_HREF } from "@/lib/navigation";
@@ -146,14 +147,14 @@ export default function ServicesPage() {
       {/* Combined Support */}
       <Section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative rounded-xl overflow-hidden aspect-[5/4] shadow-card">
+          <ImageFrame flip className="aspect-[5/4] shadow-card">
             <Image
               src="/images/photo-meeting.jpg"
               alt="Two professionals collaborating"
               fill
               className="object-cover"
             />
-          </div>
+          </ImageFrame>
           <div>
             <SectionHeading
               eyebrow="One Coordinated Partner"

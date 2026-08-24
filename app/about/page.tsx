@@ -12,6 +12,7 @@ import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CheckGrid from "@/components/ui/CheckGrid";
 import CTASection from "@/components/ui/CTASection";
+import ImageFrame from "@/components/ui/ImageFrame";
 import Eyebrow from "@/components/ui/Eyebrow";
 import { CONSULT_HREF } from "@/lib/navigation";
 import type { LucideIcon } from "lucide-react";
@@ -97,14 +98,14 @@ export default function AboutPage() {
       {/* Brand Story */}
       <Section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative rounded-xl overflow-hidden aspect-[4/3.6] shadow-card">
+          <ImageFrame flip className="aspect-[4/3.6] shadow-card">
             <Image
               src="/images/photo-meeting.jpg"
               alt="Phoenix Creative Works team in conversation"
               fill
               className="object-cover"
             />
-          </div>
+          </ImageFrame>
           <div>
             <Eyebrow>Our Story</Eyebrow>
             <h2 className="font-display font-extrabold text-3xl md:text-4xl tracking-tight leading-snug text-navy-midnight mt-4 mb-5">
@@ -200,14 +201,14 @@ export default function AboutPage() {
               them grow stronger and reach further.
             </p>
           </div>
-          <div className="relative rounded-xl overflow-hidden aspect-[5/3.2] shadow-card">
+          <ImageFrame className="aspect-[5/3.2] shadow-card">
             <Image
               src="/images/photo-phoenix.jpg"
               alt="Phoenix, Arizona skyline"
               fill
               className="object-cover"
             />
-          </div>
+          </ImageFrame>
         </div>
       </Section>
 

@@ -7,6 +7,7 @@ import {
   Rocket, DoorOpen, UserPlus, Grid2X2, Handshake,
 } from "lucide-react";
 import Section from "@/components/ui/Section";
+import ImageFrame from "@/components/ui/ImageFrame";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CheckGrid from "@/components/ui/CheckGrid";
 import PillList from "@/components/ui/PillList";
@@ -134,14 +135,14 @@ export default function BehavioralHealthPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] shadow-lg">
+            <ImageFrame className="aspect-[5/3.4] shadow-lg">
               <Image
                 src="/images/photo-hero.jpg"
                 alt="Behavioral health leadership team meeting"
                 fill
                 className="object-cover"
               />
-            </div>
+            </ImageFrame>
           </div>
         </div>
       </section>

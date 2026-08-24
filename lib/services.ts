@@ -1849,7 +1849,7 @@ export const SERVICES: ServiceConfig[] = [
     href: "/services/video-editing",
     title: "Video that tells your story the right way.",
     lead: "Great video content does not happen by accident. We take your raw footage and shape it into polished, purposeful video, edited, color graded, scored, and captioned, ready to perform on every platform your audience uses.",
-    heroPlaceholder: "video-editing/1",
+    heroImage: "/images/video-editing-hero.png",
     problem: {
       eyebrow: "The Problem",
       title: "Raw footage is not content.",
@@ -1888,7 +1888,7 @@ export const SERVICES: ServiceConfig[] = [
           "Music selection and audio mixing that fits your tone",
           "Multi-platform delivery in the formats and specs each channel requires",
         ],
-        placeholder: "video-editing/2",
+        image: "/images/video-editing-secondary.png",
       },
     ],
     process: {

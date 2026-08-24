@@ -108,7 +108,7 @@ export const CUSTOMERS: CustomerData[] = [
     ],
     primaryHref: "https://davinciconsultingservices.com",
     primaryLabel: "Visit Site",
-    screenshot: null,
+    screenshot: "/images/customer-davinci.png",
     deliverables: [
       { title: "Brand Identity Package", type: "Brand", placeholder: "da-vinci/work-1", description: "Logo, color system, typography, and brand guidelines that communicate expertise and trustworthiness." },
       { title: "Website Design and Build", type: "Web", placeholder: "da-vinci/work-2", description: "Professional website articulating Da Vinci's full service range — credentialing, compliance, training, and operational consulting." },

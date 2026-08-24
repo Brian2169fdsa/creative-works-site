@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import {
   ArrowLeft, ExternalLink, Monitor, Megaphone, FolderCog, CloudCog,
@@ -166,10 +167,21 @@ export default async function CustomerDetailPage({
                   </div>
                 </div>
                 <div className="relative bg-gradient-to-br from-cloud to-gray-100 aspect-[16/10] flex flex-col items-center justify-center gap-3">
-                  <div className="w-20 h-20 rounded-2xl bg-orange/10 border border-orange/20 flex items-center justify-center">
-                    <Monitor className="w-10 h-10 text-orange/50" aria-hidden="true" />
-                  </div>
-                  <p className="text-sm font-semibold text-gray-400">{customer.name}</p>
+                  {customer.screenshot ? (
+                    <Image
+                      src={customer.screenshot}
+                      alt={`${customer.name} website`}
+                      fill
+                      className="object-cover object-top"
+                    />
+                  ) : (
+                    <>
+                      <div className="w-20 h-20 rounded-2xl bg-orange/10 border border-orange/20 flex items-center justify-center">
+                        <Monitor className="w-10 h-10 text-orange/50" aria-hidden="true" />
+                      </div>
+                      <p className="text-sm font-semibold text-gray-400">{customer.name}</p>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

@@ -68,7 +68,6 @@ const SERVICE_ICONS: Record<string, React.ComponentType<{ className?: string }>>
   automation: Zap,
   "ai-development": Bot,
   "video-editing": Film,
-  "motion-graphics": Sparkles,
 };
 
 export default async function CustomerDetailPage({

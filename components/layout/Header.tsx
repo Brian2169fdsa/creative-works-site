@@ -20,7 +20,6 @@ import {
   Zap,
   Bot,
   Film,
-  Sparkles,
   Stethoscope,
   ArrowRight,
   Building2,
@@ -121,12 +120,6 @@ const SERVICES_MENU = [
     label: "Video Editing",
     tagline: "Professional video, polished and on brand.",
     href: "/services/video-editing",
-  },
-  {
-    icon: Sparkles,
-    label: "Motion Graphics",
-    tagline: "Animation that brings brands to life.",
-    href: "/services/motion-graphics",
   },
 ];
 

@@ -168,14 +168,14 @@ const INDUSTRIES_MENU = {
 const ABOUT_MENU = {
   featured: {
     label: "Built around people and the systems that support them.",
-    desc: "Creative Works is a Phoenix-based professional services firm dedicated to strengthening behavioral health organizations.",
+    desc: "Phoenix Creative Works is a Phoenix-based professional services firm dedicated to strengthening behavioral health organizations.",
     href: "/about",
     cta: "Our Story",
   },
   links: [
     {
       icon: UserCircle2,
-      label: "About Creative Works",
+      label: "About Phoenix Creative Works",
       desc: "Our story, mission, and values.",
       href: "/about",
     },
@@ -235,7 +235,7 @@ export default function Header() {
         <Link href="/" className="flex items-center flex-shrink-0">
           <Image
             src="/images/logo-full.png"
-            alt="Creative Works"
+            alt="Phoenix Creative Works"
             width={160}
             height={38}
             className="h-9 w-auto"
@@ -476,7 +476,7 @@ function ServicesMegaMenu() {
             Every service. One trusted partner.
           </h3>
           <p className="text-xs text-white/60 leading-relaxed mb-4">
-            Creative Works coordinates every operational function your organization needs.
+            Phoenix Creative Works coordinates every operational function your organization needs.
           </p>
           <Link
             href="/services"
@@ -600,11 +600,11 @@ function AboutMegaMenu() {
           className="absolute -bottom-4 -right-4 w-32 h-32 opacity-[0.07] pointer-events-none select-none"
         />
         <div className="relative rounded-lg overflow-hidden aspect-video mb-4 border border-white/10">
-          <Image src="/images/mega-about.png" alt="About Creative Works" fill className="object-cover" />
+          <Image src="/images/mega-about.png" alt="About Phoenix Creative Works" fill className="object-cover" />
         </div>
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-orange mb-2">
-            Creative Works
+            Phoenix Creative Works
           </p>
           <h3 className="font-display font-bold text-base text-white leading-snug mb-2">
             {ABOUT_MENU.featured.label}

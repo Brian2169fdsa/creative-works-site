@@ -70,7 +70,7 @@ export const STATS = [
 
 export const TESTIMONIAL = {
   quote:
-    "Creative Works is a true partner. They understand our world and consistently deliver solutions that make our organization stronger and more effective.",
+    "Phoenix Creative Works is a true partner. They understand our world and consistently deliver solutions that make our organization stronger and more effective.",
   name: "Jericho Chebultz",
   role: "CEO",
   org: "Behavioral Health Organization",
@@ -248,7 +248,7 @@ export const RESOURCES = [
 
 export const FAQ_CONSULT = [
   {
-    q: "Who does Creative Works serve?",
+    q: "Who does Phoenix Creative Works serve?",
     a: "We focus on behavioral health organizations, mental health clinics, substance use treatment, outpatient and residential programs, recovery and community organizations, and integrated care teams.",
   },
   {

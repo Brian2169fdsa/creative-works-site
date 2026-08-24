@@ -17,11 +17,11 @@ import AnyVerticalNote from "@/components/ui/AnyVerticalNote";
 import type { LucideIcon } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Nonprofits | Creative Works",
+  title: "Nonprofits | Phoenix Creative Works",
   description:
-    "Creative Works helps nonprofit organizations build stronger operations, technology, and marketing so they can focus on their mission instead of fighting their own systems.",
+    "Phoenix Creative Works helps nonprofit organizations build stronger operations, technology, and marketing so they can focus on their mission instead of fighting their own systems.",
   openGraph: {
-    title: "Nonprofits | Creative Works",
+    title: "Nonprofits | Phoenix Creative Works",
     description: "Mission-driven organizations deserve mission-ready infrastructure.",
   },
 };

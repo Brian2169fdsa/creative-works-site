@@ -21,16 +21,16 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.creativeworksaz.com"),
   title: {
-    default: "Creative Works | Full-Service Support for Behavioral Health Organizations",
-    template: "%s | Creative Works",
+    default: "Phoenix Creative Works | Full-Service Support for Behavioral Health Organizations",
+    template: "%s | Phoenix Creative Works",
   },
   description:
-    "Creative Works is a Phoenix-based professional services partner helping behavioral health organizations strengthen the systems behind care, marketing, SharePoint, IT, staffing, and operational support.",
+    "Phoenix Creative Works is a Phoenix-based professional services partner helping behavioral health organizations strengthen the systems behind care, marketing, SharePoint, IT, staffing, and operational support.",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.creativeworksaz.com",
-    siteName: "Creative Works",
+    siteName: "Phoenix Creative Works",
     images: [{ url: "/images/photo-hero.jpg" }],
   },
   icons: {

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "Marketing, SharePoint setup, IT services, staffing, and operational support, coordinated under one trusted partner for behavioral health organizations in Phoenix.",
   openGraph: {
-    title: "Services | Creative Works",
+    title: "Services | Phoenix Creative Works",
     description:
       "A full suite of coordinated services. One trusted partner for behavioral health organizations.",
     images: [{ url: "/images/photo-meeting.jpg" }],
@@ -85,7 +85,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Our Services"
         title="The operational foundation behind better care."
-        lead="Creative Works supports behavioral health organizations across a full suite of coordinated services, so your team can focus on the people you serve, not the systems behind them."
+        lead="Phoenix Creative Works supports behavioral health organizations across a full suite of coordinated services, so your team can focus on the people you serve, not the systems behind them."
         primary={{ label: "Schedule a Consultation", href: CONSULT_HREF }}
         secondary={{ label: "Talk With Our Team", href: "/contact" }}
         tone="cloud"
@@ -158,7 +158,7 @@ export default function ServicesPage() {
             <SectionHeading
               eyebrow="One Coordinated Partner"
               title="Most organizations need more than one kind of support."
-              lead="Marketing reaches your community. Systems keep your team organized. Reliable IT keeps everything running. The right people keep care moving. Strong operations hold it all together. Creative Works connects these so they work as one, instead of five disconnected vendors."
+              lead="Marketing reaches your community. Systems keep your team organized. Reliable IT keeps everything running. The right people keep care moving. Strong operations hold it all together. Phoenix Creative Works connects these so they work as one, instead of five disconnected vendors."
             />
             <div className="mt-6 grid gap-3">
               {[
@@ -199,7 +199,7 @@ export default function ServicesPage() {
             "Gaps between marketing, systems, and operations",
             "More invoices, more meetings, more overhead",
           ]}
-          solutionTitle="One Creative Works partnership"
+          solutionTitle="One Phoenix Creative Works partnership"
           solutions={[
             "Strategy, systems, and people aligned to one plan",
             "A single team accountable for results",

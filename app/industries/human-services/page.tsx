@@ -18,11 +18,11 @@ import AnyVerticalNote from "@/components/ui/AnyVerticalNote";
 import type { LucideIcon } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Human Services Organizations | Creative Works",
+  title: "Human Services Organizations | Phoenix Creative Works",
   description:
-    "Creative Works helps human services organizations strengthen operations, marketing, and technology so their teams can focus on serving the communities that need them most.",
+    "Phoenix Creative Works helps human services organizations strengthen operations, marketing, and technology so their teams can focus on serving the communities that need them most.",
   openGraph: {
-    title: "Human Services Organizations | Creative Works",
+    title: "Human Services Organizations | Phoenix Creative Works",
     description: "Stronger systems for organizations that serve people.",
   },
 };

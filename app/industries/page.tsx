@@ -13,7 +13,7 @@ import { CONSULT_HREF } from "@/lib/navigation";
 export const metadata: Metadata = {
   title: "Industries | Mission-Driven Organizations",
   description:
-    "Creative Works supports behavioral health organizations, human services nonprofits, and other mission-driven teams across a full suite of coordinated professional services.",
+    "Phoenix Creative Works supports behavioral health organizations, human services nonprofits, and other mission-driven teams across a full suite of coordinated professional services.",
 };
 
 const INDUSTRIES = [

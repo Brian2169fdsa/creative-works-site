@@ -13,9 +13,9 @@ import { MessageCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Schedule a Consultation | Choose How to Begin",
   description:
-    "Start with a free intro call, a paid Discovery and Operations Assessment, or a custom project deposit. Creative Works helps behavioral health organizations strengthen the systems behind care.",
+    "Start with a free intro call, a paid Discovery and Operations Assessment, or a custom project deposit. Phoenix Creative Works helps behavioral health organizations strengthen the systems behind care.",
   openGraph: {
-    title: "Schedule a Consultation | Creative Works",
+    title: "Schedule a Consultation | Phoenix Creative Works",
     description: "Choose how you'd like to begin, intro call, assessment, or project deposit.",
   },
 };
@@ -223,7 +223,7 @@ export default function ScheduleConsultationPage() {
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden border border-gray-200 shadow-card bg-white">
           <iframe
             src="https://outlook.office.com/book/PCWMeeting@phxcw.com/"
-            title="Schedule a consultation with Creative Works"
+            title="Schedule a consultation with Phoenix Creative Works"
             className="w-full h-[900px] border-0"
           />
         </div>

@@ -11,7 +11,7 @@ export default function ProblemSolution({
   problems,
   solutions,
   problemTitle = "The common challenge",
-  solutionTitle = "The Creative Works solution",
+  solutionTitle = "The Phoenix Creative Works solution",
 }: ProblemSolutionProps) {
   return (
     <div className="flex flex-wrap gap-6">

@@ -22,9 +22,9 @@ import type { LucideIcon } from "lucide-react";
 export const metadata: Metadata = {
   title: "Behavioral Health Organizations | Industry Services",
   description:
-    "Creative Works helps behavioral health organizations strengthen the systems behind care, marketing, SharePoint, IT, staffing, and operations, tailored to mission-driven teams.",
+    "Phoenix Creative Works helps behavioral health organizations strengthen the systems behind care, marketing, SharePoint, IT, staffing, and operations, tailored to mission-driven teams.",
   openGraph: {
-    title: "Behavioral Health Organizations | Creative Works",
+    title: "Behavioral Health Organizations | Phoenix Creative Works",
     description:
       "We understand your world. We help you strengthen the systems behind care.",
     images: [{ url: "/images/photo-hero.jpg" }],
@@ -121,7 +121,7 @@ export default function BehavioralHealthPage() {
               </h1>
               <p className="mt-5 text-xl text-gray-600 leading-relaxed max-w-2xl">
                 Behavioral health organizations carry an enormous mission with
-                limited resources. Creative Works helps you strengthen the
+                limited resources. Phoenix Creative Works helps you strengthen the
                 systems behind care so your team can spend more time with the
                 people who need them.
               </p>

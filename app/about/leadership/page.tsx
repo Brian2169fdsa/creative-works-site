@@ -9,13 +9,13 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import { CONSULT_HREF } from "@/lib/navigation";
 
 export const metadata: Metadata = {
-  title: "Leadership | Creative Works",
+  title: "Leadership | Phoenix Creative Works",
   description:
-    "Meet the leadership team behind Creative Works, the Phoenix-based professional services firm helping behavioral health organizations build stronger operations and serve their communities better.",
+    "Meet the leadership team behind Phoenix Creative Works, the Phoenix-based professional services firm helping behavioral health organizations build stronger operations and serve their communities better.",
   openGraph: {
-    title: "Leadership | Creative Works",
+    title: "Leadership | Phoenix Creative Works",
     description:
-      "The experienced team guiding Creative Works and the organizations we serve.",
+      "The experienced team guiding Phoenix Creative Works and the organizations we serve.",
     images: [{ url: "/images/phoenix-mark.png" }],
   },
 };
@@ -25,7 +25,7 @@ const LEADERS = [
     name: "Brian Reinhart",
     title: "CEO / President",
     photo: "/images/leader-brian-reinhart.png",
-    bio: "Brian founded Creative Works with a clear conviction: behavioral health organizations do vital work, and they deserve operational support that truly understands their mission. With a background spanning professional services, business development, and organizational strategy, Brian leads Creative Works with a people-first approach that puts long-term client outcomes ahead of short-term transactions. He is responsible for the firm's strategic direction, client relationships, and overall vision.",
+    bio: "Brian founded Phoenix Creative Works with a clear conviction: behavioral health organizations do vital work, and they deserve operational support that truly understands their mission. With a background spanning professional services, business development, and organizational strategy, Brian leads Phoenix Creative Works with a people-first approach that puts long-term client outcomes ahead of short-term transactions. He is responsible for the firm's strategic direction, client relationships, and overall vision.",
     focus: [
       "Strategic direction and firm leadership",
       "Client partnership and growth",
@@ -36,7 +36,7 @@ const LEADERS = [
     name: "Sierra Largo",
     title: "CFO",
     photo: "/images/leader-sierra-largo.png",
-    bio: "Sierra brings financial clarity and operational discipline to Creative Works, ensuring the firm and the clients it serves are built on a foundation that is sustainable, transparent, and built to grow. Her expertise spans financial planning, reporting, internal controls, and the operational finance needs unique to mission-driven organizations. Sierra partners closely with clients who need stronger financial systems and processes as part of their broader operational transformation.",
+    bio: "Sierra brings financial clarity and operational discipline to Phoenix Creative Works, ensuring the firm and the clients it serves are built on a foundation that is sustainable, transparent, and built to grow. Her expertise spans financial planning, reporting, internal controls, and the operational finance needs unique to mission-driven organizations. Sierra partners closely with clients who need stronger financial systems and processes as part of their broader operational transformation.",
     focus: [
       "Financial planning and reporting",
       "Internal controls and operational finance",
@@ -47,7 +47,7 @@ const LEADERS = [
     name: "Wayne Giles",
     title: "COO",
     photo: "/images/leader-wayne-giles.png",
-    bio: "Wayne is the operational engine behind Creative Works, overseeing how the firm delivers on its commitments to clients. With deep experience in process design, systems implementation, and operational leadership, Wayne ensures that every engagement is executed with consistency, clarity, and care. He works directly with clients on operational support engagements, bringing structure to organizations that are ready to run more efficiently and serve more effectively.",
+    bio: "Wayne is the operational engine behind Phoenix Creative Works, overseeing how the firm delivers on its commitments to clients. With deep experience in process design, systems implementation, and operational leadership, Wayne ensures that every engagement is executed with consistency, clarity, and care. He works directly with clients on operational support engagements, bringing structure to organizations that are ready to run more efficiently and serve more effectively.",
     focus: [
       "Firm operations and delivery excellence",
       "Process design and systems implementation",
@@ -76,10 +76,10 @@ export default function LeadershipPage() {
     <>
       <PageHero
         eyebrow="Our Leadership"
-        title="The team behind Creative Works."
-        lead="Creative Works is led by a team of experienced professionals who believe that stronger organizations produce better outcomes for the communities they serve. We bring strategy, finance, and operations together under one roof, so our clients never have to work with multiple disconnected partners."
+        title="The team behind Phoenix Creative Works."
+        lead="Phoenix Creative Works is led by a team of experienced professionals who believe that stronger organizations produce better outcomes for the communities they serve. We bring strategy, finance, and operations together under one roof, so our clients never have to work with multiple disconnected partners."
         primary={{ label: "Schedule a Consultation", href: CONSULT_HREF }}
-        secondary={{ label: "About Creative Works", href: "/about" }}
+        secondary={{ label: "About Phoenix Creative Works", href: "/about" }}
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "About", href: "/about" },
@@ -178,7 +178,7 @@ export default function LeadershipPage() {
           align="center"
           eyebrow="How We Lead"
           title="Leadership that puts your mission first."
-          lead="The Creative Works leadership team is involved in every client engagement. We do not hand work off and disappear. We stay accountable to the outcomes we set out to achieve."
+          lead="The Phoenix Creative Works leadership team is involved in every client engagement. We do not hand work off and disappear. We stay accountable to the outcomes we set out to achieve."
           className="mb-10"
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -201,7 +201,7 @@ export default function LeadershipPage() {
       <Section tone="navy">
         <div className="text-center max-w-2xl mx-auto">
           <p className="font-display font-bold text-2xl md:text-3xl leading-snug text-white">
-            We built Creative Works because we believe behavioral health
+            We built Phoenix Creative Works because we believe behavioral health
             organizations deserve a partner that shows up, follows through, and
             truly understands the work.
           </p>

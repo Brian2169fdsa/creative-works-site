@@ -43,11 +43,11 @@ import { cn } from "@/lib/utils";
 import type { LucideIcon } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Creative Works | Full-Service Support for Behavioral Health Organizations",
+  title: "Phoenix Creative Works | Full-Service Support for Behavioral Health Organizations",
   description:
-    "Creative Works is a Phoenix-based professional services partner helping behavioral health organizations strengthen the systems behind care, marketing, SharePoint, IT, staffing, and operational support.",
+    "Phoenix Creative Works is a Phoenix-based professional services partner helping behavioral health organizations strengthen the systems behind care, marketing, SharePoint, IT, staffing, and operational support.",
   openGraph: {
-    title: "Creative Works | Professional Services for Behavioral Health",
+    title: "Phoenix Creative Works | Professional Services for Behavioral Health",
     description: "We help behavioral health organizations strengthen the systems behind care.",
     images: [{ url: "/images/home-hero.png" }],
   },
@@ -135,7 +135,7 @@ export default function HomePage() {
             <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] shadow-lg">
               <Image
                 src="/images/home-hero.png"
-                alt="Creative Works hero"
+                alt="Phoenix Creative Works hero"
                 fill
                 className="object-cover"
                 style={{ objectPosition: "0% center" }}
@@ -293,11 +293,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Creative Works */}
+      {/* Why Phoenix Creative Works */}
       <Section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <SectionHeading
-            eyebrow="Why Creative Works"
+            eyebrow="Why Phoenix Creative Works"
             title="Strategy, technology, and people working together."
             lead="We combine strategy, technology, and people to deliver solutions that make a real difference. Our approach is built around what matters most: clarity, reliability, and sustainable growth."
           />
@@ -331,7 +331,7 @@ export default function HomePage() {
           <div className="relative rounded-xl overflow-hidden aspect-[5/3.2] shadow-card">
             <Image
               src="/images/home-secondary.png"
-              alt="Creative Works community"
+              alt="Phoenix Creative Works community"
               fill
               className="object-cover object-bottom"
             />
@@ -342,7 +342,7 @@ export default function HomePage() {
               Rooted in Phoenix. Driven by Purpose.
             </h2>
             <p className="mt-4 text-lg text-gray-600 leading-relaxed max-w-2xl">
-              Creative Works is a Phoenix-based professional services firm
+              Phoenix Creative Works is a Phoenix-based professional services firm
               dedicated to supporting behavioral health organizations. We
               understand the operational demands of mission-driven care and help
               teams build stronger organizations that change lives.
@@ -478,7 +478,7 @@ export default function HomePage() {
 
       <CTASection
         title="Let's Build a Stronger Future, Together."
-        body="Whether you need strategic guidance, better systems, or the right people, Creative Works is here to help your mission thrive."
+        body="Whether you need strategic guidance, better systems, or the right people, Phoenix Creative Works is here to help your mission thrive."
         buttonLabel="Schedule a Consultation"
         href={CONSULT_HREF}
       />

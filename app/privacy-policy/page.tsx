@@ -6,7 +6,7 @@ import { CONTACT } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Creative Works privacy policy, how we collect, use, and protect your information.",
+  description: "Phoenix Creative Works privacy policy, how we collect, use, and protect your information.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              Creative Works (&ldquo;Creative Works,&rdquo; &ldquo;we,&rdquo;
+              Phoenix Creative Works (&ldquo;Phoenix Creative Works,&rdquo; &ldquo;we,&rdquo;
               &ldquo;us,&rdquo; or &ldquo;our&rdquo;) respects your privacy.
               This Privacy Policy explains how we collect, use, and protect
               information when you visit our website or engage our services.
@@ -77,7 +77,7 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p>
               Payments are processed securely through Stripe, a third-party
-              payment processor. Creative Works does not store full payment card
+              payment processor. Phoenix Creative Works does not store full payment card
               details on its own systems. Your use of Stripe is subject to
               Stripe&apos;s own privacy policy and terms.
             </p>

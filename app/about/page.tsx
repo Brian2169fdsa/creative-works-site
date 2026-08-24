@@ -19,9 +19,9 @@ import type { LucideIcon } from "lucide-react";
 export const metadata: Metadata = {
   title: "About | Phoenix Professional Services",
   description:
-    "Creative Works is a Phoenix-based professional services partner built around people and systems, dedicated to helping behavioral health organizations serve their communities better.",
+    "Phoenix Creative Works is a Phoenix-based professional services partner built around people and systems, dedicated to helping behavioral health organizations serve their communities better.",
   openGraph: {
-    title: "About | Creative Works",
+    title: "About | Phoenix Creative Works",
     description: "People-first, systems-minded, and rooted in Phoenix.",
     images: [{ url: "/images/photo-meeting.jpg" }],
   },
@@ -86,9 +86,9 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Creative Works"
+        eyebrow="About Phoenix Creative Works"
         title="Built around people and the systems that support them."
-        lead="Creative Works is a Phoenix-based professional services partner. We believe stronger systems help organizations serve people better, and we exist to build them for behavioral health teams."
+        lead="Phoenix Creative Works is a Phoenix-based professional services partner. We believe stronger systems help organizations serve people better, and we exist to build them for behavioral health teams."
         primary={{ label: "Schedule a Consultation", href: CONSULT_HREF }}
         secondary={{ label: "Our Services", href: "/services" }}
         tone="cloud"
@@ -100,7 +100,7 @@ export default function AboutPage() {
           <div className="relative rounded-xl overflow-hidden aspect-[4/3.6] shadow-card">
             <Image
               src="/images/photo-meeting.jpg"
-              alt="Creative Works team in conversation"
+              alt="Phoenix Creative Works team in conversation"
               fill
               className="object-cover"
             />
@@ -112,7 +112,7 @@ export default function AboutPage() {
             </h2>
             <div className="grid gap-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                Creative Works began with a simple observation: behavioral
+                Phoenix Creative Works began with a simple observation: behavioral
                 health organizations do extraordinary work, but too often carry
                 it on systems that were never built to support them.
               </p>
@@ -220,7 +220,7 @@ export default function AboutPage() {
               Led by people who believe in the work.
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">
-              Creative Works is led by an experienced team spanning strategy,
+              Phoenix Creative Works is led by an experienced team spanning strategy,
               finance, and operations. Meet the leadership behind every
               engagement.
             </p>

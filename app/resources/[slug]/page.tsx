@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: resource.title,
     description: resource.excerpt,
     openGraph: {
-      title: `${resource.title} | Creative Works`,
+      title: `${resource.title} | Phoenix Creative Works`,
       description: resource.excerpt,
     },
   };
@@ -147,7 +147,7 @@ export default async function ResourceArticlePage({ params }: Props) {
               immediately.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Creative Works helps behavioral health organizations do exactly
+              Phoenix Creative Works helps behavioral health organizations do exactly
               this through our Discovery and Operations Assessment. In four to
               six weeks, we review your systems, staffing, marketing, and
               operations, and deliver a prioritized roadmap your team can act on

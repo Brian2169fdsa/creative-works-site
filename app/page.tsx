@@ -16,6 +16,10 @@ import {
   Lightbulb,
   BadgeCheck,
   Stethoscope,
+  Receipt,
+  MonitorCheck,
+  CalendarClock,
+  PhoneCall,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Section from "@/components/ui/Section";
@@ -50,6 +54,7 @@ export const metadata: Metadata = {
 };
 
 const SERVICE_ICONS: Record<string, LucideIcon> = {
+  "behavioral-health-billing": Receipt,
   marketing: Megaphone,
   "sharepoint-setup": FolderCog,
   "salesforce-build-outs": CloudCog,
@@ -169,6 +174,121 @@ export default function HomePage() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Behavioral Health Billing Feature */}
+      <section className="bg-navy-midnight py-20 mt-8">
+        <div className="max-w-container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <Eyebrow>Billing Services</Eyebrow>
+              <h2 className="font-display font-extrabold text-3xl md:text-4xl tracking-tight leading-snug text-white mt-4">
+                Get paid for every service.
+              </h2>
+              <p className="mt-4 text-lg text-white/70 leading-relaxed max-w-2xl">
+                Behavioral health billing done differently: the billing team
+                that feels like your team. We work with your teams as part of
+                your team, bill inside your EMR, report weekly, and answer when
+                you call, backed by the full-service partner no billing-only
+                vendor can match.
+              </p>
+              <div className="mt-7 grid gap-5">
+                {[
+                  {
+                    icon: MonitorCheck,
+                    title: "Inside your systems",
+                    desc: "We bill in your EMR: Sunwave & other BH platforms.",
+                  },
+                  {
+                    icon: CalendarClock,
+                    title: "Daily billing, weekly clarity",
+                    desc: "Claims out fast; reporting on billed & collected.",
+                  },
+                  {
+                    icon: PhoneCall,
+                    title: "Always reachable",
+                    desc: "Direct access, no three-day silences.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="flex gap-4">
+                    <div className="w-10 h-10 rounded-md bg-orange/15 border border-orange/25 flex items-center justify-center text-orange-soft flex-shrink-0">
+                      <item.icon className="w-5 h-5" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-white text-base">
+                        {item.title}
+                      </div>
+                      <div className="text-sm text-white/60 leading-snug mt-0.5">
+                        {item.desc}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-4 mt-8">
+                <Button href="/services/behavioral-health-billing" size="lg" arrow>
+                  Explore Billing Services
+                </Button>
+                <Button href={CONSULT_HREF} variant="inverse" size="lg" arrow>
+                  Schedule a Consultation
+                </Button>
+              </div>
+            </div>
+            <div className="bg-white/[0.06] border border-white/10 rounded-xl p-7">
+              <div className="text-xs font-bold uppercase tracking-[0.08em] text-orange-soft mb-5">
+                The Full Revenue Cycle, Managed
+              </div>
+              <div className="grid gap-4">
+                {[
+                  {
+                    title: "Verification of Benefits",
+                    desc: "Same-day VOBs your admissions team can trust.",
+                  },
+                  {
+                    title: "Utilization Review",
+                    desc: "Defend every authorized, medically necessary day.",
+                  },
+                  {
+                    title: "Billing & Collections",
+                    desc: "Clean claims, disciplined follow-up, predictable cash.",
+                  },
+                  {
+                    title: "Denials & Appeals",
+                    desc: "Clinically grounded appeals that win.",
+                  },
+                  {
+                    title: "Reimbursement Negotiations",
+                    desc: "Single-case agreements & fair-rate advocacy.",
+                  },
+                  {
+                    title: "RCA, Training & Consulting",
+                    desc: "Find the leaks, prevent denials, plan growth.",
+                  },
+                  {
+                    title: "Documentation Compliance Review",
+                    desc: "We audit documentation against payer rules before it becomes a denial.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="flex gap-3">
+                    <CheckCircle2
+                      className="w-5 h-5 text-orange-soft flex-shrink-0 mt-0.5"
+                      aria-hidden="true"
+                    />
+                    <div>
+                      <span className="font-bold text-white text-sm">
+                        {item.title}
+                      </span>
+                      <span className="text-white/60 text-sm">
+                        {" "}
+                        — {item.desc}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

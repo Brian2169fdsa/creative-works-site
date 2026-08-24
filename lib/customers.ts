@@ -75,11 +75,11 @@ export const CUSTOMERS: CustomerData[] = [
       { stat: "New", label: "Member portal launched" },
       { stat: "Fast", label: "Redesigned site launching" },
     ],
-    primaryHref: "https://aback.org",
+    primaryHref: "https://www.abcac.org",
     primaryLabel: "Visit Current Site",
     secondaryHref: "https://abcac.vercel.app",
     secondaryLabel: "Preview New Site",
-    screenshot: null,
+    screenshot: "/images/customer-abcac.png",
     deliverables: [
       { title: "Website Redesign", type: "Web", placeholder: "abcac/work-1", description: "Mobile-first Next.js website built for speed, accessibility, and clarity for Arizona's addiction counseling community." },
       { title: "Member Portal", type: "Web", placeholder: "abcac/work-2", description: "Secure portal for certification applications, IC&RC exam registration, CEU management, and credential reciprocity." },

@@ -135,10 +135,9 @@ export default function HomePage() {
             <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] shadow-lg">
               <Image
                 src="/images/home-hero.png"
-                alt="Phoenix Creative Works hero"
+                alt="Phoenix Creative Works team"
                 fill
                 className="object-cover"
-                style={{ objectPosition: "0% center" }}
                 priority
               />
             </div>

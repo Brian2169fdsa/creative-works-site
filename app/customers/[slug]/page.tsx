@@ -227,12 +227,12 @@ export default async function CustomerDetailPage({
         </div>
       </Section>
 
-      {/* The Work — Deliverables */}
+      {/* The Work: Deliverables */}
       <Section>
         <SectionHeading
           eyebrow="The Work"
           title="What we built and delivered."
-          lead="Every deliverable designed to move the needle — from brand and marketing materials to operational infrastructure and digital products."
+          lead="Every deliverable designed to move the needle, from brand and marketing materials to operational infrastructure and digital products."
           className="mb-10"
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -136,7 +136,7 @@ export default function NonprofitsPage() {
         <SectionHeading
           eyebrow="What We Understand"
           title="We know what nonprofits are up against."
-          lead="Every recommendation we make accounts for the reality of nonprofit work — limited budgets, lean teams, and the constant pressure to demonstrate impact to funders and communities."
+          lead="Every recommendation we make accounts for the reality of nonprofit work, limited budgets, lean teams, and the constant pressure to demonstrate impact to funders and communities."
           className="mb-8"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

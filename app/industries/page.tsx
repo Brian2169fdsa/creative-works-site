@@ -57,7 +57,7 @@ const INDUSTRIES = [
     icon: Heart,
     eyebrow: "Also Served",
     title: "Nonprofits",
-    desc: "Mission-driven organizations of all kinds — advocacy groups, community foundations, faith-based services, education programs, veterans services, and civic organizations — that need stronger systems without a big-agency price tag.",
+    desc: "Mission-driven organizations of all kinds, advocacy groups, community foundations, faith-based services, education programs, veterans services, and civic organizations, that need stronger systems without a big-agency price tag.",
     orgs: [
       "Advocacy Organizations",
       "Community Foundations",
@@ -142,7 +142,7 @@ export default function IndustriesPage() {
             align="center"
             eyebrow="Why Focus Matters"
             title="Care-oriented organizations need specialized support."
-            lead="Generic professional services firms do not understand compliance-sensitive workflows, community trust-building, or the operational reality of mission-driven care. We do. And that context changes everything — from how we build your Salesforce instance to how we write your marketing copy."
+            lead="Generic professional services firms do not understand compliance-sensitive workflows, community trust-building, or the operational reality of mission-driven care. We do. And that context changes everything, from how we build your Salesforce instance to how we write your marketing copy."
           />
           <div className="mt-8">
             <Link

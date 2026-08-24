@@ -23,7 +23,7 @@ export interface CustomerData {
   primaryLabel: string;
   secondaryHref?: string;
   secondaryLabel?: string;
-  screenshot: null;
+  screenshot: string | null;
   deliverables: CustomerDeliverable[];
 }
 
@@ -46,9 +46,9 @@ export const CUSTOMERS: CustomerData[] = [
       { stat: "↓", label: "Leadership burden reduced" },
       { stat: "Filled", label: "Clinical and admin roles" },
     ],
-    primaryHref: "#",
-    primaryLabel: "Visit Site",
-    screenshot: null,
+    primaryHref: "https://cholla-behavioral-health-azure.vercel.app",
+    primaryLabel: "View the Website",
+    screenshot: "/images/customer-cholla.png",
     deliverables: [
       { title: "Role Definition Package", type: "Staffing", placeholder: "cholla/work-1", description: "Clear job descriptions written for each open role, aligned to Cholla's integrated care model and compensation structure." },
       { title: "Candidate Screening Scorecard", type: "Staffing", placeholder: "cholla/work-2", description: "Custom screening criteria and interview scorecard built around clinical qualifications and culture fit." },

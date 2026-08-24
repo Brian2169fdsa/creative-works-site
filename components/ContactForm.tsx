@@ -185,7 +185,7 @@ export default function ContactForm() {
           Thank you, we received your message.
         </h3>
         <p className="mt-4 text-lg text-gray-600 max-w-sm mx-auto">
-          A member of the Creative Works team will review your needs and reach
+          A member of the Phoenix Creative Works team will review your needs and reach
           out within one business day.
         </p>
         <div className="mt-8">
@@ -353,7 +353,7 @@ export default function ContactForm() {
           className="w-5 h-5 mt-0.5 accent-orange flex-shrink-0"
         />
         <span>
-          I agree to be contacted by Creative Works about my inquiry. We respect
+          I agree to be contacted by Phoenix Creative Works about my inquiry. We respect
           your privacy and never share your information.
         </span>
       </label>

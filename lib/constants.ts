@@ -1,5 +1,5 @@
 // lib/constants.ts
-// Stripe product catalog for Creative Works. Amounts are in cents (USD).
+// Stripe product catalog for Phoenix Creative Works. Amounts are in cents (USD).
 // Replace the placeholder priceId values with real Stripe Price IDs from your dashboard.
 
 export type StripeProductKey =

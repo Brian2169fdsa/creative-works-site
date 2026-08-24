@@ -11,11 +11,11 @@ import { CUSTOMERS } from "@/lib/customers";
 import { CONSULT_HREF } from "@/lib/navigation";
 
 export const metadata: Metadata = {
-  title: "Customers | Creative Works",
+  title: "Customers | Phoenix Creative Works",
   description:
-    "Organizations that trust Creative Works to build their digital infrastructure, automate their operations, and strengthen the systems behind their mission.",
+    "Organizations that trust Phoenix Creative Works to build their digital infrastructure, automate their operations, and strengthen the systems behind their mission.",
   openGraph: {
-    title: "Customers | Creative Works",
+    title: "Customers | Phoenix Creative Works",
     description: "Real partnerships. Real results. Organizations we are proud to serve.",
   },
 };

@@ -18,9 +18,9 @@ import { CONSULT_HREF } from "@/lib/navigation";
 export const metadata: Metadata = {
   title: "Resources and Insights | Behavioral Health Leaders",
   description:
-    "Practical insights for behavioral health leaders, guidance on marketing, SharePoint, IT, staffing, operations, and leadership from Creative Works.",
+    "Practical insights for behavioral health leaders, guidance on marketing, SharePoint, IT, staffing, operations, and leadership from Phoenix Creative Works.",
   openGraph: {
-    title: "Resources and Insights | Creative Works",
+    title: "Resources and Insights | Phoenix Creative Works",
     description: "Practical insights for behavioral health leaders.",
   },
 };
@@ -130,7 +130,7 @@ export default function ResourcesPage() {
       <Section id="articles">
         <SectionHeading
           eyebrow="Latest Articles"
-          title="From the Creative Works team."
+          title="From the Phoenix Creative Works team."
           className="mb-10"
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

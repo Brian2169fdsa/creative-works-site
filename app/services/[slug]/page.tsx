@@ -16,10 +16,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const svc = getServiceBySlug(slug);
   if (!svc) return {};
   return {
-    title: `${svc.eyebrow} | Creative Works`,
+    title: `${svc.eyebrow} | Phoenix Creative Works`,
     description: svc.short,
     openGraph: {
-      title: `${svc.eyebrow} | Creative Works`,
+      title: `${svc.eyebrow} | Phoenix Creative Works`,
       description: svc.short,
     },
   };

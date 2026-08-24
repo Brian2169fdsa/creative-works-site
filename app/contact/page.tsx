@@ -13,9 +13,9 @@ import { CONSULT_HREF } from "@/lib/navigation";
 export const metadata: Metadata = {
   title: "Contact | Talk With Our Team",
   description:
-    "Tell us about your behavioral health organization and the support you need. Creative Works is based in Phoenix, Arizona and ready to help.",
+    "Tell us about your behavioral health organization and the support you need. Phoenix Creative Works is based in Phoenix, Arizona and ready to help.",
   openGraph: {
-    title: "Contact | Creative Works",
+    title: "Contact | Phoenix Creative Works",
     description: "Tell us about your organization's needs, we'll take it from there.",
   },
 };

@@ -9,9 +9,9 @@ import { CASE_STUDIES } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Case Studies | Stronger Organizations, Better Outcomes",
   description:
-    "Real-world examples of how Creative Works helps behavioral health organizations strengthen the systems behind care.",
+    "Real-world examples of how Phoenix Creative Works helps behavioral health organizations strengthen the systems behind care.",
   openGraph: {
-    title: "Case Studies | Creative Works",
+    title: "Case Studies | Phoenix Creative Works",
     description: "Real-world examples of stronger systems and better outcomes.",
   },
 };
@@ -29,7 +29,7 @@ export default function CaseStudiesPage() {
       <PageHero
         eyebrow="Case Studies"
         title="Stronger organizations. Better outcomes."
-        lead="Real-world examples of how Creative Works helps behavioral health organizations strengthen the systems behind care. These are illustrative examples, your story could be next."
+        lead="Real-world examples of how Phoenix Creative Works helps behavioral health organizations strengthen the systems behind care. These are illustrative examples, your story could be next."
         primary={{ label: "Discuss Your Organization", href: "/contact" }}
         secondary={{ label: "Schedule a Consultation", href: CONSULT_HREF }}
         tone="cloud"

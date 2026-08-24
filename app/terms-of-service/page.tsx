@@ -6,7 +6,7 @@ import { CONTACT } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Creative Works terms of service governing use of our website and professional services.",
+  description: "Phoenix Creative Works terms of service governing use of our website and professional services.",
 };
 
 export default function TermsOfServicePage() {
@@ -35,7 +35,7 @@ export default function TermsOfServicePage() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              By accessing or using the Creative Works website
+              By accessing or using the Phoenix Creative Works website
               (creativeworksaz.com), you agree to be bound by these Terms of
               Service. Please read them carefully before using our website or
               engaging our services.
@@ -55,7 +55,7 @@ export default function TermsOfServicePage() {
               2. Services
             </h2>
             <p>
-              Creative Works provides professional services including marketing,
+              Phoenix Creative Works provides professional services including marketing,
               SharePoint setup, Salesforce build-outs, IT services, staffing
               support, operational support, business process services,
               consulting, and licensure services. The terms governing specific
@@ -78,7 +78,7 @@ export default function TermsOfServicePage() {
             </h2>
             <p>
               All content on this website, including text, graphics, logos, and
-              images, is the property of Creative Works and is protected by
+              images, is the property of Phoenix Creative Works and is protected by
               applicable intellectual property laws. You may not reproduce,
               distribute, or create derivative works without our express written
               permission.
@@ -89,7 +89,7 @@ export default function TermsOfServicePage() {
             </h2>
             <p>
               This website and its content are provided &ldquo;as is&rdquo;
-              without warranties of any kind. Creative Works does not warrant
+              without warranties of any kind. Phoenix Creative Works does not warrant
               that the website will be uninterrupted, error-free, or free of
               viruses or other harmful components.
             </p>
@@ -98,7 +98,7 @@ export default function TermsOfServicePage() {
               6. Limitation of Liability
             </h2>
             <p>
-              Creative Works shall not be liable for any indirect, incidental,
+              Phoenix Creative Works shall not be liable for any indirect, incidental,
               special, or consequential damages arising from your use of the
               website or our services. Our liability is limited to the amount
               paid for the specific service giving rise to the claim.

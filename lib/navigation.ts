@@ -42,7 +42,7 @@ export const NAV: NavItem[] = [
     href: "/about",
     key: "about",
     menu: [
-      { label: "About Creative Works", href: "/about" },
+      { label: "About Phoenix Creative Works", href: "/about" },
       { label: "Leadership", href: "/about/leadership" },
     ],
   },

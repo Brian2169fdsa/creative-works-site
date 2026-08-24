@@ -28,7 +28,7 @@ export default function Footer() {
         <div>
           <Image
             src="/images/logo-full-white.png"
-            alt="Creative Works"
+            alt="Phoenix Creative Works"
             width={160}
             height={36}
             className="h-9 w-auto mb-4"
@@ -150,7 +150,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-container mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-4 text-xs text-white/50">
-          <span>© 2026 Creative Works. All rights reserved.</span>
+          <span>© 2026 Phoenix Creative Works. All rights reserved.</span>
           <div className="flex gap-6">
             <Link
               href="/privacy-policy"

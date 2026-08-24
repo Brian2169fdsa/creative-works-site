@@ -7,7 +7,7 @@ import { CONTACT } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Payment Received | Thank You",
-  description: "Your payment was received. Creative Works will follow up shortly.",
+  description: "Your payment was received. Phoenix Creative Works will follow up shortly.",
   robots: { index: false },
 };
 
@@ -49,7 +49,7 @@ export default async function CheckoutSuccessPage({ searchParams }: Props) {
               <strong className="text-navy-midnight">{product.name}</strong>.{" "}
             </>
           ) : null}
-          Creative Works will follow up shortly to get started.
+          Phoenix Creative Works will follow up shortly to get started.
         </p>
 
         <div className="bg-cloud border border-gray-200 rounded-xl p-8 mt-8 text-left">

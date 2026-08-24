@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
       const productType = session.metadata?.productType;
       // TODO: fulfill the order
       //   - send a confirmation email to the customer
-      //   - notify the Creative Works team (email / Slack / CRM)
+      //   - notify the Phoenix Creative Works team (email / Slack / CRM)
       //   - record the lead/payment in your system
       console.log("Checkout completed:", productType, session.id);
       break;

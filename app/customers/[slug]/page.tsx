@@ -28,7 +28,7 @@ export async function generateMetadata({
   const customer = getCustomer(slug);
   if (!customer) return {};
   return {
-    title: `${customer.name} | Creative Works`,
+    title: `${customer.name} | Phoenix Creative Works`,
     description: customer.tagline,
   };
 }
@@ -268,7 +268,7 @@ export default async function CustomerDetailPage({
         <Section tone="cloud">
           <SectionHeading
             eyebrow="Services Provided"
-            title="How Creative Works supported this engagement."
+            title="How Phoenix Creative Works supported this engagement."
             className="mb-8"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -297,7 +297,7 @@ export default async function CustomerDetailPage({
 
       <CTASection
         title="Let us build something like this for your organization."
-        body="Schedule a consultation and we will show you what Creative Works can create for you."
+        body="Schedule a consultation and we will show you what Phoenix Creative Works can create for you."
         buttonLabel="Schedule a Consultation"
         href={CONSULT_HREF}
       />

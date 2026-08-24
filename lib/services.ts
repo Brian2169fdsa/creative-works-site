@@ -1618,7 +1618,7 @@ export const SERVICES: ServiceConfig[] = [
           "Built on payer expectations and clinical best practice",
           "Documented and defensible under audit and review",
         ],
-        placeholder: "bhp-oversight/2",
+        image: "/images/bhp-oversight-secondary.png",
       },
     ],
     process: {

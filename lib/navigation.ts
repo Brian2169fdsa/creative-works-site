@@ -28,7 +28,6 @@ export const NAV: NavItem[] = [
       { label: "Automation", href: "/services/automation" },
       { label: "AI Development", href: "/services/ai-development" },
       { label: "Video Editing", href: "/services/video-editing" },
-      { label: "Motion Graphics", href: "/services/motion-graphics" },
     ],
   },
   {

@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   Megaphone, FolderCog, ShieldCheck, Users, RefreshCw, Compass,
+  CloudCog, FileText,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -32,6 +34,17 @@ const CATS = [
   { name: "BH Leadership", icon: Compass },
 ];
 
+const CATEGORY_ICONS: Record<string, LucideIcon> = {
+  Marketing: Megaphone,
+  SharePoint: FolderCog,
+  IT: ShieldCheck,
+  "IT Services": ShieldCheck,
+  Staffing: Users,
+  Operations: RefreshCw,
+  "BH Leadership": Compass,
+  Salesforce: CloudCog,
+};
+
 const featured = RESOURCES.find((r) => r.featured);
 const articles = RESOURCES.filter((r) => !r.featured).slice(0, 6);
 
@@ -54,9 +67,14 @@ export default function ResourcesPage() {
             className="no-underline grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-white border border-gray-200 rounded-xl shadow-card p-8 hover:shadow-lg transition-shadow"
           >
             <div className="relative rounded-lg overflow-hidden aspect-[5/3.4] bg-cloud flex items-center justify-center">
-              <div className="text-center p-8 text-gray-400">
-                <p className="text-sm">Featured article image</p>
-              </div>
+              {(() => {
+                const CategoryIcon = CATEGORY_ICONS[featured.category] || FileText;
+                return (
+                  <div className="w-24 h-24 rounded-2xl bg-orange/10 border border-orange/20 flex items-center justify-center">
+                    <CategoryIcon className="w-12 h-12 text-orange/50" aria-hidden="true" />
+                  </div>
+                );
+              })()}
             </div>
             <div>
               <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.06em] text-white bg-orange rounded-pill px-3 py-1.5">
@@ -123,9 +141,14 @@ export default function ResourcesPage() {
               className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all no-underline"
             >
               <div className="aspect-video bg-cloud flex items-center justify-center border-b border-gray-100">
-                <div className="text-center p-4 text-gray-400">
-                  <p className="text-xs">{a.category}</p>
-                </div>
+                {(() => {
+                  const CategoryIcon = CATEGORY_ICONS[a.category] || FileText;
+                  return (
+                    <div className="w-16 h-16 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center">
+                      <CategoryIcon className="w-8 h-8 text-orange/50" aria-hidden="true" />
+                    </div>
+                  );
+                })()}
               </div>
               <div className="p-6 flex flex-col gap-3 flex-1">
                 <span className="text-xs font-bold uppercase tracking-[0.06em] text-white bg-orange rounded-pill px-3 py-1 self-start">

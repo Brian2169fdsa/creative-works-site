@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { PhoneCall, ClipboardCheck, Rocket, CalendarClock, Lock } from "lucide-react";
+import { PhoneCall, ClipboardCheck, Rocket, Lock } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FAQ from "@/components/ui/FAQ";
 import CTASection from "@/components/ui/CTASection";
-import CheckoutButton from "@/components/CheckoutButton";
 import Button from "@/components/ui/Button";
 import { STRIPE_PRODUCTS, usd } from "@/lib/constants";
 import { FAQ_CONSULT } from "@/lib/site-content";
@@ -103,7 +102,7 @@ export default function ScheduleConsultationPage() {
               <span className="font-display font-extrabold text-3xl text-orange-soft">
                 {usd(STRIPE_PRODUCTS.discoveryAssessment.amount)}
               </span>
-              <span className="text-sm text-white/60">One-time via Stripe</span>
+              <span className="text-sm text-white/60">One-time assessment</span>
             </div>
             <p className="text-white/70 text-base leading-relaxed">
               A thorough paid assessment of your systems, marketing, staffing,
@@ -124,14 +123,12 @@ export default function ScheduleConsultationPage() {
               ))}
             </ul>
             <div className="mt-auto pt-4">
-              <CheckoutButton
-                productType="discoveryAssessment"
-                label="Start Assessment"
-                variant="primary"
-              />
+              <Button href="/contact" size="lg" arrow className="w-full justify-center">
+                Start Assessment
+              </Button>
               <div className="flex items-center justify-center gap-1.5 mt-3 text-xs text-white/50">
                 <Lock className="w-3 h-3" aria-hidden="true" />
-                Secure checkout via Stripe
+                Online payment coming soon
               </div>
             </div>
           </div>
@@ -148,7 +145,7 @@ export default function ScheduleConsultationPage() {
               <span className="font-display font-extrabold text-3xl text-orange">
                 {usd(STRIPE_PRODUCTS.projectDeposit.amount)}
               </span>
-              <span className="text-sm text-gray-500">Deposit via Stripe</span>
+              <span className="text-sm text-gray-500">Project deposit</span>
             </div>
             <p className="text-gray-600 text-base leading-relaxed">
               Ready to move on a defined project? Reserve your start and lock in
@@ -169,14 +166,12 @@ export default function ScheduleConsultationPage() {
               ))}
             </ul>
             <div className="mt-auto pt-4">
-              <CheckoutButton
-                productType="projectDeposit"
-                label="Pay Project Deposit"
-                variant="secondary"
-              />
+              <Button href="/contact" variant="secondary" size="lg" arrow className="w-full justify-center">
+                Request Project Deposit
+              </Button>
               <div className="flex items-center justify-center gap-1.5 mt-3 text-xs text-gray-400">
                 <Lock className="w-3 h-3" aria-hidden="true" />
-                Secure checkout via Stripe
+                Online payment coming soon
               </div>
             </div>
           </div>
@@ -216,27 +211,21 @@ export default function ScheduleConsultationPage() {
         </div>
       </Section>
 
-      {/* Scheduler Placeholder */}
+      {/* Book on our calendar */}
       <Section>
         <SectionHeading
           align="center"
           eyebrow="Prefer to Pick a Time?"
           title="Book directly on our calendar."
-          lead="Connect your scheduling tool here, the embed below is a placeholder for Calendly or Microsoft Bookings."
+          lead="Pick a time that works for you and we'll take it from there."
           className="mb-8"
         />
-        <div className="max-w-3xl mx-auto min-h-72 rounded-xl border-2 border-dashed border-gray-300 bg-cloud flex flex-col items-center justify-center gap-4 text-center p-10">
-          <CalendarClock className="w-10 h-10 text-orange" aria-hidden="true" />
-          <div className="font-display font-bold text-xl text-navy-midnight">
-            Scheduler embed area
-          </div>
-          <p className="text-sm text-gray-500 max-w-sm">
-            Drop in your Calendly or Microsoft Bookings embed code here. Until
-            then, use the Free Intro Call button above or the contact form.
-          </p>
-          <Button href="/contact" variant="secondary" arrow>
-            Use the Contact Form
-          </Button>
+        <div className="max-w-4xl mx-auto rounded-xl overflow-hidden border border-gray-200 shadow-card bg-white">
+          <iframe
+            src="https://outlook.office.com/book/PCWMeeting@phxcw.com/"
+            title="Schedule a consultation with Creative Works"
+            className="w-full h-[900px] border-0"
+          />
         </div>
       </Section>
 

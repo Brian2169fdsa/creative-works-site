@@ -34,9 +34,8 @@ function CaseCard({ c }: { c: CaseStudy }) {
   return (
     <article className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-card overflow-hidden h-full">
       <div className="relative aspect-video bg-cloud flex items-center justify-center">
-        <div className="text-center p-6 text-gray-400">
-          <Icon className="w-8 h-8 mx-auto mb-2 text-orange/40" aria-hidden="true" />
-          <p className="text-xs">{c.client}, drop a project photo</p>
+        <div className="w-16 h-16 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center">
+          <Icon className="w-8 h-8 text-orange/50" aria-hidden="true" />
         </div>
         <span className="absolute top-3 left-3 text-xs font-bold uppercase tracking-[0.06em] text-white bg-orange rounded-pill px-3 py-1">
           {c.category}

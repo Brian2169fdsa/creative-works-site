@@ -166,14 +166,10 @@ export default async function CustomerDetailPage({
                   </div>
                 </div>
                 <div className="relative bg-gradient-to-br from-cloud to-gray-100 aspect-[16/10] flex flex-col items-center justify-center gap-3">
-                  <Monitor className="w-12 h-12 text-gray-300" aria-hidden="true" />
-                  <div className="text-center px-6">
-                    <p className="text-sm font-semibold text-gray-400">{customer.name}</p>
-                    <p className="text-xs text-gray-300 mt-1">Screenshot coming soon</p>
-                    <p className="text-xs font-mono text-orange/60 mt-2 bg-orange/5 border border-orange/20 rounded px-2 py-0.5">
-                      {customer.screenshotLabel}
-                    </p>
+                  <div className="w-20 h-20 rounded-2xl bg-orange/10 border border-orange/20 flex items-center justify-center">
+                    <Monitor className="w-10 h-10 text-orange/50" aria-hidden="true" />
                   </div>
+                  <p className="text-sm font-semibold text-gray-400">{customer.name}</p>
                 </div>
               </div>
             </div>
@@ -234,11 +230,10 @@ export default async function CustomerDetailPage({
             return (
               <div key={d.title} className="bg-white border border-gray-200 rounded-xl overflow-hidden flex flex-col">
                 {/* Placeholder image area */}
-                <div className="bg-gradient-to-br from-cloud to-gray-100 aspect-[4/3] flex flex-col items-center justify-center gap-2 border-b border-gray-100">
-                  <Icon className="w-8 h-8 text-gray-300" aria-hidden="true" />
-                  <p className="text-xs font-mono text-orange/60 bg-orange/5 border border-orange/20 rounded px-2 py-0.5">
-                    {d.placeholder}
-                  </p>
+                <div className="bg-gradient-to-br from-cloud to-gray-100 aspect-[4/3] flex items-center justify-center border-b border-gray-100">
+                  <div className="w-16 h-16 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center">
+                    <Icon className="w-8 h-8 text-orange/50" aria-hidden="true" />
+                  </div>
                 </div>
                 {/* Card content */}
                 <div className="p-5 flex flex-col gap-2 flex-1">

@@ -46,7 +46,6 @@ export const NAV: NavItem[] = [
       { label: "Leadership", href: "/about/leadership" },
     ],
   },
-  { label: "Resources", href: "/resources", key: "resources" },
   { label: "Customers", href: "/customers", key: "customers" },
   { label: "Contact", href: "/contact", key: "contact" },
 ];

@@ -12,7 +12,6 @@ const QUICK_LINKS = [
   { label: "Leadership", href: "/about/leadership" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Customers", href: "/customers" },
-  { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },
 ];
 

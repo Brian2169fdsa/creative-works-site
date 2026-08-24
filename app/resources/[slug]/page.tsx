@@ -1,12 +1,28 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import {
+  Megaphone, FolderCog, ShieldCheck, Users, RefreshCw, Compass,
+  CloudCog, FileText,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { RESOURCES } from "@/lib/site-content";
 import Section from "@/components/ui/Section";
 import CTASection from "@/components/ui/CTASection";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import Button from "@/components/ui/Button";
 import { CONSULT_HREF } from "@/lib/navigation";
+
+const CATEGORY_ICONS: Record<string, LucideIcon> = {
+  Marketing: Megaphone,
+  SharePoint: FolderCog,
+  IT: ShieldCheck,
+  "IT Services": ShieldCheck,
+  Staffing: Users,
+  Operations: RefreshCw,
+  "BH Leadership": Compass,
+  Salesforce: CloudCog,
+};
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -70,9 +86,14 @@ export default async function ResourceArticlePage({ params }: Props) {
       {/* Article Image Placeholder */}
       <Section pad="pt-10 pb-0">
         <div className="max-w-3xl mx-auto aspect-[16/9] rounded-xl bg-cloud border border-gray-200 flex items-center justify-center">
-          <div className="text-center text-gray-400 p-8">
-            <p className="text-sm">Article image placeholder</p>
-          </div>
+          {(() => {
+            const CategoryIcon = CATEGORY_ICONS[resource.category] || FileText;
+            return (
+              <div className="w-24 h-24 rounded-2xl bg-orange/10 border border-orange/20 flex items-center justify-center">
+                <CategoryIcon className="w-12 h-12 text-orange/50" aria-hidden="true" />
+              </div>
+            );
+          })()}
         </div>
       </Section>
 

@@ -97,7 +97,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Behavioral Health Billing",
     title: "Get paid for every service.",
     lead: "Behavioral health billing done differently: the billing team that feels like your team. We work with your teams as part of your team, bill inside your EMR, report weekly, and answer when you call, backed by the full-service partner no billing-only vendor can match.",
-    heroPlaceholder: "behavioral-health-billing/1",
+    heroImage: "/images/billing-hero.png",
     href: "/services/behavioral-health-billing",
     tagline: "The billing team that feels like your team.",
     short:
@@ -170,7 +170,7 @@ export const SERVICES: ServiceConfig[] = [
           "Daily billing, weekly clarity: claims out fast, reporting on billed & collected",
           "Always reachable: direct access, no three-day silences",
         ],
-        placeholder: "behavioral-health-billing/2",
+        image: "/images/billing-dashboard.png",
       },
       {
         type: "checklist",
@@ -201,7 +201,7 @@ export const SERVICES: ServiceConfig[] = [
           "No setup fees, no long-term lock-in",
           "Full revenue-cycle support from day one",
         ],
-        placeholder: "behavioral-health-billing/3",
+        image: "/images/billing-growth.png",
       },
     ],
     process: {

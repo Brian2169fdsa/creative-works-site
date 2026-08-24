@@ -10,7 +10,7 @@ export default function AnyVerticalNote() {
             Behavioral Health Experts. Open to Every Vertical.
           </p>
           <p className="text-base text-navy-midnight leading-relaxed">
-            Our deepest expertise is in behavioral health — we know the workflows, the compliance landscape, and the operational realities of care-delivery organizations inside and out. But the systems challenges mission-driven organizations face are remarkably consistent across verticals. If you are working in a field we have not listed, we would love to talk. Chances are, we can help.
+            Our deepest expertise is in behavioral health. We know the workflows, the compliance landscape, and the operational realities of care-delivery organizations inside and out. But the systems challenges mission-driven organizations face are remarkably consistent across verticals. If you are working in a field we have not listed, we would love to talk. Chances are, we can help.
           </p>
         </div>
         <Link

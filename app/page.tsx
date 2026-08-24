@@ -278,11 +278,11 @@ export default function HomePage() {
                     />
                     <div>
                       <span className="font-bold text-white text-sm">
-                        {item.title}
+                        {item.title}:
                       </span>
                       <span className="text-white/60 text-sm">
                         {" "}
-                        — {item.desc}
+                        {item.desc}
                       </span>
                     </div>
                   </div>

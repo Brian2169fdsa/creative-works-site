@@ -14,6 +14,7 @@ export const NAV: NavItem[] = [
     href: "/services",
     key: "services",
     menu: [
+      { label: "Behavioral Health Billing", href: "/services/behavioral-health-billing" },
       { label: "Marketing", href: "/services/marketing" },
       { label: "SharePoint Setup", href: "/services/sharepoint-setup" },
       { label: "Salesforce Build-Outs", href: "/services/salesforce-build-outs" },

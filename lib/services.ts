@@ -92,6 +92,180 @@ export interface ServiceConfig {
 
 export const SERVICES: ServiceConfig[] = [
   {
+    slug: "behavioral-health-billing",
+    icon: "Receipt",
+    eyebrow: "Behavioral Health Billing",
+    title: "Get paid for every service.",
+    lead: "Behavioral health billing done differently: the billing team that feels like your team. We work with your teams as part of your team, bill inside your EMR, report weekly, and answer when you call, backed by the full-service partner no billing-only vendor can match.",
+    heroPlaceholder: "behavioral-health-billing/1",
+    href: "/services/behavioral-health-billing",
+    tagline: "The billing team that feels like your team.",
+    short:
+      "Full revenue-cycle management inside your EMR, from same-day VOBs and utilization review to clean claims, denials, appeals, and weekly billed-and-collected reporting.",
+    problem: {
+      title: "Billing-only vendors leave revenue behind.",
+      lead: "When billing lives outside your team and outside your systems, revenue quietly slips away, in slow VOBs, unbilled days, unworked denials, and reports you never see.",
+      items: [
+        "VOBs too slow for admissions to make confident decisions",
+        "Authorized, medically necessary days lost without utilization review defense",
+        "Claims sitting unbilled while cash flow tightens",
+        "Denials written off instead of appealed and won",
+        "Documentation gaps that become denials after the fact",
+        "Three-day silences when you call your billing vendor",
+      ],
+      columns: 2,
+    },
+    provide: {
+      eyebrow: "The Full Revenue Cycle, Managed",
+      title: "Every stage of your revenue cycle, handled by your team.",
+      lead: "We work with your teams as part of your team, inside your systems, across the entire revenue cycle.",
+      columns: 4,
+      cards: [
+        {
+          icon: "ClipboardCheck",
+          title: "Verification of Benefits",
+          desc: "Same-day VOBs your admissions team can trust.",
+        },
+        {
+          icon: "ShieldCheck",
+          title: "Utilization Review",
+          desc: "Defend every authorized, medically necessary day.",
+        },
+        {
+          icon: "Receipt",
+          title: "Billing & Collections",
+          desc: "Clean claims, disciplined follow-up, predictable cash.",
+        },
+        {
+          icon: "Scale",
+          title: "Denials & Appeals",
+          desc: "Clinically grounded appeals that win.",
+        },
+        {
+          icon: "Handshake",
+          title: "Reimbursement Negotiations",
+          desc: "Single-case agreements & fair-rate advocacy.",
+        },
+        {
+          icon: "Search",
+          title: "RCA, Training & Consulting",
+          desc: "Find the leaks, prevent denials, plan growth.",
+        },
+        {
+          icon: "FileSearch",
+          title: "Documentation Compliance Review",
+          desc: "We audit clinical documentation against payer and medical-necessity rules before it becomes a denial.",
+        },
+      ],
+    },
+    sections: [
+      {
+        type: "callout",
+        tone: "navy",
+        eyebrow: "Part of Your Team",
+        title: "We work in your systems, as part of your team.",
+        body: "No black-box billing portal, no data held hostage. We bill inside your EMR, Sunwave and other behavioral health platforms, so you see every claim, every denial, and every dollar collected in your own systems, in real time.",
+        points: [
+          "Inside your systems: we bill in your EMR, Sunwave & other BH platforms",
+          "Daily billing, weekly clarity: claims out fast, reporting on billed & collected",
+          "Always reachable: direct access, no three-day silences",
+        ],
+        placeholder: "behavioral-health-billing/2",
+      },
+      {
+        type: "checklist",
+        tone: "white",
+        eyebrow: "Included in Every Partnership",
+        title: "Everything your revenue cycle needs, included.",
+        lead: "Full revenue-cycle support from day one, whatever your size or stage.",
+        items: [
+          "Verification of benefits & authorizations",
+          "Utilization review & concurrent defense",
+          "Claims submission & collections follow-up",
+          "Denials management & multi-level appeals",
+          "Documentation compliance review",
+          "We work inside your EMR, your data stays yours",
+          "Weekly billed & collected reporting",
+          "Direct access to your billing team",
+        ],
+        columns: 2,
+      },
+      {
+        type: "callout",
+        tone: "cloud",
+        eyebrow: "Partnership Pricing",
+        title: "Specialized pricing that grows with you.",
+        body: "Every organization gets specialized pricing built around its census and stage of growth, so what you pay always tracks what we recover. No setup fees, no long-term lock-in, and a partnership built on transparency: you see every claim, every denial, and every dollar collected, in your own systems, in real time.",
+        points: [
+          "Specialized pricing tailored to your organization",
+          "No setup fees, no long-term lock-in",
+          "Full revenue-cycle support from day one",
+        ],
+        placeholder: "behavioral-health-billing/3",
+      },
+    ],
+    process: {
+      eyebrow: "How It Works",
+      title: "From assessment to predictable cash.",
+      steps: [
+        {
+          title: "Free Revenue-Cycle Assessment",
+          desc: "We find the revenue you're leaving behind, unbilled, denied, or underpaid.",
+        },
+        {
+          title: "Onboard Inside Your EMR",
+          desc: "We set up in your systems, Sunwave and other BH platforms, your data stays yours.",
+        },
+        {
+          title: "Daily Billing",
+          desc: "Clean claims out fast, with disciplined collections follow-up.",
+        },
+        {
+          title: "Weekly Reporting",
+          desc: "Clear reporting on billed and collected, every week.",
+        },
+        {
+          title: "Defend and Improve",
+          desc: "Denials appealed, rates negotiated, and leaks closed before they repeat.",
+        },
+      ],
+    },
+    benefits: {
+      title: "What billing done differently gives you.",
+      items: [
+        {
+          title: "Predictable cash",
+          desc: "Clean claims and disciplined follow-up keep revenue flowing.",
+        },
+        {
+          title: "Every day defended",
+          desc: "Utilization review that protects authorized, medically necessary care.",
+        },
+        {
+          title: "Denials that get won",
+          desc: "Clinically grounded appeals instead of write-offs.",
+        },
+        {
+          title: "Real transparency",
+          desc: "You see every claim and every dollar in your own systems.",
+        },
+        {
+          title: "A team that answers",
+          desc: "Direct access to your billing team, no three-day silences.",
+        },
+        {
+          title: "A full-service partner",
+          desc: "Backed by marketing, IT, staffing, and operations support no billing-only vendor can match.",
+        },
+      ],
+    },
+    related: ["bhp-oversight", "business-process-services", "operational-support"],
+    cta: {
+      title: "Find the revenue you're leaving behind.",
+      body: "Start with a free revenue-cycle assessment and see exactly what is going unbilled, denied, or underpaid.",
+    },
+  },
+  {
     slug: "marketing",
     icon: "Megaphone",
     eyebrow: "Marketing",

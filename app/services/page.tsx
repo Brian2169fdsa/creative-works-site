@@ -4,7 +4,7 @@ import Link from "next/link";
 import {
   Megaphone, FolderCog, CloudCog, ShieldCheck, Users,
   RefreshCw, ListChecks, Lightbulb, BadgeCheck, CheckCircle2,
-  Stethoscope,
+  Stethoscope, Receipt,
 } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import Section from "@/components/ui/Section";
@@ -29,6 +29,7 @@ export const metadata: Metadata = {
 };
 
 const SERVICE_ICONS: Record<string, LucideIcon> = {
+  "behavioral-health-billing": Receipt,
   marketing: Megaphone,
   "sharepoint-setup": FolderCog,
   "salesforce-build-outs": CloudCog,
@@ -42,6 +43,7 @@ const SERVICE_ICONS: Record<string, LucideIcon> = {
 };
 
 const SERVICE_DETAILS: Record<string, string[]> = {
+  "behavioral-health-billing": ["Same-day verification of benefits", "Utilization review & denials management", "Weekly billed & collected reporting"],
   marketing: ["Brand and messaging", "Social media and ads", "Referral partner materials"],
   "sharepoint-setup": ["Portals and document libraries", "Permission structure", "Migration and training"],
   "salesforce-build-outs": ["CRM setup and configuration", "Workflow automation", "Dashboards and reporting"],

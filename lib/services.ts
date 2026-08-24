@@ -1280,7 +1280,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Consulting Services",
     title: "Guidance for the decisions that shape your organization's future.",
     lead: "Sometimes you need an experienced outside perspective. We provide strategic consulting for behavioral health organizations navigating growth, change, technology decisions, and operational challenges.",
-    heroPlaceholder: "consulting/1",
+    heroImage: "/images/consulting-hero.png",
     href: "/services/consulting",
     tagline: "Guidance for the decisions that matter.",
     short:

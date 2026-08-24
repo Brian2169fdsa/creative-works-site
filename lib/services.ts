@@ -1036,7 +1036,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Operational Support",
     title: "Stronger processes. A calmer, more effective organization.",
     lead: "Operations is everything behind the scenes that makes care possible. We help you map, improve, and sustain the processes that keep your organization moving forward, reliably and consistently.",
-    heroPlaceholder: "operational-support/1",
+    heroImage: "/images/operational-support-hero.png",
     href: "/services/operational-support",
     tagline: "Better processes. Better outcomes.",
     short:

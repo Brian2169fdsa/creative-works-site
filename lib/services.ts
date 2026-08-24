@@ -1398,7 +1398,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Licensure Services",
     title: "Open your program and stay compliant, with confidence.",
     lead: "Behavioral health licensure and accreditation are complex, time-consuming, and unforgiving of errors. We guide organizations through the application, compliance, and accreditation processes so you can open your doors on schedule.",
-    heroPlaceholder: "licensure/1",
+    heroImage: "/images/licensure-hero.png",
     href: "/services/licensure",
     tagline: "Open and stay compliant with confidence.",
     short:

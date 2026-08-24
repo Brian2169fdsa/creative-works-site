@@ -6,6 +6,9 @@
   html {
     scroll-behavior: smooth;
   }
+  ::selection {
+    background-color: rgb(241 90 36 / 0.22);
+  }
   body {
     @apply font-sans text-gray-800 antialiased;
   }

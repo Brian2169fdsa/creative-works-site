@@ -29,6 +29,7 @@ import PillList from "@/components/ui/PillList";
 import CTASection from "@/components/ui/CTASection";
 import StatsBand from "@/components/ui/StatsBand";
 import Eyebrow from "@/components/ui/Eyebrow";
+import ImageFrame from "@/components/ui/ImageFrame";
 import {
   TRUST_CHIPS,
   WHY_ITEMS,
@@ -132,7 +133,7 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] shadow-lg">
+            <ImageFrame className="aspect-[5/3.4] shadow-lg">
               <Image
                 src="/images/home-hero.png"
                 alt="Phoenix Creative Works team"
@@ -140,7 +141,7 @@ export default function HomePage() {
                 className="object-cover"
                 priority
               />
-            </div>
+            </ImageFrame>
           </div>
         </div>
       </section>
@@ -148,17 +149,14 @@ export default function HomePage() {
       {/* Pillar Strip */}
       <section className="px-6 -mt-8 relative z-10">
         <div className="max-w-container mx-auto bg-white border border-gray-200 rounded-xl shadow-card overflow-hidden">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
-            {SERVICES.map((svc, i) => {
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 -ml-px -mt-px">
+            {SERVICES.map((svc) => {
               const Icon = SERVICE_ICONS[svc.slug] || Megaphone;
               return (
                 <Link
                   key={svc.slug}
                   href={svc.href}
-                  className={cn(
-                    "flex flex-col items-center text-center gap-2.5 p-5 hover:bg-cloud transition-colors",
-                    i > 0 ? "border-l border-gray-200" : ""
-                  )}
+                  className="flex flex-col items-center text-center gap-2.5 p-5 hover:bg-cloud transition-colors border-l border-t border-gray-200"
                 >
                   <Icon
                     className="w-7 h-7 text-orange"
@@ -327,14 +325,14 @@ export default function HomePage() {
       {/* Phoenix Rooted */}
       <Section tone="cloud">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative rounded-xl overflow-hidden aspect-[5/3.2] shadow-card">
+          <ImageFrame flip className="aspect-[5/3.2] shadow-card">
             <Image
               src="/images/home-secondary.png"
               alt="Phoenix Creative Works community"
               fill
               className="object-cover object-bottom"
             />
-          </div>
+          </ImageFrame>
           <div>
             <Eyebrow>Rooted in Phoenix</Eyebrow>
             <h2 className="font-display font-extrabold text-3xl md:text-4xl tracking-tight leading-snug text-navy-midnight mt-4">

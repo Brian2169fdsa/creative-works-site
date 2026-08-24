@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import Button from "./Button";
 import Eyebrow from "./Eyebrow";
 import Breadcrumb from "./Breadcrumb";
+import ImageFrame from "./ImageFrame";
 
 interface PageHeroProps {
   eyebrow?: string;
@@ -121,14 +122,14 @@ export default function PageHero({
           </div>
 
           {image && (
-            <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] shadow-lg">
+            <ImageFrame dark={dark} className="aspect-[5/3.4] shadow-lg">
               <Image
                 src={image}
                 alt={imageAlt || ""}
                 fill
                 className="object-cover"
               />
-            </div>
+            </ImageFrame>
           )}
         </div>
       </div>

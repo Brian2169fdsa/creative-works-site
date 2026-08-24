@@ -8,6 +8,7 @@ import SectionHeading from "./ui/SectionHeading";
 import CheckGrid from "./ui/CheckGrid";
 import ProcessSteps from "./ui/ProcessSteps";
 import CTASection from "./ui/CTASection";
+import ImageFrame from "./ui/ImageFrame";
 import { CONSULT_HREF } from "@/lib/navigation";
 import type { ServiceConfig } from "@/lib/services";
 import { SERVICES } from "@/lib/services";
@@ -86,7 +87,7 @@ function CalloutSection({ s, icon }: CalloutSectionProps) {
             </div>
           )}
         </div>
-        <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] shadow-lg">
+        <ImageFrame dark={dark} className="aspect-[5/3.4] shadow-lg">
           {s.image ? (
             <Image src={s.image} alt={s.title} fill className="object-cover" style={s.imagePosition ? { objectPosition: s.imagePosition } : undefined} />
           ) : (
@@ -106,7 +107,7 @@ function CalloutSection({ s, icon }: CalloutSectionProps) {
               </div>
             </div>
           )}
-        </div>
+        </ImageFrame>
       </div>
     </Section>
   );
@@ -195,7 +196,7 @@ export default function ServicePage(cfg: ServiceConfig) {
                 </Button>
               </div>
             </div>
-            <div className="relative rounded-xl overflow-hidden aspect-[5/3.4] shadow-lg">
+            <ImageFrame className="aspect-[5/3.4] shadow-lg">
               {cfg.heroImage ? (
                 <Image
                   src={cfg.heroImage}
@@ -212,7 +213,7 @@ export default function ServicePage(cfg: ServiceConfig) {
                   </div>
                 </div>
               )}
-            </div>
+            </ImageFrame>
           </div>
         </div>
       </section>

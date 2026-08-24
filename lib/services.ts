@@ -271,9 +271,7 @@ export const SERVICES: ServiceConfig[] = [
     eyebrow: "Marketing",
     title: "Marketing that reaches your community and grows your mission.",
     lead: "Behavioral health organizations do vital work that most communities do not fully understand. We help you build awareness, connect with the people who need you, and create marketing that genuinely reflects your mission.",
-    heroPlaceholder: "Marketing team at work, photo placeholder",
     heroImage: "/images/marketing-hero.png",
-    heroImagePosition: "left center",
     href: "/services/marketing",
     tagline: "Reach more people. Grow your mission.",
     short:
